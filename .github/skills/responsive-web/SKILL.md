@@ -14,10 +14,10 @@ description: "Gunakan saat membangun atau mengaudit tampilan mobile, tablet, dan
 - Beri jarak dan ukuran target sentuh yang nyaman. Jangan mengandalkan hover untuk mengungkap informasi penting.
 
 ## Pemeriksaan lintas viewport
-Tinjau setidaknya viewport sempit sekitar 320–375 px, tablet sekitar 768 px, dan desktop sekitar 1280 px, disesuaikan dengan kebutuhan konten. Uji juga lebar di antaranya jika ada breakpoint kritis. Periksa:
-- urutan dan keterbacaan konten, heading panjang, navigasi, CTA, form, dan footer;
-- grid/kartu, margin tepi, gambar, rasio media, overflow, serta perubahan orientasi bila relevan;
-- ukuran teks/target sentuh, fokus keyboard, dan keadaan menu terbuka;
-- konsistensi visual tanpa menyembunyikan fungsi penting pada mobile.
+Uji seluruh lebar viewport berikut, bukan hanya satu ukuran representatif: **320, 375, 390, 414, 768, 1024, dan 1280 px atau lebih**. Periksa perubahan breakpoint dan lebar di antara ukuran tersebut bila layout atau konten menunjukkan titik rawan. Pada setiap ukuran, tinjau:
+- navbar/navigasi (termasuk menu terbuka dan tertutup), hero, serta urutan/keterbacaan konten;
+- tipografi dan heading panjang, kartu, grid, gambar/media, tombol, formulir, modal/dialog bila ada, dan footer;
+- ukuran target sentuh, jarak tepi, wrapping, fokus, serta state interaksi;
+- overflow horizontal atau clipping, rasio media, konsistensi visual, dan fungsi penting yang mungkin tersembunyi.
 
-Catat lingkungan atau keterbatasan pratinjau; jangan menyatakan semua perangkat telah diuji bila hanya memeriksa beberapa ukuran. Gunakan `website-testing` untuk validasi perilaku.
+Catat viewport yang benar-benar diperiksa dan keterbatasan alat/pratinjau; jangan menyatakan semua ukuran telah diuji bila pemeriksaan tidak dilakukan pada seluruh daftar. Gunakan `website-testing` untuk validasi perilaku.

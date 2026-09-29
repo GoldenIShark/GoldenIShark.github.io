@@ -3,7 +3,8 @@
 ## Konteks proyek
 - Ini adalah situs Shark Studio berbahasa Indonesia. Halaman utama berada di `index.html`; interaksi di `script.js`; gaya di `style.css`; aset situs utama berada di `assets/`.
 - `portofolio/` berisi situs-situs portofolio yang dapat memiliki struktur dan aset masing-masing. Perlakukan setiap subfolder situs sebagai proyek mandiri dan periksa struktur aktual sebelum mengubahnya.
-- Situs utama menggunakan HTML, CSS, dan JavaScript biasa. Pertahankan stack, pola, dan gaya yang sudah ada; jangan menambahkan framework, paket, atau dependensi tanpa permintaan eksplisit dan alasan yang disetujui.
+- Deliverable utama adalah website statis/display-only yang cocok di-hosting pada static hosting. Gunakan HTML, CSS, dan Vanilla JavaScript; pertahankan implementasi situs yang ada.
+- Jangan memakai framework atau library besar kecuali benar-benar diperlukan untuk memenuhi kebutuhan yang dinyatakan. Jelaskan kebutuhan tersebut dan dapatkan persetujuan sebelum menambahkannya; jangan menambahkan paket, dependensi, backend, atau build step secara otomatis.
 
 ## Prioritas pengerjaan
 1. Penuhi tujuan pengguna dan kebutuhan audiens terlebih dahulu; kejelasan, kegunaan, aksesibilitas, dan kepercayaan lebih penting daripada dekorasi.
@@ -14,6 +15,7 @@
 
 ## Cara bekerja
 - Sebelum mengedit, baca file dan pola di area sasaran; periksa status Git agar perubahan yang sudah ada tidak tertimpa. Jangan mengedit `.git/`.
+- Untuk website baru atau perombakan besar, pahami proyek dan susun rencana sebelum mulai coding. Pengecualian: perubahan kecil yang terfokus pada situs yang sudah ada boleh langsung dikerjakan setelah memeriksa konteks dan dampaknya.
 - Tentukan tujuan halaman, audiens, CTA, hierarki konten, dan batasan sebelum menyusun atau merombak antarmuka.
 - Gunakan skill yang paling relevan dari `.github/skills/`; baca seluruh `SKILL.md` skill tersebut sebelum menerapkannya. Untuk permintaan lintas bidang, kombinasikan skill yang diperlukan, bukan semuanya secara otomatis.
 - Pertahankan bahasa Indonesia pada antarmuka dan dokumentasi bila sesuai konteks situs. Gunakan label, instruksi, dan pesan kesalahan yang lugas dan konsisten.

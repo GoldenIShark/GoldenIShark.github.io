@@ -6,15 +6,18 @@ description: "Gunakan saat menentukan tujuan, audiens, proposisi nilai, CTA, str
 # Perencanaan Website
 
 ## Tujuan
-Ubah permintaan website menjadi rencana yang terarah dan dapat diuji sebelum implementasi. Rencanakan hanya sedalam yang dibutuhkan: perubahan kecil tidak perlu proses panjang.
+Ubah permintaan website menjadi rencana yang terarah dan dapat diuji sebelum implementasi. Untuk website baru atau perombakan besar, jangan mulai coding sebelum proyek dipahami dan rencana dirumuskan. Pengecualian: perubahan kecil yang terfokus pada website yang sudah ada boleh langsung dilakukan setelah konteks relevan diperiksa. Rencanakan hanya sedalam yang dibutuhkan.
 
 ## Proses
-1. **Klarifikasi tujuan:** apakah halaman menginformasikan, menghasilkan prospek, menjual, membangun merek, atau menampilkan karya? Tentukan satu hasil utama.
-2. **Kenali audiens dan konteks:** apa yang pengunjung ketahui, butuhkan, khawatirkan, serta perangkat dan kondisi yang mungkin digunakan?
-3. **Tetapkan proposisi nilai dan CTA:** rumuskan manfaat yang benar-benar didukung informasi yang tersedia dan tindakan utama yang mudah ditemukan. Catat informasi yang belum diberikan; jangan mengarang fakta.
-4. **Susun konten:** urutkan bagian menurut kebutuhan pengunjung, misalnya hero, manfaat/layanan, bukti kepercayaan yang tersedia, portofolio, penawaran, FAQ, dan kontak. Setiap bagian harus mempunyai tujuan.
-5. **Buat spesifikasi ringkas:** halaman/section yang terdampak, pesan kunci, CTA, kebutuhan aset, perilaku, batasan teknis, serta kriteria keberhasilan.
-6. **Prioritaskan:** pisahkan kebutuhan peluncuran dari peningkatan opsional. Pilih implementasi sekecil mungkin yang menghasilkan manfaat terbesar.
+1. **Pahami proyek dan konteks bisnis:** identifikasi jenis bisnis/organisasi, layanan atau produk, model dan kebutuhan yang dinyatakan, identitas, konten yang tersedia, batasan teknis, serta apakah situs baru atau yang sudah ada. Jangan mengarang fakta.
+2. **Kenali pengguna dan tujuan:** definisikan target pengguna, kebutuhan/pertanyaan mereka, konteks perangkat, dan tujuan utama website (misalnya informasi, prospek, penjualan, branding, atau portofolio). Tetapkan hasil yang diharapkan.
+3. **Tetapkan pesan dan tindakan:** rumuskan proposisi nilai yang didukung informasi dan CTA utama beserta tujuan/hasil tindakannya. Catat data yang belum tersedia untuk diklarifikasi.
+4. **Rencanakan halaman dan navigasi:** tentukan daftar halaman, hubungan antarahalaman, label/struktur navigasi, serta urutan section pada setiap halaman dari kebutuhan utama pengguna ke informasi pendukung. Beri tiap halaman dan section fungsi yang jelas.
+5. **Tentukan arah visual:** jelaskan gaya visual, palet warna, hierarki/skala tipografi, spacing dan perlakuan komponen yang diinginkan. Selaraskan dengan identitas yang ada; catat preferensi yang belum diketahui.
+6. **Rencanakan media dan gerak:** sebutkan kebutuhan gambar/aset per halaman atau section, sumber yang tersedia, serta kebutuhan animasi/interaksi gerak. Jangan mengada-adakan aset atau menambahkan animasi tanpa tujuan.
+7. **Rencanakan responsivitas:** jelaskan perilaku layout, navigasi, konten, media, dan kontrol pada mobile, tablet, dan desktop; gunakan skill `responsive-web` untuk spesifikasi dan pemeriksaan viewport.
+8. **Tetapkan struktur teknis dan folder:** identifikasi root situs serta struktur folder/file yang ada atau yang dibutuhkan, lokasi aset, teknologi, path relatif, dan batasan static hosting. Utamakan HTML, CSS, dan Vanilla JavaScript; jangan mengusulkan framework/library besar kecuali benar-benar diperlukan dan disetujui.
+9. **Tentukan kriteria dan prioritas:** tulis kriteria keberhasilan yang dapat diperiksa, pisahkan kebutuhan peluncuran dari peningkatan opsional, lalu pilih implementasi terkecil yang memenuhi tujuan.
 
 ## Petunjuk keputusan
 - Landing page berfokus pada satu tujuan dan menghindari CTA yang saling bersaing.
@@ -23,4 +26,4 @@ Ubah permintaan website menjadi rencana yang terarah dan dapat diuji sebelum imp
 - Jika data, audiens, konten, atau arah merek belum cukup jelas, ajukan pertanyaan terarah atau nyatakan asumsi secara terbuka.
 
 ## Hasil dan pemeriksaan
-Bila berguna, berikan outline berurutan atau wireframe tekstual singkat beserta alasan prioritasnya sebelum mengedit. Rencana dianggap siap bila tujuan, audiens, pesan utama, CTA, struktur, lingkup, dan kriteria pemeriksaan dapat dipahami tanpa menebak. Gunakan skill `website-content`, `human-ui-design`, dan `responsive-web` hanya jika kebutuhan tersebut memang muncul.
+Sebelum coding pada proyek baru atau perombakan besar, sampaikan rencana ringkas yang secara eksplisit mencakup: jenis bisnis/organisasi; target pengguna; tujuan website; daftar halaman; navigasi; urutan section; pesan dan CTA; gaya visual; palet; tipografi; kebutuhan gambar/aset; animasi/interaksi; perilaku responsif; serta struktur folder/teknis. Sertakan outline halaman atau wireframe tekstual dan kriteria keberhasilan bila membantu. Tandai hal yang belum diketahui untuk diklarifikasi, bukan diisi dengan asumsi sebagai fakta. Perubahan kecil pada situs yang sudah ada boleh melewati rencana formal setelah konteks dan cakupan diperiksa. Gunakan skill `website-content`, `human-ui-design`, dan `responsive-web` bila relevan.

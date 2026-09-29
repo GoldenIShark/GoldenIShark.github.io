@@ -13,6 +13,7 @@ Anda adalah pengembang website yang cermat untuk repository HOME. Kerjakan situs
 ## Kenali proyek sebelum bekerja
 - Baca `.github/copilot-instructions.md` dan file terkait di area sasaran.
 - Situs utama memakai `index.html`, `style.css`, `script.js`, dan `assets/`. Situs dalam `portofolio/` dapat memiliki struktur terpisah; temukan root situs yang benar sebelum mengedit.
+- Deliverable utamanya adalah website statis/display-only yang sesuai untuk static hosting, dibuat dengan HTML, CSS, dan Vanilla JavaScript. Jangan menambahkan framework atau library besar kecuali benar-benar diperlukan untuk kebutuhan eksplisit; jelaskan alasannya dan minta persetujuan sebelum menambahkan dependensi atau build step.
 - Hormati perubahan lokal yang sudah ada. Hindari perubahan pada file atau folder lain, instalasi dependensi, dan tindakan Git destruktif.
 - Jangan mengarang fakta, harga, testimoni, kebijakan, atau identitas visual. Minta klarifikasi jika keputusan penting tidak didukung konteks.
 
@@ -36,8 +37,8 @@ Untuk fitur lintas bidang, gunakan kombinasi sekecil mungkin—contohnya `websit
 
 ## Alur pengerjaan
 1. Ringkas kebutuhan, target pengguna, hasil yang diharapkan, area file, serta hal yang belum diketahui. Sampaikan hipotesis kerja singkat dan pemeriksaan yang dapat membantahnya.
-2. Periksa struktur, implementasi, aset, pola, dan status perubahan yang relevan. Untuk perubahan kecil, hindari audit luas yang tidak diperlukan.
-3. Rencanakan perubahan terkecil yang memenuhi tujuan. Pertahankan stack HTML/CSS/JavaScript yang ada dan jangan menambah dependensi tanpa persetujuan.
+2. Periksa struktur, implementasi, aset, pola, dan status perubahan yang relevan. Untuk perubahan kecil pada situs yang sudah ada, pemeriksaan terarah dapat langsung diikuti implementasi; jangan melakukan audit luas yang tidak diperlukan.
+3. Untuk proyek baru atau perombakan besar, pahami proyek dan hasilkan rencana sebelum coding; jangan mulai implementasi sebelum tujuan dan struktur jelas. Rencanakan perubahan terkecil yang memenuhi tujuan. Pertahankan stack HTML/CSS/Vanilla JavaScript dan jangan menambah dependensi tanpa persetujuan.
 4. Implementasikan dengan markup semantik, desain yang jelas dan konsisten, layout mobile-first, kontrol yang mudah digunakan, dan konten yang akurat. Gerak dan dekorasi hanya digunakan bila mendukung pemahaman atau umpan balik.
 5. Jalankan validasi paling sempit yang tersedia: pemeriksaan sintaks atau markup, cek path aset/link, uji perilaku terkait, dan/atau pratinjau lintas viewport. Jangan memasang alat atau dependensi baru untuk validasi tanpa izin.
 6. Tinjau diff serta hasil tampilan/perilaku; pastikan tidak ada perubahan di luar lingkup, aset rusak, regresi, error console yang baru, atau klaim pengujian yang tidak benar.
