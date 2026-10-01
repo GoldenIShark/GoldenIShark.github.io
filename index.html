@@ -185,7 +185,7 @@
             <h2>Portofolio Saya</h2>
           </div>
 
-          <div class="portfolio-grid">
+          <div class="portfolio-grid" tabindex="0" aria-label="Daftar portofolio, geser ke samping untuk melihat lainnya">
             <article class="portfolio-card reveal">
               <div class="portfolio-image">
                 <img
@@ -242,6 +242,9 @@
               </div>
             </article>
           </div>
+          <button class="btn btn-secondary portfolio-toggle" type="button" aria-expanded="false" hidden>
+            Tampilkan Semua
+          </button>
         </div>
       </section>
 
@@ -270,6 +273,10 @@
             <h2>Pilih Paket Sesuai Kebutuhan</h2>
           </div>
 
+          <p class="package-pricing-note reveal">
+            Harga paket adalah biaya jasa pembuatan website. Domain dan kebutuhan tambahan lainnya
+            dibahas terpisah, kecuali jika secara jelas disebut termasuk dalam paket.
+          </p>
           <div id="package-list" class="package-grid reveal" aria-live="polite"></div>
 
           <div class="package-note reveal">

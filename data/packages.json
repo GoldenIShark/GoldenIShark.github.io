@@ -2,6 +2,7 @@
   {
     "name": "Basic",
     "price": "Rp100.000",
+    "domainIncluded": false,
     "estimate": "1-3 hari kerja",
     "badge": "Starter",
     "featured": false,
@@ -21,6 +22,7 @@
   {
     "name": "Popular",
     "price": "Rp200.000",
+    "domainIncluded": false,
     "estimate": "3-5 hari kerja",
     "badge": "PALING POPULER",
     "featured": true,
@@ -41,6 +43,7 @@
   {
     "name": "Premium",
     "price": "Rp350.000",
+    "domainIncluded": false,
     "estimate": "5-7 hari kerja",
     "badge": "Premium",
     "featured": false,
@@ -60,6 +63,7 @@
   {
     "name": "Custom",
     "price": "Mulai Rp100.000",
+    "domainIncluded": false,
     "estimate": "Menyesuaikan kebutuhan dan tingkat kesulitan",
     "badge": "Custom",
     "featured": false,

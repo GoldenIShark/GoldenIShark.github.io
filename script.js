@@ -7,16 +7,49 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
   const siteHeader = document.querySelector('.site-header');
   const packageList = document.querySelector('#package-list');
+  const portfolioGrid = document.querySelector('.portfolio-grid');
+  const portfolioToggle = document.querySelector('.portfolio-toggle');
+  const portfolioCards = portfolioGrid ? Array.from(portfolioGrid.querySelectorAll('.portfolio-card')) : [];
+  const portfolioLimit = 10;
+
+  const renderPackageCard = (pkg) => {
+    const tierClass = `package-card--${pkg.name.toLowerCase()}`;
+    const domainMessage = pkg.domainIncluded
+      ? 'Domain termasuk dalam paket ini.'
+      : 'Domain dibeli dan dibayar terpisah.';
+
+    return `
+      <article class="package-card ${tierClass}${pkg.featured ? ' featured' : ''} reveal">
+        <div class="package-badge">${pkg.badge}</div>
+        <div>
+          <h3>${pkg.name}</h3>
+          <p class="package-price">${pkg.price}</p>
+          ${pkg.estimate ? `<p class="package-estimate">Estimasi: ${pkg.estimate}</p>` : ''}
+        </div>
+        <ul class="package-features">
+          ${pkg.features.map((feature) => `<li>${feature}</li>`).join('')}
+        </ul>
+        <div class="package-domain-info" role="note">
+          <strong>Domain</strong>
+          <span>${domainMessage}</span>
+        </div>
+        ${pkg.customNote ? `<p class="package-custom-note">${pkg.customNote}</p>` : ''}
+        <a href="${pkg.href}" data-package-name="${pkg.name}" data-package-price="${pkg.price}" class="btn package-order ${pkg.name === 'Custom' ? 'btn-secondary' : 'btn-primary'}">${pkg.button}</a>
+      </article>
+    `;
+  };
 
   const pesanPaket = (namaPaket, harga) => {
     const message = namaPaket === 'Custom'
-      ? 'Halo Shark Studio, saya ingin berkonsultasi mengenai Paket Custom. Saya memiliki kebutuhan website yang ingin saya diskusikan.'
-      : `Halo Shark Studio, saya tertarik dengan Paket ${namaPaket} dengan harga ${harga}. Saya ingin mengetahui informasi lebih lanjut mengenai paket tersebut.`;
+      ? 'Halo Shark Studio, saya ingin berkonsultasi mengenai Paket Custom. Saya memiliki kebutuhan website yang ingin saya diskusikan. Domain dapat dibahas atau dipesan secara terpisah.'
+      : `Halo Shark Studio, saya tertarik dengan Paket ${namaPaket} seharga ${harga} untuk jasa pembuatan website. Saya ingin mengetahui informasi lebih lanjut; domain dapat dibahas atau dipesan secara terpisah.`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   const bindPackageButtons = () => {
+    if (!packageList) return;
+
     packageList.querySelectorAll('.package-order').forEach((button) => {
       button.addEventListener('click', (event) => {
         event.preventDefault();
@@ -30,6 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  if (portfolioGrid && portfolioToggle) {
+    portfolioCards.forEach((card, index) => {
+      card.hidden = index >= portfolioLimit;
+    });
+    portfolioToggle.hidden = portfolioCards.length <= portfolioLimit;
+    portfolioToggle.addEventListener('click', () => {
+      const showAll = portfolioToggle.getAttribute('aria-expanded') !== 'true';
+      portfolioCards.forEach((card, index) => {
+        card.hidden = !showAll && index >= portfolioLimit;
+        if (card.hidden) {
+          card.classList.remove('visible');
+        } else if (showAll && !card.classList.contains('visible')) {
+          observer.observe(card);
+        }
+      });
+      portfolioToggle.setAttribute('aria-expanded', String(showAll));
+      portfolioToggle.textContent = showAll ? 'Tampilkan Lebih Sedikit' : 'Tampilkan Semua';
     });
   }
 
@@ -66,47 +119,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
       })
       .then((packages) => {
-        packageList.innerHTML = packages.map((pkg) => {
-          const tierClass = `package-card--${pkg.name.toLowerCase()}`;
-          return `
-            <article class="package-card ${tierClass}${pkg.featured ? ' featured' : ''} reveal">
-              <div class="package-badge">${pkg.badge}</div>
-              <div>
-                <h3>${pkg.name}</h3>
-                <p class="package-price">${pkg.price}</p>
-                <p class="package-estimate">Estimasi: ${pkg.estimate}</p>
-              </div>
-              <ul class="package-features">
-                ${pkg.features.map((feature) => `<li>${feature}</li>`).join('')}
-              </ul>
-              ${pkg.customNote ? `<p class="package-custom-note">${pkg.customNote}</p>` : ''}
-              <a href="${pkg.href}" data-package-name="${pkg.name}" data-package-price="${pkg.price}" class="btn package-order ${pkg.name === 'Custom' ? 'btn-secondary' : 'btn-primary'}">${pkg.button}</a>
-            </article>
-          `;
-        }).join('');
+        packageList.innerHTML = packages.map(renderPackageCard).join('');
 
         const newRevealItems = packageList.querySelectorAll('.reveal');
         newRevealItems.forEach((item) => observer.observe(item));
         bindPackageButtons();
       })
       .catch(() => {
-        packageList.innerHTML = `
-          <article class="package-card package-card--basic reveal">
-            <div class="package-badge">Starter</div>
-            <div>
-              <h3>Basic</h3>
-              <p class="package-price">Rp100.000</p>
-            </div>
-            <ul class="package-features">
-              <li>1 halaman website</li>
-              <li>Responsive untuk HP</li>
-              <li>Desain sederhana</li>
-              <li>Informasi/profil</li>
-              <li>Tombol kontak</li>
-            </ul>
-            <a href="#contact" data-package-name="Basic" data-package-price="Rp100.000" class="btn btn-primary package-order">Pesan Paket</a>
-          </article>
-        `;
+        packageList.innerHTML = renderPackageCard({
+          name: 'Basic',
+          price: 'Rp100.000',
+          domainIncluded: false,
+          badge: 'Starter',
+          featured: false,
+          features: [
+            '1 halaman website',
+            'Responsive untuk HP',
+            'Desain sederhana',
+            'Informasi/profil',
+            'Tombol kontak',
+          ],
+          button: 'Pesan Paket',
+          href: '#contact',
+        });
         const fallbackItem = packageList.querySelector('.reveal');
         if (fallbackItem) observer.observe(fallbackItem);
         bindPackageButtons();
