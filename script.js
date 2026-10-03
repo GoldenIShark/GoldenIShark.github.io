@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         ${pkg.customNote ? `<p class="package-custom-note">${pkg.customNote}</p>` : ''}
         <a href="${pkg.href}" data-package-name="${pkg.name}" data-package-price="${pkg.price}" class="btn package-order ${pkg.name === 'Custom' ? 'btn-secondary' : 'btn-primary'}">${pkg.button}</a>
+        <a href="brief.html?paket=${encodeURIComponent(pkg.name)}" class="btn btn-secondary package-brief">Pesan dengan Brief</a>
       </article>
     `;
   };

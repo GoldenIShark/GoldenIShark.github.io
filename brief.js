@@ -245,6 +245,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const applyPackageParameter = () => {
+    const requestedPackage = new URLSearchParams(window.location.search).get('paket');
+    if (!requestedPackage) return false;
+    const option = Array.from(packageSelect.options).find((item) => item.value === requestedPackage);
+    if (!option) return false;
+    packageSelect.value = requestedPackage;
+    updateCustomField();
+    return true;
+  };
+
   form.addEventListener('input', () => {
     feedback.textContent = '';
     renderSummary();
@@ -305,6 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadExistingDraft();
+  const hasPackageParameter = applyPackageParameter();
   renderSummary();
   updateCustomField();
+  if (hasPackageParameter) scheduleSave();
 });

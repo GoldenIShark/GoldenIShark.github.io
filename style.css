@@ -324,6 +324,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 .package-card .btn {
   margin-top: auto;
 }
+.package-card .package-brief { margin-top: 0.65rem; }
+.package-brief-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.75rem 1.25rem; margin: 1.5rem auto 0; text-align: center; }
+.package-brief-cta p { margin: 0; color: var(--text-secondary); }
+.package-brief-cta .btn { width: auto; }
 .package-card h3 {
   margin: 0;
   font-size: 1.5rem;
@@ -464,6 +468,13 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 @media (min-width: 768px) and (max-width: 1023px) {
   .card-grid, .feature-grid, .package-grid, .contact-info { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .portfolio-grid { grid-auto-columns: calc((100% - 1.5rem) / 2); }
+  .header-inner { position: relative; }
+  .menu-toggle { display: flex; }
+  .main-nav { position: absolute; top: 72px; left: 0; width: 100%; padding: 0 1rem 1rem; border: 1px solid var(--border); border-top: 0; border-radius: 0 0 12px 12px; background: rgba(7, 17, 20, 0.98); opacity: 0; visibility: hidden; transform: translateY(-12px); transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease; }
+  .main-nav.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .main-nav ul { display: block; padding-top: 0.8rem; }
+  .main-nav li + li { margin-top: 0.45rem; }
+  .main-nav a { display: block; padding: 0.55rem 0; }
 }
 
 @media (min-width: 768px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }

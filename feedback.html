@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id" class="feedback-document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sampaikan saran atau laporkan masalah pada website AD Sharks Studio."
+    />
+    <meta property="og:site_name" content="AD Sharks Studio" />
+    <title>Saran / Lapor Bug | AD Sharks Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="feedback.css" />
+  </head>
+  <body class="feedback-page">
+    <header class="site-header feedback-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="AD Sharks Studio, beranda">
+          <img src="assets/Logo/LogoFull.png" alt="" />
+          <span><span class="logo-accent">AD</span> Sharks Studio</span>
+        </a>
+        <a class="feedback-home-link" href="index.html">Kembali ke Home</a>
+      </div>
+    </header>
+
+    <main class="feedback-main">
+      <div class="container feedback-container">
+        <header class="feedback-intro">
+          <p class="eyebrow">Masukan pengunjung</p>
+          <h1>Saran / Lapor Bug</h1>
+          <p>Sampaikan ide atau masalah yang Anda temukan agar pengalaman menggunakan AD Sharks Studio dapat terus diperbaiki.</p>
+          <p class="feedback-setup-note">Form ini belum terhubung ke tujuan pengiriman. Isian tidak akan dikirim sampai tujuan tersebut dikonfigurasi.</p>
+        </header>
+
+        <form class="feedback-form" id="feedback-form">
+          <div class="feedback-field-grid">
+            <div class="feedback-field">
+              <label for="report-name">Nama <span class="field-status optional">Opsional</span></label>
+              <input id="report-name" name="name" type="text" autocomplete="name" />
+            </div>
+            <div class="feedback-field">
+              <label for="report-email">Email <span class="field-status optional">Opsional</span></label>
+              <input id="report-email" name="email" type="email" autocomplete="email" />
+            </div>
+          </div>
+
+          <fieldset class="report-type">
+            <legend>Jenis laporan <span class="field-status required">Wajib</span></legend>
+            <div class="report-type-options">
+              <label><input type="radio" name="type" value="Saran" required /> Saran</label>
+              <label><input type="radio" name="type" value="Lapor Bug" required /> Lapor Bug</label>
+            </div>
+          </fieldset>
+
+          <div class="feedback-field">
+            <label for="report-title">Judul <span class="field-status required">Wajib</span></label>
+            <input id="report-title" name="title" type="text" required />
+            <small class="field-help">Buat judul singkat yang menggambarkan masukan atau masalah, agar mudah dikenali.</small>
+          </div>
+
+          <div class="feedback-field">
+            <label for="report-description">Deskripsi <span class="field-status required">Wajib</span></label>
+            <textarea id="report-description" name="description" rows="6" required aria-describedby="report-guidance"></textarea>
+            <small class="field-help" id="report-guidance">Pilih jenis laporan untuk melihat panduan pengisian.</small>
+          </div>
+
+          <div class="feedback-field-grid">
+            <div class="feedback-field">
+              <label for="report-location">Halaman/fitur yang bermasalah <span class="field-status optional">Opsional</span></label>
+              <input id="report-location" name="location" type="text" placeholder="Contoh: halaman Paket" />
+            </div>
+            <div class="feedback-field">
+              <label for="report-environment">Perangkat/browser <span class="field-status optional">Opsional</span></label>
+              <input id="report-environment" name="environment" type="text" placeholder="Contoh: Android, Chrome" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary feedback-submit" type="submit">Kirim masukan</button>
+          <p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer feedback-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand"><img src="assets/Logo/Logo.png" alt="" /><span>© 2026 AD Sharks Studio</span></p>
+        <nav class="feedback-footer-nav" aria-label="Navigasi footer">
+          <a href="index.html">Home</a>
+          <a href="brief.html">Brief Website</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="feedback-config.js"></script>
+    <script src="feedback.js"></script>
+  </body>
+</html>
