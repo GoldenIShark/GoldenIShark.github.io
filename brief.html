@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id" class="brief-document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Isi brief website AD Sharks Studio untuk membantu kami memahami bisnis dan kebutuhan website Anda." />
+    <meta property="og:site_name" content="AD Sharks Studio" />
+    <title>Brief Website | AD Sharks Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="brief.css" />
+  </head>
+  <body class="brief-page">
+    <header class="site-header brief-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="AD Sharks Studio, beranda">
+          <img src="assets/Logo/LogoFull.png" alt="" />
+          <span><span class="logo-accent">AD</span> Sharks Studio</span>
+        </a>
+        <a class="brief-home-link" href="index.html#packages"><span class="brief-home-long">Kembali ke </span>paket</a>
+      </div>
+    </header>
+
+    <main class="brief-main">
+      <div class="container brief-container">
+        <header class="brief-intro">
+          <p class="eyebrow">AD Sharks Studio</p>
+          <h1>Ceritakan website yang ingin dibuat.</h1>
+          <p>Isi informasi yang sudah Anda ketahui. Bagian desain dan aset boleh dikosongkan bila belum siap.</p>
+          <p class="draft-note" id="draft-status" role="status" aria-live="polite">Draft disimpan di browser ini selama 2 hari.</p>
+        </header>
+
+        <form id="brief-form" novalidate>
+          <section class="brief-section brief-section-a" data-section-title="A. DATA PELANGGAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">A</span><h2>Data Pelanggan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-a-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-a-content">
+              <div class="field-grid">
+                <div class="field"><label for="customer-name" data-summary-label="Nama">Nama lengkap <span class="field-status required">Wajib</span></label><input id="customer-name" name="customerName" type="text" autocomplete="name" aria-required="true" data-summary-label="Nama" /></div>
+                <div class="field"><label for="business-name" data-summary-label="Nama bisnis">Nama bisnis <span class="field-status required">Wajib</span></label><input id="business-name" name="businessName" type="text" autocomplete="organization" aria-required="true" data-summary-label="Nama bisnis" /></div>
+                <div class="field"><label for="customer-whatsapp" data-summary-label="WhatsApp pelanggan">WhatsApp Anda <span class="field-status required">Wajib</span></label><input id="customer-whatsapp" name="customerWhatsapp" type="tel" autocomplete="tel" aria-required="true" data-summary-label="WhatsApp pelanggan" /></div>
+                <div class="field"><label for="customer-email" data-summary-label="Email pelanggan">Email <span class="field-status optional">Opsional</span></label><input id="customer-email" name="customerEmail" type="text" autocomplete="email" data-summary-label="Email pelanggan" /></div>
+                <div class="field"><label for="business-location" data-summary-label="Lokasi">Lokasi <span class="field-status optional">Opsional</span></label><input id="business-location" name="businessLocation" type="text" autocomplete="address-level2" data-summary-label="Lokasi" /></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-b" data-section-title="B. TENTANG BISNIS">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">B</span><h2>Tentang Bisnis</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-b-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-b-content">
+              <div class="field-grid">
+                <div class="field"><label for="business-category" data-summary-label="Kategori bisnis">Kategori bisnis <span class="field-status required">Wajib</span></label><input id="business-category" name="businessCategory" type="text" aria-required="true" data-summary-label="Kategori bisnis" /></div>
+                <div class="field"><label for="business-description" data-summary-label="Deskripsi bisnis">Deskripsi bisnis <span class="field-status required">Wajib</span></label><textarea id="business-description" name="businessDescription" rows="3" aria-required="true" data-summary-label="Deskripsi bisnis"></textarea></div>
+                <div class="field"><label for="products-services" data-summary-label="Produk atau layanan">Produk/Layanan <span class="field-status required">Wajib</span></label><textarea id="products-services" name="productsServices" rows="3" aria-required="true" data-summary-label="Produk atau layanan"></textarea></div>
+                <div class="field"><label for="target-customer" data-summary-label="Target pelanggan">Target pelanggan <span class="field-status optional">Opsional</span></label><textarea id="target-customer" name="targetCustomer" rows="3" data-summary-label="Target pelanggan"></textarea></div>
+                <div class="field"><label for="business-advantage" data-summary-label="Keunggulan bisnis">Keunggulan bisnis <span class="field-status optional">Opsional</span></label><textarea id="business-advantage" name="businessAdvantage" rows="3" data-summary-label="Keunggulan bisnis"></textarea></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-c" data-section-title="C. TUJUAN WEBSITE">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">C</span><h2>Tujuan Website</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-c-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-c-content">
+              <div class="field-grid">
+                <div class="field"><label for="website-goal" data-summary-label="Tujuan website">Tujuan website <span class="field-status required">Wajib</span></label><textarea id="website-goal" name="websiteGoal" rows="3" aria-required="true" data-summary-label="Tujuan website"></textarea></div>
+                <div class="field"><label for="website-target" data-summary-label="Target website">Target website <span class="field-status optional">Opsional</span></label><textarea id="website-target" name="websiteTarget" rows="3" data-summary-label="Target website"></textarea></div>
+                <div class="field"><label for="desired-cta" data-summary-label="CTA yang diinginkan">CTA yang diinginkan <span class="field-status optional">Opsional</span></label><input id="desired-cta" name="desiredCta" type="text" aria-describedby="cta-help" data-summary-label="CTA yang diinginkan" /><small class="field-help" id="cta-help">CTA adalah tindakan yang diharapkan dilakukan pengunjung, misalnya hubungi WhatsApp, pesan produk, daftar, beli, atau lihat katalog.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-d" data-section-title="D. STRUKTUR & FITUR">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">D</span><h2>Struktur &amp; Fitur</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-d-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-d-content">
+              <div class="field-grid">
+                <div class="field"><label for="website-pages" data-summary-label="Halaman yang dibutuhkan">Halaman yang dibutuhkan <span class="field-status required">Wajib</span></label><textarea id="website-pages" name="websitePages" rows="3" aria-required="true" data-summary-label="Halaman yang dibutuhkan"></textarea></div>
+                <div class="field"><label for="desired-features" data-summary-label="Fitur yang diinginkan">Fitur yang diinginkan <span class="field-status optional">Opsional</span></label><textarea id="desired-features" name="desiredFeatures" rows="3" data-summary-label="Fitur yang diinginkan"></textarea></div>
+                <div class="field"><label for="special-needs" data-summary-label="Kebutuhan khusus">Kebutuhan khusus <span class="field-status optional">Opsional</span></label><textarea id="special-needs" name="specialNeeds" rows="3" data-summary-label="Kebutuhan khusus"></textarea></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-e" data-section-title="E. DESAIN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">E</span><h2>Desain</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-e-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-e-content">
+              <div class="field-grid">
+                <div class="field"><label for="design-colors" data-summary-label="Warna">Warna <span class="field-status optional">Opsional</span></label><input id="design-colors" name="designColors" type="text" data-summary-label="Warna" /></div>
+                <div class="field"><label for="design-style" data-summary-label="Gaya atau desain">Gaya/desain <span class="field-status optional">Opsional</span></label><textarea id="design-style" name="designStyle" rows="3" data-summary-label="Gaya atau desain"></textarea></div>
+                <div class="field"><label for="design-reference" data-summary-label="Referensi website">Referensi website <span class="field-status optional">Opsional</span></label><input id="design-reference" name="designReference" type="text" data-summary-label="Referensi website" /></div>
+                <div class="field"><label for="design-animation" data-summary-label="Animasi">Animasi <span class="field-status optional">Opsional</span></label><input id="design-animation" name="designAnimation" type="text" data-summary-label="Animasi" /></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-f" data-section-title="F. KONTEN & ASET">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">F</span><h2>Konten &amp; Aset</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-f-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-f-content">
+              <p class="section-help">Untuk file, Anda dapat menempelkan tautan berbagi atau menuliskan aset yang akan disiapkan.</p>
+              <div class="field-grid">
+                <div class="field"><label for="business-logo" data-summary-label="Logo">Logo <span class="field-status optional">Opsional</span></label><textarea id="business-logo" name="businessLogo" rows="2" data-summary-label="Logo"></textarea></div>
+                <div class="field"><label for="business-images" data-summary-label="Foto atau gambar">Foto/gambar <span class="field-status optional">Opsional</span></label><textarea id="business-images" name="businessImages" rows="2" data-summary-label="Foto atau gambar"></textarea></div>
+                <div class="field"><label for="business-copy" data-summary-label="Teks atau konten">Teks/konten <span class="field-status optional">Opsional</span></label><textarea id="business-copy" name="businessCopy" rows="2" data-summary-label="Teks atau konten"></textarea></div>
+                <div class="field"><label for="product-data" data-summary-label="Data produk">Data produk <span class="field-status optional">Opsional</span></label><textarea id="product-data" name="productData" rows="2" data-summary-label="Data produk"></textarea></div>
+                <div class="field"><label for="product-prices" data-summary-label="Harga produk">Harga produk <span class="field-status optional">Opsional</span></label><textarea id="product-prices" name="productPrices" rows="2" data-summary-label="Harga produk"></textarea></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-g" data-section-title="G. KONTAK">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">G</span><h2>Kontak</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-g-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-g-content">
+              <div class="field-grid">
+                <div class="field"><label for="business-whatsapp" data-summary-label="WhatsApp bisnis">WhatsApp bisnis <span class="field-status required">Wajib</span></label><input id="business-whatsapp" name="businessWhatsapp" type="tel" aria-required="true" data-summary-label="WhatsApp bisnis" /></div>
+                <div class="field"><label for="main-social" data-summary-label="Sosial media utama">Sosial media utama <span class="field-status optional">Opsional</span></label><input id="main-social" name="mainSocial" type="text" data-summary-label="Sosial media utama" /></div>
+                <div class="field"><label for="other-socials" data-summary-label="Media sosial lainnya">Media sosial lainnya <span class="field-status optional">Opsional</span></label><input id="other-socials" name="otherSocials" type="text" data-summary-label="Media sosial lainnya" /></div>
+                <div class="field"><label for="business-email" data-summary-label="Email bisnis">Email <span class="field-status optional">Opsional</span></label><input id="business-email" name="businessEmail" type="text" data-summary-label="Email bisnis" /></div>
+                <div class="field"><label for="business-maps" data-summary-label="Google Maps">Google Maps <span class="field-status optional">Opsional</span></label><input id="business-maps" name="businessMaps" type="text" data-summary-label="Google Maps" /></div>
+                <div class="field"><label for="marketplace" data-summary-label="Marketplace">Marketplace <span class="field-status optional">Opsional</span></label><input id="marketplace" name="marketplace" type="text" data-summary-label="Marketplace" /></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-h" data-section-title="H. DOMAIN & HOSTING">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">H</span><h2>Domain &amp; Hosting</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-h-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-h-content">
+              <div class="field-grid">
+                <div class="field"><label for="domain-choice" data-summary-label="Domain">Domain <span class="field-status optional">Opsional</span></label><input id="domain-choice" name="domainChoice" type="text" placeholder="Contoh: namabisnis.com" data-summary-label="Domain" /></div>
+                <div class="field"><label for="hosting-choice" data-summary-label="Hosting">Hosting <span class="field-status optional">Opsional</span></label><input id="hosting-choice" name="hostingChoice" type="text" data-summary-label="Hosting" /></div>
+                <div class="field"><label for="purchase-help" data-summary-label="Bantuan pembelian domain atau hosting">Membutuhkan bantuan pembelian <span class="field-status optional">Opsional</span></label><select id="purchase-help" name="purchaseHelp" data-summary-label="Bantuan pembelian domain atau hosting"><option value="">Pilih bila diperlukan</option><option value="Ya">Ya</option><option value="Belum yakin">Belum yakin</option><option value="Tidak">Tidak</option></select></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-i" data-section-title="I. DEADLINE & CATATAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">I</span><h2>Deadline &amp; Catatan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-i-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-i-content">
+              <div class="field-grid">
+                <div class="field"><label for="deadline" data-summary-label="Deadline">Deadline <span class="field-status optional">Opsional</span></label><input id="deadline" name="deadline" type="date" data-summary-label="Deadline" /></div>
+                <div class="field"><label for="priority" data-summary-label="Prioritas">Prioritas <span class="field-status optional">Opsional</span></label><select id="priority" name="priority" data-summary-label="Prioritas"><option value="">Pilih bila ada</option><option value="Tampilan">Tampilan</option><option value="Informasi bisnis">Informasi bisnis</option><option value="Kontak dan pemesanan">Kontak dan pemesanan</option><option value="Fitur khusus">Fitur khusus</option><option value="Lainnya">Lainnya</option></select></div>
+                <div class="field"><label for="extra-notes" data-summary-label="Catatan tambahan">Catatan tambahan <span class="field-status optional">Opsional</span></label><textarea id="extra-notes" name="extraNotes" rows="3" data-summary-label="Catatan tambahan"></textarea></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-j" data-section-title="J. PERSETUJUAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">J</span><h2>Persetujuan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-j-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-j-content">
+              <div class="field"><label for="revision-terms" data-summary-label="Ketentuan atau jumlah revisi">Ketentuan/jumlah revisi <span class="field-status required">Wajib</span></label><textarea id="revision-terms" name="revisionTerms" rows="2" aria-required="true" data-summary-label="Ketentuan atau jumlah revisi"></textarea></div>
+              <div class="consent-list">
+                <label class="consent-item" data-summary-label="Persetujuan hasil website masuk portfolio"><input id="portfolio-consent" name="portfolioConsent" type="checkbox" value="Disetujui" aria-required="true" data-summary-label="Persetujuan hasil website masuk portfolio" /><span>Saya menyetujui hasil website dapat dimasukkan ke portfolio AD Sharks Studio. <span class="field-status required">Wajib</span></span></label>
+                <label class="consent-item" data-summary-label="Persetujuan penggunaan aset dari pelanggan"><input id="asset-consent" name="assetConsent" type="checkbox" value="Disetujui" aria-required="true" data-summary-label="Persetujuan penggunaan aset dari pelanggan" /><span>Saya memastikan aset yang saya berikan boleh digunakan untuk website. <span class="field-status required">Wajib</span></span></label>
+                <label class="consent-item" data-summary-label="Persetujuan akhir"><input id="final-consent" name="finalConsent" type="checkbox" value="Disetujui" aria-required="true" data-summary-label="Persetujuan akhir" /><span>Saya menyetujui informasi brief ini sebagai dasar diskusi pengerjaan website. <span class="field-status required">Wajib</span></span></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-k" data-section-title="K. PAKET & BUDGET">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">K</span><h2>Paket &amp; Budget</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-k-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-k-content">
+              <div class="field-grid">
+                <div class="field"><label for="package-choice" data-summary-label="Pilihan paket">Pilihan paket <span class="field-status required">Wajib</span></label><select id="package-choice" name="packageChoice" aria-required="true" data-summary-label="Pilihan paket"><option value="">Pilih paket</option><option value="Basic">Basic</option><option value="Popular">Popular</option><option value="Premium">Premium</option><option value="Custom">Custom</option></select></div>
+                <div class="field"><label for="budget" data-summary-label="Budget">Budget <span class="field-status required">Wajib</span></label><input id="budget" name="budget" type="number" inputmode="numeric" min="100000" step="1000" placeholder="100000" aria-required="true" aria-describedby="budget-help" data-summary-label="Budget" /><small class="field-help" id="budget-help">Minimum Rp100.000. Harga jasa website terpisah dari harga domain dan hosting.</small></div>
+                <div class="field custom-needs-field" id="custom-needs-field" hidden><label for="custom-needs" data-summary-label="Kebutuhan custom">Kebutuhan Custom <span class="field-status optional">Opsional</span></label><textarea id="custom-needs" name="customNeeds" rows="3" data-summary-label="Kebutuhan Custom" disabled></textarea></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="brief-actions">
+            <div class="brief-feedback" id="brief-feedback" role="alert" aria-live="assertive"></div>
+            <div class="brief-action-buttons">
+              <button class="btn btn-secondary reset-button" id="reset-brief" type="button">Reset Brief</button>
+              <button class="btn btn-primary send-button" id="send-brief" type="button">Kirim Brief ke WhatsApp</button>
+            </div>
+            <p class="send-note">Pesan akan disiapkan di WhatsApp. Anda tetap perlu menekan tombol kirim di WhatsApp.</p>
+          </div>
+        </form>
+
+        <details class="brief-review">
+          <summary>Periksa ringkasan brief</summary>
+          <div class="summary-content" id="brief-summary" aria-live="polite"></div>
+        </details>
+      </div>
+    </main>
+
+    <footer class="site-footer brief-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand"><img src="assets/Logo/Logo.png" alt="" /><span>© 2026 AD Sharks Studio</span></p>
+        <a href="index.html">Kembali ke halaman utama</a>
+      </div>
+    </footer>
+
+    <script src="brief.js"></script>
+  </body>
+</html>

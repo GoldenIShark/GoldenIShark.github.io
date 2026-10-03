@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pesanPaket = (namaPaket, harga) => {
     const message = namaPaket === 'Custom'
-      ? 'Halo Shark Studio, saya ingin berkonsultasi mengenai Paket Custom. Saya memiliki kebutuhan website yang ingin saya diskusikan. Domain dapat dibahas atau dipesan secara terpisah.'
-      : `Halo Shark Studio, saya tertarik dengan Paket ${namaPaket} seharga ${harga} untuk jasa pembuatan website. Saya ingin mengetahui informasi lebih lanjut; domain dapat dibahas atau dipesan secara terpisah.`;
+      ? 'Halo AD Sharks Studio, saya ingin berkonsultasi mengenai Paket Custom. Saya memiliki kebutuhan website yang ingin saya diskusikan. Domain dapat dibahas atau dipesan secara terpisah.'
+      : `Halo AD Sharks Studio, saya tertarik dengan Paket ${namaPaket} seharga ${harga} untuk jasa pembuatan website. Saya ingin mengetahui informasi lebih lanjut; domain dapat dibahas atau dipesan secara terpisah.`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };

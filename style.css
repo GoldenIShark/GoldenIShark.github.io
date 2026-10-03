@@ -49,8 +49,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 
 .site-header.scrolled { background: rgba(7, 17, 20, 0.94); border-color: var(--border); box-shadow: 0 8px 26px rgba(0, 0, 0, 0.14); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
-.logo { color: var(--white); font-size: 1.2rem; font-weight: 700; }
-.logo span { color: var(--green); }
+.logo { display: flex; align-items: center; gap: 0.65rem; color: var(--white); font-size: 1.2rem; font-weight: 700; }
+.logo img { width: 58px; height: 58px; border-radius: 9px; background: #fff; object-fit: contain; }
+.logo .logo-accent { color: var(--green); }
 
 .main-nav ul { display: flex; align-items: center; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
 .main-nav a { color: var(--text-secondary); font-weight: 600; transition: color 0.25s ease; }
@@ -430,6 +431,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 .site-footer { padding: 1.3rem 0 2rem; border-top: 1px solid var(--border); background: var(--bg-primary); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .footer-inner p { margin: 0; color: var(--text-secondary); }
+.footer-brand { display: flex; align-items: center; gap: 0.65rem; }
+.footer-brand img { width: 40px; height: 40px; border-radius: 7px; background: #fff; object-fit: contain; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 1rem; color: var(--text-secondary); }
 .footer-nav a:hover { color: var(--green); }
 
