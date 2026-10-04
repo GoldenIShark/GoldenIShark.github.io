@@ -1,3 +1,0 @@
-window.ADSharksFeedbackConfig = {
-  endpoint: '',
-};

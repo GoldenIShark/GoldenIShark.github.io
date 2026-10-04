@@ -36,24 +36,29 @@ html.feedback-document { scroll-behavior: auto; }
 .report-type-options label { display: flex; min-height: 48px; align-items: center; gap: 0.55rem; padding: 0.65rem 0.9rem; border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; }
 .report-type-options label:focus-within { border-color: var(--green); }
 .report-type-options input { width: 18px; height: 18px; margin: 0; accent-color: var(--green); }
+.report-type input:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 .feedback-submit { width: 100%; background: var(--sea-blue); color: var(--white); box-shadow: 0 10px 26px rgba(21, 151, 184, 0.2); cursor: pointer; }
 .feedback-submit:hover, .feedback-submit:focus-visible { background: var(--sea-blue-dark); box-shadow: 0 14px 32px rgba(21, 151, 184, 0.28); }
 .feedback-submit:focus-visible { outline-color: var(--sea-blue); }
-.feedback-status { min-height: 1.5em; margin: 0; color: var(--text-secondary); }
+.feedback-send-note, .feedback-fallback { margin: -0.65rem 0 0; color: var(--text-secondary); font-size: 0.84rem; line-height: 1.55; }
+.feedback-status { min-height: 1.5em; margin: -0.65rem 0 0; color: var(--text-secondary); }
 .feedback-status[data-state="error"] { color: #ffaaaa; }
-.feedback-status[data-state="success"] { color: #70d9b4; }
+.feedback-status[data-state="notice"] { color: #8bdcf0; }
+.feedback-fallback a { color: var(--green); text-decoration: underline; text-underline-offset: 0.15em; }
 .feedback-footer-nav { display: flex; flex-wrap: wrap; gap: 1rem; color: var(--text-secondary); }
-.feedback-footer-nav a:hover { color: var(--green); }
+.feedback-footer-nav a:hover, .feedback-footer-nav a:focus-visible { color: var(--green); }
 
 @media (max-width: 600px) {
-  .feedback-page .container { width: min(100% - 1.25rem, 760px); }
+  .feedback-page .container { width: calc(100% - 1.25rem); max-width: 760px; }
   .feedback-page .header-inner { min-height: 66px; }
   .feedback-page .logo { gap: 0.45rem; font-size: 0.98rem; }
   .feedback-page .logo img { width: 46px; height: 46px; }
   .feedback-home-link { padding: 0.55rem 0.65rem; font-size: 0.88rem; }
+  .feedback-home-long { display: none; }
   .feedback-main { padding: 2.2rem 0 3.5rem; }
   .feedback-intro { margin-bottom: 1.5rem; text-align: left; }
   .feedback-form { gap: 1rem; padding: 1rem 0.8rem; }
   .feedback-field-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .feedback-footer .footer-inner { align-items: flex-start; }
+  .report-type-options { flex-direction: column; }
 }

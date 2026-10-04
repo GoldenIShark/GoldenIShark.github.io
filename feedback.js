@@ -1,11 +1,16 @@
+const FEEDBACK_CONFIG = {
+  email: 'goldenishark22@gmail.com',
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#feedback-form');
   const status = document.querySelector('#feedback-status');
   const guidance = document.querySelector('#report-guidance');
-  const submitButton = form ? form.querySelector('button[type="submit"]') : null;
-  const config = window.ADSharksFeedbackConfig || {};
+  const emailLink = document.querySelector('#feedback-email-link');
 
-  if (!form || !status || !guidance || !submitButton) return;
+  if (!form || !status || !guidance || !emailLink) return;
+
+  emailLink.href = `mailto:${FEEDBACK_CONFIG.email}`;
 
   const updateGuidance = () => {
     const selectedType = form.querySelector('input[name="type"]:checked');
@@ -22,43 +27,77 @@ document.addEventListener('DOMContentLoaded', () => {
     radio.addEventListener('change', updateGuidance);
   });
 
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     status.textContent = '';
     status.removeAttribute('data-state');
 
-    if (!form.reportValidity()) return;
+    const selectedType = form.querySelector('input[name="type"]:checked');
+    const titleField = form.querySelector('#report-title');
+    const descriptionField = form.querySelector('#report-description');
+    const emailField = form.querySelector('#report-email');
 
-    if (typeof config.endpoint !== 'string' || !config.endpoint.trim()) {
-      status.textContent = 'Tujuan pengiriman belum dikonfigurasi. Isian Anda belum dikirim.';
+    if (!selectedType) {
+      status.textContent = 'Pilih jenis laporan: Saran atau Lapor Bug.';
       status.dataset.state = 'error';
+      form.querySelector('input[name="type"]').focus();
       return;
     }
 
-    submitButton.disabled = true;
-    status.textContent = 'Mengirim masukan...';
-
-    try {
-      const report = Object.fromEntries(new FormData(form).entries());
-      const response = await fetch(config.endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(report),
-      });
-
-      if (!response.ok) throw new Error(`Pengiriman gagal (${response.status})`);
-
-      form.reset();
-      updateGuidance();
-      status.textContent = 'Masukan berhasil dikirim. Terima kasih.';
-      status.dataset.state = 'success';
-    } catch (error) {
-      status.textContent = error instanceof Error
-        ? `Masukan belum berhasil dikirim. ${error.message}`
-        : 'Masukan belum berhasil dikirim. Silakan coba kembali.';
+    if (!titleField.value.trim()) {
+      status.textContent = 'Judul wajib diisi. Silakan lengkapi field Judul.';
       status.dataset.state = 'error';
-    } finally {
-      submitButton.disabled = false;
+      titleField.focus();
+      return;
     }
+
+    if (!descriptionField.value.trim()) {
+      status.textContent = 'Deskripsi wajib diisi. Silakan lengkapi field Deskripsi.';
+      status.dataset.state = 'error';
+      descriptionField.focus();
+      return;
+    }
+
+    if (!emailField.validity.valid) {
+      status.textContent = 'Format email belum benar. Periksa kembali field Email atau kosongkan jika tidak ingin dihubungi.';
+      status.dataset.state = 'error';
+      emailField.reportValidity();
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      status.textContent = 'Periksa kembali field wajib yang belum lengkap.';
+      status.dataset.state = 'error';
+      form.reportValidity();
+      return;
+    }
+
+    const report = Object.fromEntries(new FormData(form).entries());
+    const subject = `[${report.type}] ${String(report.title).trim()}`;
+    const optionalFields = [
+      ['Nama', report.name],
+      ['Email', report.email],
+      ['Halaman/Fitur', report.location],
+      ['Perangkat/Browser', report.environment],
+    ];
+    const body = [
+      'Kepada: AD Sharks Studio',
+      '',
+      '=== LAPORAN FEEDBACK ===',
+      '',
+      `Jenis: ${report.type}`,
+      `Judul: ${String(report.title).trim()}`,
+      ...optionalFields
+        .filter(([, value]) => typeof value === 'string' && value.trim() !== '')
+        .map(([label, value]) => `${label}: ${value.trim()}`),
+      '',
+      'Deskripsi:',
+      String(report.description).trim().replace(/\r\n?/g, '\n'),
+    ].join('\r\n');
+    const mailtoUrl = `mailto:${FEEDBACK_CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    status.textContent = 'Aplikasi email akan dibuka. Email belum terkirim sampai Anda menekan Kirim di aplikasi email.';
+    status.dataset.state = 'notice';
+    window.location.href = mailtoUrl;
   });
 });

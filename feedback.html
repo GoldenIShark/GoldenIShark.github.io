@@ -19,7 +19,7 @@
           <img src="assets/Logo/LogoFull.png" alt="" />
           <span><span class="logo-accent">AD</span> Sharks Studio</span>
         </a>
-        <a class="feedback-home-link" href="index.html">Kembali ke Home</a>
+        <a class="feedback-home-link" href="index.html"><span class="feedback-home-long">Kembali ke </span>Home</a>
       </div>
     </header>
 
@@ -29,18 +29,20 @@
           <p class="eyebrow">Masukan pengunjung</p>
           <h1>Saran / Lapor Bug</h1>
           <p>Sampaikan ide atau masalah yang Anda temukan agar pengalaman menggunakan AD Sharks Studio dapat terus diperbaiki.</p>
-          <p class="feedback-setup-note">Form ini belum terhubung ke tujuan pengiriman. Isian tidak akan dikirim sampai tujuan tersebut dikonfigurasi.</p>
+          <p class="feedback-setup-note">Isian hanya digunakan untuk menyusun email di perangkat Anda dan tidak disimpan oleh halaman ini.</p>
         </header>
 
-        <form class="feedback-form" id="feedback-form">
+        <form class="feedback-form" id="feedback-form" novalidate>
           <div class="feedback-field-grid">
             <div class="feedback-field">
               <label for="report-name">Nama <span class="field-status optional">Opsional</span></label>
-              <input id="report-name" name="name" type="text" autocomplete="name" />
+              <input id="report-name" name="name" type="text" autocomplete="name" aria-describedby="report-name-help" />
+              <small class="field-help" id="report-name-help">Masukkan nama Anda jika ingin memperkenalkan diri. Bagian ini boleh dikosongkan.</small>
             </div>
             <div class="feedback-field">
               <label for="report-email">Email <span class="field-status optional">Opsional</span></label>
-              <input id="report-email" name="email" type="email" autocomplete="email" />
+              <input id="report-email" name="email" type="email" autocomplete="email" aria-describedby="report-email-help" />
+              <small class="field-help" id="report-email-help">Masukkan email jika Anda ingin dapat dihubungi kembali mengenai laporan ini.</small>
             </div>
           </div>
 
@@ -54,8 +56,8 @@
 
           <div class="feedback-field">
             <label for="report-title">Judul <span class="field-status required">Wajib</span></label>
-            <input id="report-title" name="title" type="text" required />
-            <small class="field-help">Buat judul singkat yang menggambarkan masukan atau masalah, agar mudah dikenali.</small>
+            <input id="report-title" name="title" type="text" required aria-describedby="report-title-help" />
+            <small class="field-help" id="report-title-help">Berikan judul singkat yang menggambarkan isi laporan atau saran Anda.</small>
           </div>
 
           <div class="feedback-field">
@@ -66,17 +68,21 @@
 
           <div class="feedback-field-grid">
             <div class="feedback-field">
-              <label for="report-location">Halaman/fitur yang bermasalah <span class="field-status optional">Opsional</span></label>
-              <input id="report-location" name="location" type="text" placeholder="Contoh: halaman Paket" />
+              <label for="report-location">Halaman/Fitur <span class="field-status optional">Opsional</span></label>
+              <input id="report-location" name="location" type="text" placeholder="Contoh: halaman Paket" aria-describedby="report-location-help" />
+              <small class="field-help" id="report-location-help">Jika berkaitan dengan halaman atau fitur tertentu, sebutkan bagian yang mengalami masalah atau yang ingin Anda beri saran.</small>
             </div>
             <div class="feedback-field">
-              <label for="report-environment">Perangkat/browser <span class="field-status optional">Opsional</span></label>
-              <input id="report-environment" name="environment" type="text" placeholder="Contoh: Android, Chrome" />
+              <label for="report-environment">Perangkat/Browser <span class="field-status optional">Opsional</span></label>
+              <input id="report-environment" name="environment" type="text" placeholder="Contoh: Android, Chrome" aria-describedby="report-environment-help" />
+              <small class="field-help" id="report-environment-help">Contohnya Android + Chrome, Windows + Chrome, atau perangkat dan browser lain yang Anda gunakan.</small>
             </div>
           </div>
 
-          <button class="btn btn-primary feedback-submit" type="submit">Kirim masukan</button>
+          <button class="btn btn-primary feedback-submit" type="submit">Kirim ke Email</button>
+          <p class="feedback-send-note">Tombol ini akan membuka aplikasi email di perangkat Anda. Silakan periksa kembali isi email sebelum menekan Kirim.</p>
           <p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
+          <p class="feedback-fallback">Aplikasi email tidak ditemukan? Silakan gunakan aplikasi email di perangkat Anda atau <a id="feedback-email-link" href="mailto:goldenishark22@gmail.com">hubungi AD Sharks Studio melalui email</a>.</p>
         </form>
       </div>
     </main>
@@ -87,11 +93,11 @@
         <nav class="feedback-footer-nav" aria-label="Navigasi footer">
           <a href="index.html">Home</a>
           <a href="brief.html">Brief Website</a>
+          <a href="mailto:goldenishark22@gmail.com">Email</a>
         </nav>
       </div>
     </footer>
 
-    <script src="feedback-config.js"></script>
     <script src="feedback.js"></script>
   </body>
 </html>
