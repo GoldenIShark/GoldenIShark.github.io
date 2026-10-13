@@ -1,0 +1,173 @@
+{
+  "id": "rangkuman-skill",
+  "title": "Rangkuman Skill, Alat, dan Referensi",
+  "category": "Referensi",
+  "description": "Daftar sumber yang tersedia di repository dan keputusan awal. Ini bukan persetujuan otomatis untuk menambahkan dependensi.",
+  "updatedAt": "2026-10-10",
+  "sections": [
+    {
+      "title": "Skill repository",
+      "description": "Semua skill berikut ditemukan di .github/skills/. Fungsi diringkas dari nama dan peta skill pada petunjuk repository; buka file sumber sebelum mengikuti prosedurnya untuk suatu tugas.",
+      "items": [
+        {
+          "title": "asset-management",
+          "source": ".github/skills/asset-management/SKILL.md",
+          "function": "Memilih, mengoptimalkan, dan mengelola aset website.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu menjaga aset dan path konsisten.",
+          "limitations": "Perubahan aset dapat merusak referensi jika tidak dilacak.",
+          "decision": "Gunakan saat tugas menyentuh aset; tidak menambahkan dependensi."
+        },
+        {
+          "title": "convert-images-to-webp",
+          "source": ".github/skills/convert-images-to-webp/SKILL.md",
+          "function": "Panduan konversi gambar ke WebP.",
+          "evaluationStatus": "Tersedia; relevansi bergantung pada aset dan konteks.",
+          "benefit": "Optimasi format gambar bila sesuai.",
+          "limitations": "Jangan konversi SVG otomatis atau meratakan GIF animasi; ikuti petunjuk lengkap skill.",
+          "decision": "Gunakan hanya jika konversi relevan dan aset tervalidasi."
+        },
+        {
+          "title": "frontend-development",
+          "source": ".github/skills/frontend-development/SKILL.md",
+          "function": "Implementasi dan pemeliharaan HTML, CSS, dan JavaScript.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Mendorong perubahan kecil sesuai pola proyek.",
+          "limitations": "Bukan alasan untuk menambah framework atau build step.",
+          "decision": "Gunakan untuk perubahan antarmuka yang diminta."
+        },
+        {
+          "title": "github-management",
+          "source": ".github/skills/github-management/SKILL.md",
+          "function": "Pemeriksaan status, diff, staging, commit, dan GitHub.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu menjaga perubahan lokal tetap terpisah.",
+          "limitations": "Perintah destruktif dan staging luas harus dihindari.",
+          "decision": "Gunakan saat tugas melibatkan operasi Git/GitHub."
+        },
+        {
+          "title": "human-ui-design",
+          "source": ".github/skills/human-ui-design/SKILL.md",
+          "function": "Hierarki visual, palet, spacing, keterbacaan, dan UX.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Menjaga konsistensi visual dan kemudahan penggunaan.",
+          "limitations": "Tidak semua tugas memerlukan perubahan visual.",
+          "decision": "Gunakan saat kebutuhan desain/UX relevan."
+        },
+        {
+          "title": "performance",
+          "source": ".github/skills/performance/SKILL.md",
+          "function": "Diagnosis dan optimasi performa website.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Mengarahkan pengukuran pada masalah nyata.",
+          "limitations": "Klaim peningkatan perlu didukung pengukuran.",
+          "decision": "Gunakan saat performa termasuk cakupan."
+        },
+        {
+          "title": "responsive-web",
+          "source": ".github/skills/responsive-web/SKILL.md",
+          "function": "Layout dan navigasi adaptif lintas viewport.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu menentukan dan memeriksa perilaku responsif.",
+          "limitations": "Jangan klaim ukuran viewport sudah diuji tanpa pemeriksaan.",
+          "decision": "Gunakan saat tugas berdampak pada layout responsif."
+        },
+        {
+          "title": "seo-accessibility",
+          "source": ".github/skills/seo-accessibility/SKILL.md",
+          "function": "Metadata, semantik, kontras, keyboard, dan aksesibilitas.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu pemeriksaan aksesibilitas serta SEO dasar.",
+          "limitations": "Audit lengkap memerlukan pemeriksaan yang sesuai, bukan asumsi.",
+          "decision": "Gunakan saat metadata, semantik, atau aksesibilitas relevan."
+        },
+        {
+          "title": "web-animation",
+          "source": ".github/skills/web-animation/SKILL.md",
+          "function": "Penambahan atau pemeriksaan gerak dan transisi web.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Mengarahkan penggunaan gerak yang bertujuan.",
+          "limitations": "Gerak yang tidak diperlukan dapat mengganggu dan menambah beban.",
+          "decision": "Gunakan hanya bila gerak termasuk kebutuhan."
+        },
+        {
+          "title": "website-content",
+          "source": ".github/skills/website-content/SKILL.md",
+          "function": "Penyusunan dan peninjauan konten website.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Menjaga konten tetap jelas dan konsisten.",
+          "limitations": "Fakta bisnis tidak boleh direka.",
+          "decision": "Gunakan untuk perubahan copy/konten."
+        },
+        {
+          "title": "website-maintenance",
+          "source": ".github/skills/website-maintenance/SKILL.md",
+          "function": "Diagnosis dan perbaikan lokal website yang ada.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu menjaga lingkup perubahan dan regresi.",
+          "limitations": "Perlu bukti sebelum menyebut sesuatu sebagai bug.",
+          "decision": "Gunakan untuk pemeliharaan yang diminta."
+        },
+        {
+          "title": "website-planning",
+          "source": ".github/skills/website-planning/SKILL.md",
+          "function": "Perencanaan struktur, konten, tujuan, dan kriteria.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membuat kebutuhan dan prioritas lebih eksplisit.",
+          "limitations": "Perencanaan harus sedalam kebutuhan proyek.",
+          "decision": "Gunakan untuk fitur/website baru atau perubahan besar."
+        },
+        {
+          "title": "website-testing",
+          "source": ".github/skills/website-testing/SKILL.md",
+          "function": "Pemeriksaan fungsi, tampilan, responsivitas, teknis, dan aksesibilitas.",
+          "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
+          "benefit": "Membantu mencatat cakupan pengujian dengan jujur.",
+          "limitations": "Hasil terbatas tidak membuktikan semua browser atau viewport.",
+          "decision": "Gunakan untuk perubahan yang perlu validasi."
+        }
+      ]
+    },
+    {
+      "title": "Teknologi, library, template, dan alat",
+      "items": [
+        {
+          "title": "HTML, CSS, dan Vanilla JavaScript",
+          "source": "index.html, style.css, script.js serta halaman terkait di root dan portofolio/.",
+          "function": "Stack yang tampak digunakan oleh situs statis.",
+          "evaluationStatus": "Digunakan; keberadaan diperiksa pada source proyek utama.",
+          "benefit": "Sesuai static hosting dan menghindari dependensi framework besar.",
+          "limitations": "Fitur yang memerlukan server tidak tersedia hanya dengan stack ini.",
+          "decision": "Pertahankan pola yang ada kecuali kebutuhan baru dan persetujuan mengharuskan perubahan."
+        },
+        {
+          "title": "Git",
+          "source": "Repository lokal dan .github/copilot-instructions.md.",
+          "function": "Melacak perubahan kode dan dokumentasi.",
+          "evaluationStatus": "Digunakan untuk pengelolaan repository.",
+          "benefit": "Menampilkan perubahan dan riwayat.",
+          "limitations": "Status lokal dapat mencakup pekerjaan yang belum selesai; periksa sebelum mengubah.",
+          "decision": "Gunakan perintah non-destruktif; jangan staging atau commit tanpa instruksi."
+        },
+        {
+          "title": "Library/framework pihak ketiga",
+          "source": "Tidak ada dependensi root yang tercatat pada berkas proyek utama yang diperiksa.",
+          "function": "Belum ada kebutuhan/keputusan adopsi yang dicatat.",
+          "evaluationStatus": "Belum dipilih atau dievaluasi untuk penambahan.",
+          "benefit": "Dapat memenuhi kebutuhan khusus jika memang terbukti perlu.",
+          "limitations": "Kompatibilitas, ukuran, keamanan, pemeliharaan, dan build perlu dievaluasi.",
+          "decision": "Jangan menambahkan sebelum ada kebutuhan dan persetujuan."
+        },
+        {
+          "title": "Template UI tambahan",
+          "source": "Belum ada template UI terpisah yang teridentifikasi untuk website utama.",
+          "function": "Belum ditentukan.",
+          "evaluationStatus": "Belum dievaluasi.",
+          "benefit": "Dapat mempercepat pekerjaan jika sesuai kebutuhan.",
+          "limitations": "Risiko duplikasi, aksesibilitas, lisensi, dan ketidakcocokan identitas.",
+          "decision": "Jangan mengadopsi tanpa evaluasi dan pemeriksaan lisensi/kompatibilitas."
+        }
+      ]
+    }
+  ]
+}

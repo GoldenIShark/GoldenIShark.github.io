@@ -1,0 +1,145 @@
+{
+  "id": "daftar-rencana",
+  "title": "Daftar Rencana Pengembangan",
+  "category": "Pengembangan",
+  "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
+  "updatedAt": "2026-10-10",
+  "sections": [
+    {
+      "title": "Belum dimulai atau masih perlu dilanjutkan",
+      "items": [
+        {
+          "id": "REN-001",
+          "title": "Menuntaskan bagian Tentang halaman utama",
+          "goal": "Menampilkan judul, subjudul, dan isi yang disepakati dengan tata letak teknisi-modern.",
+          "priority": "Tinggi",
+          "status": "Sedang dikerjakan",
+          "nextSteps": "Perbaiki judul h2 dan label bagian; periksa hierarki heading, isi, perataan paragraf, serta responsivitas.",
+          "dependencies": "Konfirmasi konten yang diminta; verifikasi halaman setelah perubahan kode.",
+          "resultAndUpdatedAt": "Source berisi subjudul dan tiga paragraf, tetapi h2 masih kosong dan eyebrow masih “Tentang Saya”. Dicatat pada MAS-001. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-002",
+          "title": "Menyempurnakan informasi paket Basic, Popular, Premium, dan Custom",
+          "goal": "Membuat cakupan tiap paket jelas dan konsisten dengan data yang ditampilkan.",
+          "priority": "Tinggi",
+          "status": "Belum dimulai",
+          "nextSteps": "Tinjau batas halaman/fitur, istilah “revisi”, estimasi, dan konsistensi tampilan dengan sumber data.",
+          "dependencies": "Verifikasi data paket dan kesepakatan bisnis; hindari perubahan harga tanpa persetujuan.",
+          "resultAndUpdatedAt": "Nama paket, daftar fitur, estimasi, dan harga tercantum di data/packages.json; kelengkapan cakupan belum dievaluasi. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-003",
+          "title": "Memisahkan biaya jasa, domain, dan hosting",
+          "goal": "Menjelaskan komponen biaya agar pelanggan memahami apa yang termasuk dan terpisah.",
+          "priority": "Sedang",
+          "status": "Belum dimulai",
+          "nextSteps": "Identifikasi informasi biaya yang disetujui, lalu jelaskan biaya jasa, domain, dan hosting secara terpisah.",
+          "dependencies": "Konfirmasi harga serta kondisi tiap paket; jangan mengarang nominal atau layanan hosting.",
+          "resultAndUpdatedAt": "Belum ada rincian biaya terpisah yang dikonfirmasi dalam dokumentasi ini. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-004",
+          "title": "Menetapkan alur revisi satuan berbayar",
+          "goal": "Menyepakati cakupan, harga, dan estimasi untuk setiap revisi sebelum pengerjaan.",
+          "priority": "Tinggi",
+          "status": "Belum dimulai",
+          "nextSteps": "Definisikan cara membedakan koreksi kecil dari halaman/fitur baru; catat persetujuan, status pembayaran, dan hasil di daftar-revisi.",
+          "dependencies": "Kesepakatan bisnis dan pelanggan untuk tiap permintaan; nominal tidak ditetapkan di dokumen ini.",
+          "resultAndUpdatedAt": "Kebijakan pencatatan awal tersedia di daftar-revisi; belum ada harga atau kesepakatan revisi pelanggan tercatat. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-005",
+          "title": "Mengelola daftar pelanggan dan kebutuhan proyek",
+          "goal": "Menyimpan ringkasan kebutuhan pelanggan aktual secara terstruktur dan terbatas.",
+          "priority": "Sedang",
+          "status": "Belum dimulai",
+          "nextSteps": "Isi format pelanggan hanya setelah hubungan dan kebutuhan proyek dikonfirmasi.",
+          "dependencies": "Persetujuan dan kebutuhan aktual; praktik perlindungan data.",
+          "resultAndUpdatedAt": "Format kosong tersedia di daftar-pelanggan; tidak ada data pelanggan fiktif. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-006",
+          "title": "Mencatat permintaan revisi dan status pengerjaan",
+          "goal": "Menyediakan riwayat revisi yang dapat ditautkan ke pelanggan dan proyek.",
+          "priority": "Sedang",
+          "status": "Belum dimulai",
+          "nextSteps": "Gunakan ID revisi dan isi log hanya setelah permintaan nyata diterima.",
+          "dependencies": "ID pelanggan/proyek, cakupan, persetujuan, dan kesepakatan pembayaran.",
+          "resultAndUpdatedAt": "Format serta aturan revisi tersedia di daftar-revisi; belum ada permintaan revisi pelanggan yang tercatat. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-007",
+          "title": "Mengevaluasi paket token revisi untuk masa mendatang",
+          "goal": "Menilai apakah token revisi bermanfaat setelah proses revisi satuan berjalan.",
+          "priority": "Rendah",
+          "status": "Belum dimulai",
+          "nextSteps": "Evaluasi pola permintaan, biaya administrasi, masa berlaku, dan dampaknya bagi pelanggan sebelum merancang paket.",
+          "dependencies": "Data penggunaan nyata dan kebijakan revisi satuan yang disepakati.",
+          "resultAndUpdatedAt": "Rencana masa depan saja; token revisi bukan fitur aktif. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-008",
+          "title": "Mengevaluasi portal login pelanggan",
+          "goal": "Menilai kebutuhan portal untuk status proyek, statistik token, dan riwayat revisi.",
+          "priority": "Rendah",
+          "status": "Belum dimulai",
+          "nextSteps": "Tentukan kebutuhan pengguna serta model akses dan data sebelum memilih arsitektur.",
+          "dependencies": "Keputusan kebutuhan backend dan kajian keamanan pada REN-009; token belum tersedia.",
+          "resultAndUpdatedAt": "Rencana masa depan saja; portal login bukan fitur aktif. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-009",
+          "title": "Mengevaluasi keamanan dan pemeliharaan jika backend dibutuhkan",
+          "goal": "Menilai akses data pelanggan, autentikasi, pencadangan, dan pemeliharaan sebelum backend dibangun.",
+          "priority": "Tinggi",
+          "status": "Belum dimulai",
+          "nextSteps": "Jika backend benar-benar dipertimbangkan, kaji model ancaman, kontrol akses, penyimpanan, pencadangan, pemulihan, dan pemeliharaan sebelum implementasi.",
+          "dependencies": "Kebutuhan backend nyata dan rancangan data; tidak ada backend yang ditambahkan oleh rencana ini.",
+          "resultAndUpdatedAt": "Evaluasi bersyarat; tidak ada portal atau backend pelanggan aktif yang teridentifikasi saat pemeriksaan. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-010",
+          "title": "Menyempurnakan formulir Brief Pelanggan dan Feedback",
+          "goal": "Menilai kejelasan pertanyaan, validasi, privasi, dan alur pengiriman.",
+          "priority": "Sedang",
+          "status": "Belum dimulai",
+          "nextSteps": "Periksa alur dari pengisian sampai tindakan akhir serta teks yang menjelaskan penyimpanan/pengiriman.",
+          "dependencies": "Pemeriksaan interaksi aktual dan keputusan kebutuhan formulir.",
+          "resultAndUpdatedAt": "brief.html/brief.js dan feedback.html/feedback.js tersedia; alur belum diverifikasi end-to-end dalam tugas dokumentasi ini. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-011",
+          "title": "Memeriksa responsivitas, aksesibilitas, performa, dan tautan",
+          "goal": "Menemukan regresi yang dapat memengaruhi pengunjung di viewport dan teknologi bantu yang relevan.",
+          "priority": "Tinggi",
+          "status": "Belum dimulai",
+          "nextSteps": "Jalankan pemeriksaan viewport, keyboard, semantik/kontras, aset, tautan, console, dan perilaku halaman yang terdampak; catat ukuran yang benar-benar diuji.",
+          "dependencies": "Browser/pratinjau dan hasil pengujian aktual; jangan menyimpulkan dari source saja.",
+          "resultAndUpdatedAt": "Belum ada hasil QA lengkap yang dicatat pada pusat dokumentasi ini. Pembaruan 2026-10-10."
+        },
+        {
+          "id": "REN-012",
+          "title": "Memelihara dokumentasi dan pengujian setelah perubahan",
+          "goal": "Menjaga catatan tetap sejalan dengan repository dan pengujian nyata.",
+          "priority": "Sedang",
+          "status": "Belum dimulai",
+          "nextSteps": "Perbarui berkas terkait setelah perubahan fitur; pisahkan temuan source dari hasil runtime dan arsipkan catatan usang.",
+          "dependencies": "Disiplin pembaruan setiap perubahan dan bukti yang dapat ditinjau.",
+          "resultAndUpdatedAt": "Aturan dasar tercantum di README; rutinitas pemeliharaan dan pengujian berkelanjutan belum dibuktikan. Pembaruan 2026-10-10."
+        }
+      ]
+    },
+    {
+      "title": "Selesai",
+      "items": [
+        {
+          "id": "REN-013",
+          "title": "Menyiapkan pusat dokumentasi internal",
+          "result": "Struktur dokumentasi awal dibuat di list/; file dan aturan pembaruan tercantum di README.md. Tidak mengubah kode website.",
+          "updatedAt": "2026-10-10"
+        }
+      ]
+    }
+  ]
+}

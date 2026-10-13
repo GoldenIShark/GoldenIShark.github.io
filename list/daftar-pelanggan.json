@@ -1,0 +1,51 @@
+{
+  "id": "daftar-pelanggan",
+  "title": "Daftar Pelanggan",
+  "category": "Operasional",
+  "description": "Catatan pelanggan hanya setelah hubungan dan kebutuhan proyek dikonfirmasi. Tidak ada data contoh atau pelanggan fiktif.",
+  "updatedAt": null,
+  "privacyNotice": "Catatan pelanggan hanya untuk administrasi internal. Jangan menaruh informasi pribadi, kontak, rahasia, atau data pembayaran sensitif dalam data JSON publik. Repository GitHub Pages dapat dibaca siapa pun; halaman ini bukan tempat penyimpanan privat.",
+  "sections": [
+    {
+      "title": "Kondisi saat ini",
+      "paragraphs": [
+        "Pemeriksaan repository saat dokumen ini dibuat tidak menemukan catatan pelanggan yang dapat dikonfirmasi; hal itu tidak membuktikan bahwa tidak ada pelanggan di luar repository."
+      ],
+      "items": []
+    },
+    {
+      "title": "Status proyek",
+      "lists": [
+        {
+          "title": "Status proyek yang dapat digunakan",
+          "items": ["Calon pelanggan", "Konsultasi", "Menunggu persetujuan", "Pengerjaan", "Selesai", "Dibatalkan"]
+        },
+        {
+          "title": "Status pembayaran yang dapat digunakan jika relevan",
+          "items": ["Belum diketahui", "Belum dibayar", "Sebagian", "Lunas", "Tidak berlaku"]
+        }
+      ],
+      "paragraphs": [
+        "Gunakan status pembayaran hanya berdasarkan konfirmasi. Jangan mencatat rincian rekening, transaksi, atau data keuangan sensitif."
+      ]
+    },
+    {
+      "title": "Format catatan pelanggan",
+      "description": "Gunakan ID pelanggan unik seperti PLG-001, bukan nomor identitas pribadi. Tautkan proyek melalui ID proyek pada daftar-proyek.",
+      "fields": [
+        {"name": "ID pelanggan", "description": "Kode unik, bukan nomor identitas pribadi."},
+        {"name": "Nama/nama panggilan", "description": "Nama yang diperlukan untuk mengelola komunikasi."},
+        {"name": "Bisnis atau proyek", "description": "Nama bisnis atau proyek jika ada."},
+        {"name": "Jenis website", "description": "Jenis website yang dipesan."},
+        {"name": "Tanggal mulai", "description": "Tanggal mulai yang telah dikonfirmasi."},
+        {"name": "Target selesai", "description": "Target yang telah disepakati; jangan mengarang tenggat."},
+        {"name": "Status proyek", "description": "Pilih salah satu status proyek yang telah dikonfirmasi."},
+        {"name": "Status pembayaran (jika relevan)", "description": "Catat hanya status yang telah dikonfirmasi; jangan masukkan detail transaksi."},
+        {"name": "Repository atau demo", "description": "Tautan proyek jika tersedia dan aman dibagikan."},
+        {"name": "Kebutuhan yang dikonfirmasi", "description": "Ringkasan kebutuhan aktual pelanggan."},
+        {"name": "Catatan dan tanggal pembaruan", "description": "Catatan relevan dan tanggal pembaruannya."}
+      ],
+      "items": []
+    }
+  ]
+}

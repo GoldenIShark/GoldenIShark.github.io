@@ -1,0 +1,34 @@
+{
+  "id": "daftar-masalah",
+  "title": "Daftar Masalah",
+  "category": "Pengembangan",
+  "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
+  "updatedAt": "2026-10-10",
+  "sections": [
+    {
+      "title": "Terverifikasi",
+      "description": "Temuan yang dapat ditunjukkan langsung pada source.",
+      "items": [
+        {
+          "id": "MAS-001",
+          "title": "Heading utama section Tentang kosong",
+          "summary": "Eyebrow masih bertuliskan “Tentang Saya”, sementara subjudul berada pada elemen h3.",
+          "impact": "Judul section yang terlihat tidak mencerminkan judul yang diminta dan hierarki heading section tidak lengkap.",
+          "reproduction": "Buka section #about pada source halaman utama; periksa .section-heading: teks eyebrow “Tentang Saya”, h3 berisi subjudul, dan h2 kosong. Ini temuan inspeksi source, bukan klaim uji browser.",
+          "files": ["index.html", "style.css"],
+          "priority": "Sedang",
+          "status": "Terbuka",
+          "resolution": "Belum diperbaiki atau diuji setelah perbaikan.",
+          "relatedPlan": "REN-001"
+        }
+      ]
+    },
+    {
+      "title": "Dugaan yang perlu diperiksa",
+      "paragraphs": [
+        "Belum ada dugaan tambahan yang dicatat. Tambahkan dugaan hanya jika ada gejala atau bukti awal, lalu dokumentasikan cara mereproduksinya sebelum mengubah status menjadi terverifikasi."
+      ],
+      "items": []
+    }
+  ]
+}

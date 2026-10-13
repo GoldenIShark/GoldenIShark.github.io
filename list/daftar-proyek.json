@@ -1,0 +1,93 @@
+{
+  "id": "daftar-proyek",
+  "title": "Daftar Proyek Website",
+  "category": "Operasional",
+  "description": "Proyek yang dicatat berdasarkan file dan folder yang ditemukan di repository. Folder portofolio tidak membuktikan hubungan pelanggan atau status deployment.",
+  "updatedAt": "2026-10-10",
+  "sections": [
+    {
+      "title": "Proyek website",
+      "items": [
+        {
+          "id": "PRJ-INT-001",
+          "title": "Website utama AD Sharks Studio",
+          "websiteType": "Website jasa/portofolio",
+          "purpose": "Informasi layanan, paket, portofolio, brief, feedback, dan kontak.",
+          "status": "Source tersedia; status deployment dan QA belum dikonfirmasi.",
+          "technology": ["HTML", "CSS", "Vanilla JavaScript", "JSON lokal"],
+          "location": "Root repository (index.html, style.css, script.js, data/).",
+          "demo": "Belum dicatat.",
+          "customerRelationship": "Proyek internal; bukan data pelanggan.",
+          "maintenanceNotes": "Kondisi halaman Tentang dicatat sebagai MAS-001."
+        },
+        {
+          "id": "PRJ-DEMO-001",
+          "title": "NEXORA Business",
+          "websiteType": "Demo/portofolio bisnis berdasarkan letak folder dan judul halaman.",
+          "purpose": "Contoh website bertema bisnis.",
+          "status": "File proyek tersedia; status pemeliharaan belum diperiksa.",
+          "technology": ["HTML", "CSS", "JavaScript (berkas ditemukan)"],
+          "location": "portofolio/bisnis/",
+          "demo": "Belum dicatat.",
+          "customerRelationship": "Tidak diketahui; jangan anggap pelanggan.",
+          "maintenanceNotes": "Periksa konten, aset, dan tautan sebelum perubahan."
+        },
+        {
+          "id": "PRJ-DEMO-002",
+          "title": "Proposal Website — Golden Shark",
+          "websiteType": "Template proposal website.",
+          "purpose": "Menyusun proposal yang dapat disesuaikan sebelum dibagikan.",
+          "status": "File dan README tersedia; status deployment belum dikonfirmasi.",
+          "technology": ["HTML", "CSS", "Vanilla JavaScript", "JSON lokal (menurut README proyek)"],
+          "location": "portofolio/proposal/",
+          "demo": "README menyebut tautan luar yang perlu diverifikasi sebelum digunakan.",
+          "customerRelationship": "Tidak diketahui; placeholder klien di template bukan bukti pelanggan.",
+          "maintenanceNotes": "Ikuti instruksi penyesuaian pada README proyek dan cocokkan paket sebelum membagikan proposal."
+        },
+        {
+          "id": "PRJ-DEMO-003",
+          "title": "Ruang Rasa — Demo Shark Studio",
+          "websiteType": "Demo website restoran/makanan.",
+          "purpose": "Memperlihatkan contoh desain frontend restoran.",
+          "status": "README menyatakan proyek demo; status pemeliharaan saat ini belum diperiksa.",
+          "technology": ["HTML", "CSS", "Vanilla JavaScript (menurut README proyek)"],
+          "location": "portofolio/restoran/",
+          "demo": "Belum dicatat.",
+          "customerRelationship": "Demo; README menyebut data restoran/kontak sebagai data demo.",
+          "maintenanceNotes": "README menyatakan tidak ada backend, database, login, API, atau sistem admin."
+        },
+        {
+          "id": "PRJ-DEMO-004",
+          "title": "SMA Cakrawala Nusa",
+          "websiteType": "Demo/portofolio website sekolah berdasarkan letak folder dan judul halaman.",
+          "purpose": "Contoh website bertema sekolah.",
+          "status": "File proyek tersedia; status pemeliharaan belum diperiksa.",
+          "technology": ["HTML", "CSS", "JavaScript (berkas ditemukan)"],
+          "location": "portofolio/sekolah/",
+          "demo": "Belum dicatat.",
+          "customerRelationship": "Tidak diketahui; jangan anggap pelanggan.",
+          "maintenanceNotes": "Periksa konten, aset, dan tautan sebelum perubahan."
+        },
+        {
+          "id": "PRJ-DEMO-005",
+          "title": "NAYA SUPPLY",
+          "websiteType": "Demo/portofolio toko berdasarkan judul halaman.",
+          "purpose": "Contoh website toko.",
+          "status": "File proyek tersedia; status pemeliharaan belum diperiksa.",
+          "technology": ["HTML", "CSS", "JavaScript (berkas ditemukan)"],
+          "location": "portofolio/toko/",
+          "demo": "Belum dicatat.",
+          "customerRelationship": "Tidak diketahui; jangan anggap pelanggan.",
+          "maintenanceNotes": "Periksa konten, aset, dan tautan sebelum perubahan."
+        }
+      ]
+    },
+    {
+      "title": "Proyek pelanggan",
+      "paragraphs": [
+        "Belum ada proyek pelanggan yang dapat dikonfirmasi dari catatan proyek di repository. Catat proyek pelanggan baru hanya setelah dikonfirmasi dan tautkan ke ID pada daftar-pelanggan."
+      ],
+      "items": []
+    }
+  ]
+}

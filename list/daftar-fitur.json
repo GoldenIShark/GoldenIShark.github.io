@@ -1,0 +1,206 @@
+{
+  "id": "daftar-fitur",
+  "title": "Daftar Fitur",
+  "category": "Pengembangan",
+  "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
+  "updatedAt": "2026-10-10",
+  "sections": [
+    {
+      "title": "Tersedia — keberadaan diperiksa di source",
+      "items": [
+        {
+          "id": "FIT-001",
+          "title": "Halaman utama dan bagian layanan",
+          "description": "Halaman utama statis memuat beranda, jasa, alasan memilih layanan, paket, portofolio, dan kontak.",
+          "benefit": "Memberi pengunjung ringkasan layanan dan jalur informasi.",
+          "priority": "Tinggi",
+          "status": "Tersedia di source",
+          "files": ["index.html", "style.css"],
+          "testNotes": "Struktur section dan tautan diperiksa; belum diuji seluruh interaksi."
+        },
+        {
+          "id": "FIT-002",
+          "title": "Navigasi utama responsif",
+          "description": "Tombol menu mengubah kelas menu dan aria-expanded; tautan internal mengarah ke section.",
+          "benefit": "Membantu menemukan bagian situs, khususnya layar sempit.",
+          "priority": "Tinggi",
+          "status": "Tersedia di source",
+          "files": ["index.html", "style.css", "script.js"],
+          "testNotes": "Ada markup, aturan layar kecil, dan handler; belum dilakukan uji keyboard/browser pada semua ukuran."
+        },
+        {
+          "id": "FIT-003",
+          "title": "Daftar proyek portofolio",
+          "description": "Halaman utama menampilkan kartu proyek dan tautan menuju demo yang dirujuknya.",
+          "benefit": "Memberi contoh tampilan proyek.",
+          "priority": "Sedang",
+          "status": "Tersedia di source",
+          "files": ["index.html", "portofolio/"],
+          "testNotes": "Source mencantumkan empat kartu; target dan isi proyek tetap perlu diperiksa saat QA."
+        },
+        {
+          "id": "FIT-004",
+          "title": "Data dan tampilan paket",
+          "description": "JavaScript memuat data/packages.json, merender kartu, dan menyediakan fallback jika pemuatan data gagal.",
+          "benefit": "Menyajikan paket dan jalur pemesanan dari data terpisah.",
+          "priority": "Tinggi",
+          "status": "Tersedia di source",
+          "files": ["data/packages.json", "script.js", "index.html"],
+          "testNotes": "Nama, harga, estimasi, badge, dan daftar fitur ada pada data lokal; ini bukan verifikasi kesesuaian harga dengan kesepakatan bisnis."
+        },
+        {
+          "id": "FIT-005",
+          "title": "Pesan paket melalui WhatsApp",
+          "description": "Handler membuat tautan wa.me dengan isi pesan berdasarkan paket.",
+          "benefit": "Memudahkan calon pelanggan memulai konsultasi atau pemesanan.",
+          "priority": "Tinggi",
+          "status": "Tersedia di source",
+          "files": ["script.js"],
+          "testNotes": "Tautan dan penyusunan pesan terlihat di source; alur aplikasi WhatsApp tidak dijalankan dalam pemeriksaan ini."
+        },
+        {
+          "id": "FIT-006",
+          "title": "Formulir Brief Website",
+          "description": "Formulir mengumpulkan kebutuhan dan menyimpan atau memulihkan draft melalui cookie browser dengan masa kedaluwarsa yang diinformasikan.",
+          "benefit": "Memungkinkan pengunjung menyiapkan brief dan melanjutkan draft di browser yang sama.",
+          "priority": "Sedang",
+          "status": "Tersedia di source",
+          "files": ["brief.html", "brief.js", "brief.css"],
+          "testNotes": "Source menyebut penyimpanan lokal dua hari; privasi dan alur lengkap belum diuji end-to-end. Data tidak dianggap terkirim atau tersimpan di server."
+        },
+        {
+          "id": "FIT-007",
+          "title": "Formulir saran/laporan masalah",
+          "description": "Validasi isi, panduan berdasarkan jenis laporan, lalu membuka aplikasi email melalui mailto:.",
+          "benefit": "Mengarahkan masukan tanpa backend formulir yang teridentifikasi.",
+          "priority": "Sedang",
+          "status": "Tersedia di source",
+          "files": ["feedback.html", "feedback.js", "feedback.css"],
+          "testNotes": "Source menjelaskan email baru terkirim setelah pengguna menekan Kirim di aplikasi email; alur email belum diuji."
+        },
+        {
+          "id": "FIT-008",
+          "title": "Tombol kembali ke atas dan reveal",
+          "description": "JavaScript mengatur tombol kembali ke atas dan mengamati elemen .reveal menggunakan IntersectionObserver.",
+          "benefit": "Memberikan navigasi halaman dan efek tampilan yang sudah ada.",
+          "priority": "Rendah",
+          "status": "Tersedia di source",
+          "files": ["index.html", "style.css", "script.js"],
+          "testNotes": "Ini perilaku source yang ada, bukan fitur baru dari rencana; belum diuji ulang pada semua kondisi."
+        }
+      ]
+    },
+    {
+      "title": "Sedang dikembangkan",
+      "items": [
+        {
+          "id": "FIT-009",
+          "title": "Bagian Tentang teknisi-modern",
+          "description": "Konten baru diminta, tetapi heading h2 pada source yang diperiksa kosong dan eyebrow masih “Tentang Saya”.",
+          "benefit": "Menjelaskan fokus layanan dan batas frontend/backend dengan jelas.",
+          "priority": "Tinggi",
+          "status": "Belum lengkap",
+          "files": ["index.html", "style.css"],
+          "testNotes": "Dicatat sebagai MAS-001; judul akhir, tampilan, dan responsivitas belum lulus verifikasi."
+        }
+      ]
+    },
+    {
+      "title": "Direncanakan",
+      "items": [
+        {
+          "id": "FIT-010",
+          "title": "Revisi satuan berbayar",
+          "description": "Pencatatan revisi dengan cakupan, harga, dan estimasi yang disepakati sebelum mulai.",
+          "benefit": "Membuat ekspektasi revisi jelas per permintaan.",
+          "priority": "Tinggi",
+          "status": "Direncanakan; kebijakan dicatat, implementasi operasional belum ada",
+          "files": ["list/daftar-revisi.json"],
+          "testNotes": "Belum ada permintaan pelanggan atau uji proses tercatat."
+        },
+        {
+          "id": "FIT-011",
+          "title": "Paket token revisi",
+          "description": "Kemungkinan paket token untuk penggunaan mendatang.",
+          "benefit": "Akan dievaluasi setelah kebutuhan penggunaan diketahui.",
+          "priority": "Rendah",
+          "status": "Direncanakan untuk masa depan",
+          "files": [],
+          "testNotes": "Bukan fitur aktif; belum ada implementasi atau pengujian."
+        },
+        {
+          "id": "FIT-012",
+          "title": "Portal login pelanggan",
+          "description": "Portal untuk melihat proyek, statistik token, dan riwayat revisi.",
+          "benefit": "Memberi akses terpusat jika kebutuhan backend kelak disetujui.",
+          "priority": "Rendah",
+          "status": "Direncanakan untuk evaluasi masa depan",
+          "files": [],
+          "testNotes": "Bukan fitur aktif; belum ada portal/backend yang teridentifikasi."
+        }
+      ]
+    },
+    {
+      "title": "Memerlukan evaluasi",
+      "items": [
+        {
+          "id": "FIT-013",
+          "title": "Rincian biaya jasa, domain, dan hosting",
+          "description": "Menjelaskan komponen biaya secara terpisah berdasarkan kebijakan yang disetujui.",
+          "benefit": "Mencegah anggapan keliru bahwa domain atau hosting selalu termasuk.",
+          "priority": "Tinggi",
+          "status": "Perlu evaluasi dan konfirmasi informasi bisnis",
+          "files": ["data/packages.json", "index.html"],
+          "testNotes": "Tidak menambah nominal sebelum dikonfirmasi."
+        },
+        {
+          "id": "FIT-014",
+          "title": "Penyempurnaan informasi paket",
+          "description": "Menilai kejelasan cakupan Basic, Popular, Premium, dan Custom serta istilah revisi/hosting.",
+          "benefit": "Membantu pelanggan membandingkan paket berdasarkan kebutuhan.",
+          "priority": "Tinggi",
+          "status": "Perlu evaluasi",
+          "files": ["data/packages.json", "script.js"],
+          "testNotes": "Data paket ada; kesesuaian ruang lingkup belum dinilai atau disetujui."
+        },
+        {
+          "id": "FIT-015",
+          "title": "Pengembangan Brief dan Feedback",
+          "description": "Menilai pertanyaan, validasi, aksesibilitas, privasi, serta alur pengiriman.",
+          "benefit": "Membuat komunikasi kebutuhan dan laporan lebih jelas.",
+          "priority": "Sedang",
+          "status": "Perlu evaluasi",
+          "files": ["brief.html", "brief.js", "feedback.html", "feedback.js"],
+          "testNotes": "Formulir sudah tampak di source, tetapi belum diuji end-to-end."
+        },
+        {
+          "id": "FIT-016",
+          "title": "QA responsivitas, aksesibilitas, performa, dan tautan",
+          "description": "Pemeriksaan berkala lintas viewport dan alur halaman.",
+          "benefit": "Mengurangi regresi dan meningkatkan keterjangkauan penggunaan.",
+          "priority": "Tinggi",
+          "status": "Perlu evaluasi/pelaksanaan QA",
+          "files": [],
+          "testNotes": "Belum ada laporan pemeriksaan lengkap pada dokumentasi ini."
+        },
+        {
+          "id": "FIT-017",
+          "title": "Keamanan dan privasi fitur backend masa depan",
+          "description": "Evaluasi akses data, autentikasi, pencadangan, dan pemeliharaan jika backend menjadi kebutuhan.",
+          "benefit": "Mengurangi risiko sebelum menyimpan atau menyajikan data pelanggan.",
+          "priority": "Tinggi",
+          "status": "Evaluasi bersyarat, bukan fitur berjalan",
+          "files": [],
+          "testNotes": "Backend pelanggan tidak teridentifikasi di website utama yang diperiksa."
+        }
+      ]
+    },
+    {
+      "title": "Ditunda atau dibatalkan",
+      "paragraphs": [
+        "Belum ada fitur yang secara eksplisit ditandai ditunda atau dibatalkan. Portal dan token berada pada bagian Direncanakan, bukan fitur aktif."
+      ],
+      "items": []
+    }
+  ]
+}

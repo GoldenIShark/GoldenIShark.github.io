@@ -1,0 +1,66 @@
+{
+  "id": "daftar-revisi",
+  "title": "Daftar Revisi",
+  "category": "Operasional",
+  "description": "Aturan awal menggunakan revisi satuan berbayar. Cakupan, harga, dan estimasi disepakati sebelum pengerjaan.",
+  "updatedAt": null,
+  "sections": [
+    {
+      "title": "Aturan awal: revisi satuan berbayar",
+      "lists": [
+        {
+          "items": [
+            "Setiap permintaan revisi dicatat sebagai satu entri dan dinilai tersendiri.",
+            "Sebelum pekerjaan revisi dimulai, sepakati cakupan, harga, estimasi waktu, dan status persetujuannya dengan pelanggan. Jangan mengisi nominal atau estimasi berdasarkan dugaan.",
+            "Perubahan teks, gambar, warna, atau tata letak yang sudah berada dalam ruang lingkup proyek dapat dicatat sebagai revisi kecil. Pastikan klasifikasinya sesuai kesepakatan proyek, bukan aturan otomatis.",
+            "Penambahan halaman, fungsi, integrasi, backend, atau perubahan ruang lingkup yang berarti dicatat sebagai penambahan fitur/halaman dan dinilai terpisah dari revisi kecil.",
+            "Catat status pembayaran hanya berdasarkan konfirmasi. Jangan simpan nomor rekening, detail transaksi, kata sandi, atau data finansial sensitif.",
+            "Paket token revisi dan portal login pelanggan adalah rencana masa depan, bukan bagian dari alur aktif."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Status yang digunakan",
+      "lists": [
+        {
+          "title": "Persetujuan",
+          "items": ["Belum diminta", "Menunggu persetujuan", "Disetujui", "Ditolak", "Tidak berlaku"]
+        },
+        {
+          "title": "Pembayaran",
+          "items": ["Belum diketahui", "Belum dibayar", "Sebagian", "Lunas", "Tidak berlaku"]
+        },
+        {
+          "title": "Pengerjaan",
+          "items": ["Belum dimulai", "Sedang dikerjakan", "Selesai", "Ditunda", "Dibatalkan"]
+        }
+      ]
+    },
+    {
+      "title": "Format catatan revisi",
+      "description": "Gunakan ID unik seperti REV-001. Hubungkan dengan ID pelanggan dan proyek yang telah dikonfirmasi pada daftar-pelanggan dan daftar-proyek.",
+      "fields": [
+        {"name": "ID revisi", "description": "ID unik untuk satu permintaan revisi."},
+        {"name": "ID pelanggan/proyek", "description": "Hubungan dengan catatan pelanggan dan proyek yang telah dikonfirmasi."},
+        {"name": "Tanggal permintaan", "description": "Tanggal permintaan revisi diterima."},
+        {"name": "Deskripsi perubahan", "description": "Perubahan yang diminta pelanggan."},
+        {"name": "Cakupan", "description": "Klasifikasikan sebagai revisi kecil atau fitur/halaman baru sesuai kesepakatan."},
+        {"name": "Estimasi biaya", "description": "Isi hanya setelah biaya disepakati."},
+        {"name": "Persetujuan", "description": "Status persetujuan yang dikonfirmasi."},
+        {"name": "Pembayaran", "description": "Status pembayaran yang dikonfirmasi; jangan masukkan detail transaksi."},
+        {"name": "Pengerjaan", "description": "Status pengerjaan aktual."},
+        {"name": "Tanggal selesai", "description": "Tanggal selesai aktual, jika ada."},
+        {"name": "Catatan hasil", "description": "Ringkasan hasil dan pengujian yang benar-benar dilakukan."}
+      ],
+      "items": []
+    },
+    {
+      "title": "Permintaan revisi tercatat",
+      "paragraphs": [
+        "Belum ada permintaan revisi pelanggan yang terkonfirmasi untuk dicatat. Jangan membuat entri contoh."
+      ],
+      "items": []
+    }
+  ]
+}

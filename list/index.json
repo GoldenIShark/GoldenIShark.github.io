@@ -1,0 +1,55 @@
+{
+  "title": "Katalog Catatan AD Sharks Studio",
+  "description": "Daftar catatan pengembangan yang dapat dibuka melalui pusat catatan.",
+  "notes": [
+    {
+      "id": "daftar-fitur",
+      "title": "Daftar Fitur",
+      "category": "Pengembangan",
+      "description": "Inventaris fitur website berdasarkan kondisi source yang diperiksa.",
+      "file": "list/daftar-fitur.json"
+    },
+    {
+      "id": "daftar-masalah",
+      "title": "Daftar Masalah",
+      "category": "Pengembangan",
+      "description": "Temuan teknis terverifikasi dan dugaan yang masih perlu diperiksa.",
+      "file": "list/daftar-masalah.json"
+    },
+    {
+      "id": "daftar-pelanggan",
+      "title": "Daftar Pelanggan",
+      "category": "Operasional",
+      "description": "Format pencatatan pelanggan yang terkonfirmasi tanpa data pelanggan fiktif.",
+      "file": "list/daftar-pelanggan.json"
+    },
+    {
+      "id": "daftar-proyek",
+      "title": "Daftar Proyek Website",
+      "category": "Operasional",
+      "description": "Website internal dan proyek demo/portofolio yang ditemukan di repository.",
+      "file": "list/daftar-proyek.json"
+    },
+    {
+      "id": "daftar-rencana",
+      "title": "Daftar Rencana Pengembangan",
+      "category": "Pengembangan",
+      "description": "Rencana pengembangan dengan prioritas, status, langkah, dan ketergantungan.",
+      "file": "list/daftar-rencana.json"
+    },
+    {
+      "id": "daftar-revisi",
+      "title": "Daftar Revisi",
+      "category": "Operasional",
+      "description": "Aturan revisi satuan berbayar dan format pencatatan permintaan revisi.",
+      "file": "list/daftar-revisi.json"
+    },
+    {
+      "id": "rangkuman-skill",
+      "title": "Rangkuman Skill, Alat, dan Referensi",
+      "category": "Referensi",
+      "description": "Skill, alat, pustaka, template, dan referensi yang tersedia atau dipertimbangkan.",
+      "file": "list/rangkuman-skill.json"
+    }
+  ]
+}

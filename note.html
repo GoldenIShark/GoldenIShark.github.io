@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pusat catatan pengembangan AD Sharks Studio: rencana, fitur, proyek, dan referensi."
+    />
+    <meta property="og:site_name" content="AD Sharks Studio" />
+    <title>Pusat Catatan | AD Sharks Studio</title>
+    <link rel="stylesheet" href="note.css" />
+    <script src="note.js" defer></script>
+  </head>
+  <body class="note-page">
+    <header class="note-header">
+      <div class="note-container note-header-inner">
+        <a class="note-brand" href="index.html" aria-label="AD Sharks Studio, kembali ke halaman utama">
+          <span class="note-brand-mark" aria-hidden="true">AD</span>
+          <span>AD Sharks Studio</span>
+        </a>
+        <a class="note-home-link" href="index.html">Kembali ke website</a>
+      </div>
+    </header>
+
+    <main class="note-container note-main">
+      <section class="note-intro" aria-labelledby="page-title">
+        <p class="note-eyebrow">Dokumentasi internal</p>
+        <h1 id="page-title">Pusat Catatan AD Sharks Studio</h1>
+        <p class="note-lead">
+          Jelajahi catatan pengembangan, proyek, operasional, dan referensi yang
+          tersimpan di repository.
+        </p>
+        <p class="note-privacy">
+          Catatan di halaman ini dapat dibaca publik melalui GitHub Pages. Jangan
+          menyimpan data pribadi atau rahasia di dalamnya.
+        </p>
+      </section>
+
+      <section id="catalogue-view" class="note-view" aria-labelledby="catalogue-title">
+        <div class="note-section-heading">
+          <div>
+            <p class="note-eyebrow">Katalog</p>
+            <h2 id="catalogue-title" tabindex="-1">Daftar catatan</h2>
+          </div>
+          <p id="catalogue-count" class="note-result-count" aria-live="polite"></p>
+        </div>
+
+        <div class="note-controls">
+          <div class="note-field note-search">
+            <label for="note-search">Cari catatan</label>
+            <input
+              id="note-search"
+              type="search"
+              placeholder="Cari judul, kategori, atau deskripsi"
+              autocomplete="off"
+            />
+          </div>
+          <div class="note-field note-category">
+            <label for="category-filter">Kategori</label>
+            <select id="category-filter">
+              <option value="">Semua kategori</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="catalogue-status" class="note-message" role="status" aria-live="polite">
+          Memuat daftar catatan…
+        </p>
+        <div id="note-cards" class="note-card-grid" aria-label="Kartu catatan"></div>
+        <div id="empty-state" class="note-empty" hidden>
+          <h3>Catatan tidak ditemukan</h3>
+          <p>Coba kata pencarian atau kategori yang berbeda.</p>
+        </div>
+        <div id="catalogue-error" class="note-error" role="alert" hidden>
+          <p id="catalogue-error-message"></p>
+          <button id="retry-catalogue" class="note-button note-button-secondary" type="button">
+            Coba lagi
+          </button>
+        </div>
+      </section>
+
+      <section id="detail-view" class="note-view note-detail" aria-labelledby="detail-title" hidden>
+        <button id="back-to-catalogue" class="note-button note-button-secondary" type="button">
+          Kembali ke Daftar
+        </button>
+        <p id="detail-status" class="note-message" role="status" aria-live="polite"></p>
+        <div id="detail-error" class="note-error" role="alert" hidden>
+          <p id="detail-error-message"></p>
+        </div>
+        <article id="note-detail-content" hidden>
+          <header class="note-detail-header">
+            <p id="detail-category" class="note-category-label"></p>
+            <h2 id="detail-title" tabindex="-1"></h2>
+            <p id="detail-description" class="note-detail-description"></p>
+            <p id="detail-updated" class="note-updated" hidden></p>
+          </header>
+          <p id="detail-privacy" class="note-privacy note-detail-privacy" hidden></p>
+          <div id="detail-sections" class="note-detail-sections"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="note-footer">
+      <div class="note-container note-footer-inner">
+        <p>Dokumentasi AD Sharks Studio</p>
+        <a href="index.html">Kembali ke halaman utama</a>
+      </div>
+    </footer>
+  </body>
+</html>
