@@ -1,0 +1,59 @@
+html.faq-document { scroll-behavior: auto; }
+
+.faq-page { min-height: 100vh; background: var(--bg-primary); }
+.faq-header { background: rgba(7, 17, 20, 0.96); }
+.faq-skip-link { position: absolute; top: 0.5rem; left: 0.5rem; z-index: 1100; padding: 0.7rem 1rem; transform: translateY(-160%); background: var(--bg-card); color: var(--white); }
+.faq-skip-link:focus { transform: translateY(0); }
+.faq-main { padding: 3.5rem 0 5rem; }
+.faq-container { max-width: 880px; }
+.faq-intro { max-width: 680px; margin: 0 auto 2.25rem; text-align: center; }
+.faq-intro .eyebrow { margin-bottom: 0.7rem; }
+.faq-intro h1 { margin: 0 0 0.8rem; color: var(--white); font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; }
+.faq-intro > p:last-child { margin: 0 auto; color: var(--text-secondary); }
+.faq-tools { max-width: 620px; margin: 0 auto 1.5rem; }
+.faq-tools label { display: block; margin-bottom: 0.45rem; color: var(--text-primary); font-weight: 700; }
+.faq-tools input { width: 100%; min-height: 50px; padding: 0.7rem 0.9rem; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 8px; outline: none; background: #09171b; color: var(--text-primary); }
+.faq-tools input::placeholder { color: #a8bcbf; }
+.faq-tools input:focus { border-color: var(--green); box-shadow: 0 0 0 2px rgba(32, 201, 151, 0.15); }
+.faq-tools p { margin: 0.45rem 0 0; color: var(--text-secondary); font-size: 0.85rem; }
+.faq-categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.55rem; margin-bottom: 2.75rem; }
+.faq-categories a { display: inline-flex; min-height: 42px; align-items: center; padding: 0.45rem 0.8rem; border: 1px solid var(--border); border-radius: 7px; color: var(--text-secondary); font-size: 0.92rem; font-weight: 600; }
+.faq-categories a:hover, .faq-categories a:focus-visible { border-color: var(--green); color: var(--green); }
+.faq-category { margin-bottom: 2.5rem; scroll-margin-top: 90px; }
+.faq-category h2 { margin: 0 0 0.5rem; padding-bottom: 0.65rem; border-bottom: 1px solid rgba(32, 201, 151, 0.32); color: var(--white); font-size: 1.35rem; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item[hidden], .faq-category[hidden], .faq-empty[hidden] { display: none; }
+.faq-item summary { position: relative; min-height: 56px; padding: 1rem 2.5rem 1rem 0; color: var(--text-primary); font-weight: 700; line-height: 1.5; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { position: absolute; top: 50%; right: 0.4rem; color: var(--green); content: "+"; font-size: 1.35rem; font-weight: 500; transform: translateY(-50%); }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.faq-item p { max-width: 760px; margin: -0.15rem 2rem 1.1rem 0; color: var(--text-secondary); }
+.faq-item p a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.faq-empty { margin: 0 0 2rem; padding: 1rem; border-left: 3px solid var(--sea-blue); background: var(--bg-secondary); color: var(--text-primary); }
+.faq-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 3rem; padding: 1.5rem; border: 1px solid rgba(32, 201, 151, 0.2); border-radius: 10px; background: rgba(16, 35, 41, 0.8); }
+.faq-contact > div { flex: 1 1 100%; }
+.faq-contact .eyebrow { margin-bottom: 0.45rem; }
+.faq-contact h2 { margin: 0; color: var(--white); font-size: 1.25rem; line-height: 1.35; }
+.faq-contact .btn { flex: 1 1 190px; }
+.faq-footer .footer-inner { align-items: flex-start; }
+
+@media (min-width: 640px) {
+  .faq-contact { padding: 1.75rem; }
+  .faq-contact > div { flex: 1 1 100%; }
+}
+
+@media (max-width: 600px) {
+  .faq-page .container { width: min(100% - 1.25rem, 880px); }
+  .faq-page .header-inner { min-height: 66px; }
+  .faq-page .logo { gap: 0.45rem; font-size: 0.98rem; }
+  .faq-page .logo img { width: 46px; height: 46px; }
+  .faq-main { padding: 2.2rem 0 3.5rem; }
+  .faq-intro { margin-bottom: 1.5rem; text-align: left; }
+  .faq-intro h1 { font-size: 2rem; }
+  .faq-categories { justify-content: flex-start; margin-bottom: 2rem; }
+  .faq-category { margin-bottom: 2rem; }
+  .faq-contact { align-items: stretch; padding: 1.1rem; }
+  .faq-contact .btn { flex-basis: 100%; }
+  .faq-footer .footer-inner { align-items: flex-start; }
+}
