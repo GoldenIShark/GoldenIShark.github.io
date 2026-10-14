@@ -15,7 +15,7 @@
           "purpose": "Informasi layanan, paket, portofolio, brief, feedback, dan kontak.",
           "status": "Source tersedia; status deployment dan QA belum dikonfirmasi.",
           "technology": ["HTML", "CSS", "Vanilla JavaScript", "JSON lokal"],
-          "location": "Root repository (index.html, style.css, script.js, data/).",
+          "location": "Root repository (index.html, css/, js/, data/).",
           "demo": "Belum dicatat.",
           "customerRelationship": "Proyek internal; bukan data pelanggan.",
           "maintenanceNotes": "Kondisi halaman Tentang dicatat sebagai MAS-001."

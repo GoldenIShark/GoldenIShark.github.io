@@ -204,8 +204,10 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
-# Keep the site's JSON documentation despite the Python `list/` ignore rule.
+# Keep site documentation despite the Python `list/` ignore rule.
 !/list/
+!/docs/list/
+!/docs/list/**
 
 # Ruff stuff:
 .ruff_cache/

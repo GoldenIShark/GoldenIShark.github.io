@@ -133,7 +133,7 @@
       "items": [
         {
           "title": "HTML, CSS, dan Vanilla JavaScript",
-          "source": "index.html, style.css, script.js serta halaman terkait di root dan portofolio/.",
+          "source": "index.html, css/, js/, serta halaman terkait di root dan portofolio/.",
           "function": "Stack yang tampak digunakan oleh situs statis.",
           "evaluationStatus": "Digunakan; keberadaan diperiksa pada source proyek utama.",
           "benefit": "Sesuai static hosting dan menghindari dependensi framework besar.",

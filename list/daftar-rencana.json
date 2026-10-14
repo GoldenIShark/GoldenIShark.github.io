@@ -106,7 +106,7 @@
           "status": "Belum dimulai",
           "nextSteps": "Periksa alur dari pengisian sampai tindakan akhir serta teks yang menjelaskan penyimpanan/pengiriman.",
           "dependencies": "Pemeriksaan interaksi aktual dan keputusan kebutuhan formulir.",
-          "resultAndUpdatedAt": "brief.html/brief.js dan feedback.html/feedback.js tersedia; alur belum diverifikasi end-to-end dalam tugas dokumentasi ini. Pembaruan 2026-10-10."
+          "resultAndUpdatedAt": "brief.html dengan js/brief.js dan feedback.html dengan js/feedback.js tersedia; alur belum diverifikasi end-to-end dalam tugas dokumentasi ini. Pembaruan 2026-10-10."
         },
         {
           "id": "REN-011",

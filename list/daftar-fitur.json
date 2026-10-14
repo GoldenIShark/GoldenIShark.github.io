@@ -15,7 +15,7 @@
           "benefit": "Memberi pengunjung ringkasan layanan dan jalur informasi.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
-          "files": ["index.html", "style.css"],
+          "files": ["index.html", "css/style.css"],
           "testNotes": "Struktur section dan tautan diperiksa; belum diuji seluruh interaksi."
         },
         {
@@ -25,7 +25,7 @@
           "benefit": "Membantu menemukan bagian situs, khususnya layar sempit.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
-          "files": ["index.html", "style.css", "script.js"],
+          "files": ["index.html", "css/style.css", "js/script.js"],
           "testNotes": "Ada markup, aturan layar kecil, dan handler; belum dilakukan uji keyboard/browser pada semua ukuran."
         },
         {
@@ -45,7 +45,7 @@
           "benefit": "Menyajikan paket dan jalur pemesanan dari data terpisah.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
-          "files": ["data/packages.json", "script.js", "index.html"],
+          "files": ["data/packages.json", "js/script.js", "index.html"],
           "testNotes": "Nama, harga, estimasi, badge, dan daftar fitur ada pada data lokal; ini bukan verifikasi kesesuaian harga dengan kesepakatan bisnis."
         },
         {
@@ -55,7 +55,7 @@
           "benefit": "Memudahkan calon pelanggan memulai konsultasi atau pemesanan.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
-          "files": ["script.js"],
+          "files": ["js/script.js"],
           "testNotes": "Tautan dan penyusunan pesan terlihat di source; alur aplikasi WhatsApp tidak dijalankan dalam pemeriksaan ini."
         },
         {
@@ -65,7 +65,7 @@
           "benefit": "Memungkinkan pengunjung menyiapkan brief dan melanjutkan draft di browser yang sama.",
           "priority": "Sedang",
           "status": "Tersedia di source",
-          "files": ["brief.html", "brief.js", "brief.css"],
+          "files": ["brief.html", "js/brief.js", "css/brief.css"],
           "testNotes": "Source menyebut penyimpanan lokal dua hari; privasi dan alur lengkap belum diuji end-to-end. Data tidak dianggap terkirim atau tersimpan di server."
         },
         {
@@ -75,7 +75,7 @@
           "benefit": "Mengarahkan masukan tanpa backend formulir yang teridentifikasi.",
           "priority": "Sedang",
           "status": "Tersedia di source",
-          "files": ["feedback.html", "feedback.js", "feedback.css"],
+          "files": ["feedback.html", "js/feedback.js", "css/feedback.css"],
           "testNotes": "Source menjelaskan email baru terkirim setelah pengguna menekan Kirim di aplikasi email; alur email belum diuji."
         },
         {
@@ -85,7 +85,7 @@
           "benefit": "Memberikan navigasi halaman dan efek tampilan yang sudah ada.",
           "priority": "Rendah",
           "status": "Tersedia di source",
-          "files": ["index.html", "style.css", "script.js"],
+          "files": ["index.html", "css/style.css", "js/script.js"],
           "testNotes": "Ini perilaku source yang ada, bukan fitur baru dari rencana; belum diuji ulang pada semua kondisi."
         }
       ]
@@ -100,7 +100,7 @@
           "benefit": "Menjelaskan fokus layanan dan batas frontend/backend dengan jelas.",
           "priority": "Tinggi",
           "status": "Belum lengkap",
-          "files": ["index.html", "style.css"],
+          "files": ["index.html", "css/style.css"],
           "testNotes": "Dicatat sebagai MAS-001; judul akhir, tampilan, dan responsivitas belum lulus verifikasi."
         }
       ]
@@ -160,7 +160,7 @@
           "benefit": "Membantu pelanggan membandingkan paket berdasarkan kebutuhan.",
           "priority": "Tinggi",
           "status": "Perlu evaluasi",
-          "files": ["data/packages.json", "script.js"],
+          "files": ["data/packages.json", "js/script.js"],
           "testNotes": "Data paket ada; kesesuaian ruang lingkup belum dinilai atau disetujui."
         },
         {
@@ -170,7 +170,7 @@
           "benefit": "Membuat komunikasi kebutuhan dan laporan lebih jelas.",
           "priority": "Sedang",
           "status": "Perlu evaluasi",
-          "files": ["brief.html", "brief.js", "feedback.html", "feedback.js"],
+          "files": ["brief.html", "js/brief.js", "feedback.html", "js/feedback.js"],
           "testNotes": "Formulir sudah tampak di source, tetapi belum diuji end-to-end."
         },
         {
