@@ -1,4 +1,4 @@
-# Proposal Digital — Golden Shark
+# Proposal Digital — NFShark
 
 Template website proposal untuk menawarkan layanan desain dan pengembangan website. Dibuat dengan HTML, CSS, dan Vanilla JavaScript; tidak membutuhkan framework, build step, atau dependensi tambahan.
 
@@ -47,6 +47,6 @@ Ilustrasi browser dan preview portofolio dibuat dengan CSS; folder aset disediak
 
 ## Perhatian
 
-- Tautan pada kartu portofolio dan GitHub Pages membuka situs publik Golden Shark; tautan tersebut memerlukan koneksi internet dan bukan bagian dari salinan mandiri template. Ganti URL-nya jika demo proyek dipindahkan.
+- Tautan pada kartu portofolio dan GitHub Pages membuka situs publik eksternal; periksa tujuan dan kepemilikan URL sebelum membagikan proposal, lalu perbarui jika alamat tujuan berubah.
 - Fitur di daftar hasil merupakan bahan konfirmasi. Backend/server, sistem login, dashboard admin, database, API, pembayaran daring, atau sistem kompleks tidak termasuk cakupan otomatis.
 - Placeholder dan konten contoh harus ditinjau sebelum proposal dikirim kepada klien.

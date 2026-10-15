@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     detailRequest += 1;
     detailView.hidden = true;
     catalogueView.hidden = false;
-    document.title = 'Pusat Catatan | AD Sharks Studio';
+    document.title = 'Pusat Catatan | NFShark';
     renderCatalog();
     document.querySelector('#catalogue-title').focus({ preventScroll: true });
   };

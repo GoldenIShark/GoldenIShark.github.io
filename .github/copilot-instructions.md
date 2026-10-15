@@ -1,7 +1,7 @@
 # Petunjuk Copilot untuk repository HOME
 
 ## Konteks proyek
-- Ini adalah situs Shark Studio berbahasa Indonesia. Halaman utama berada di `index.html`; interaksi di `script.js`; gaya di `style.css`; aset situs utama berada di `assets/`.
+- Ini adalah situs NFShark berbahasa Indonesia. Halaman utama berada di `index.html`; interaksi di `script.js`; gaya di `style.css`; aset situs utama berada di `assets/`.
 - `portofolio/` berisi situs-situs portofolio yang dapat memiliki struktur dan aset masing-masing. Perlakukan setiap subfolder situs sebagai proyek mandiri dan periksa struktur aktual sebelum mengubahnya.
 - Deliverable utama adalah website statis/display-only yang cocok di-hosting pada static hosting. Gunakan HTML, CSS, dan Vanilla JavaScript; pertahankan implementasi situs yang ada.
 - Jangan memakai framework atau library besar kecuali benar-benar diperlukan untuk memenuhi kebutuhan yang dinyatakan. Jelaskan kebutuhan tersebut dan dapatkan persetujuan sebelum menambahkannya; jangan menambahkan paket, dependensi, backend, atau build step secara otomatis.

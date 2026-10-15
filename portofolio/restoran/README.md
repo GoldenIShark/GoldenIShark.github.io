@@ -1,6 +1,6 @@
-# Ruang Rasa — Demo Portfolio Shark Studio
+# Ruang Rasa — Demo Portfolio NFShark
 
-Demo website restoran/toko makanan modern untuk menunjukkan kemampuan frontend Shark Studio.
+Demo website restoran/toko makanan modern untuk menunjukkan kemampuan frontend NFShark.
 
 ## Teknologi
 

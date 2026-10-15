@@ -1,6 +1,6 @@
 # SMA Cakrawala Nusa
 
-Demo website sekolah modern untuk portofolio Shark Studio.
+Demo website sekolah modern untuk portofolio NFShark.
 
 ## Catatan
 

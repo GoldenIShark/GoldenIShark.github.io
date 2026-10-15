@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedType && selectedType.value === 'Lapor Bug') {
       guidance.textContent = 'Jelaskan masalah yang Anda temukan, apa yang terjadi, dan jika memungkinkan langkah yang dilakukan sebelum masalah muncul.';
     } else if (selectedType) {
-      guidance.textContent = 'Jelaskan ide atau perubahan yang menurut Anda dapat membuat AD Sharks Studio lebih mudah digunakan.';
+      guidance.textContent = 'Jelaskan ide atau perubahan yang menurut Anda dapat membuat NFShark lebih mudah digunakan.';
     } else {
       guidance.textContent = 'Pilih jenis laporan untuk melihat panduan pengisian.';
     }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Perangkat/Browser', report.environment],
     ];
     const body = [
-      'Kepada: AD Sharks Studio',
+      'Kepada: NFShark',
       '',
       '=== LAPORAN FEEDBACK ===',
       '',

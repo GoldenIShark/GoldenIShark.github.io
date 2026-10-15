@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const createWhatsappMessage = () => {
-    const lines = ['BRIEF WEBSITE - AD SHARKS STUDIO', ''];
+    const lines = ['BRIEF WEBSITE - NFShark', ''];
     form.querySelectorAll('.brief-section').forEach((section) => {
       const sectionLines = [];
       section.querySelectorAll('input, textarea, select').forEach((control) => {

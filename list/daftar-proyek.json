@@ -10,7 +10,7 @@
       "items": [
         {
           "id": "PRJ-INT-001",
-          "title": "Website utama AD Sharks Studio",
+          "title": "Website utama NFShark",
           "websiteType": "Website jasa/portofolio",
           "purpose": "Informasi layanan, paket, portofolio, brief, feedback, dan kontak.",
           "status": "Source tersedia; status deployment dan QA belum dikonfirmasi.",
@@ -34,7 +34,7 @@
         },
         {
           "id": "PRJ-DEMO-002",
-          "title": "Proposal Website — Golden Shark",
+          "title": "Proposal Website — NFShark",
           "websiteType": "Template proposal website.",
           "purpose": "Menyusun proposal yang dapat disesuaikan sebelum dibagikan.",
           "status": "File dan README tersedia; status deployment belum dikonfirmasi.",
@@ -46,7 +46,7 @@
         },
         {
           "id": "PRJ-DEMO-003",
-          "title": "Ruang Rasa — Demo Shark Studio",
+          "title": "Ruang Rasa — Demo NFShark",
           "websiteType": "Demo website restoran/makanan.",
           "purpose": "Memperlihatkan contoh desain frontend restoran.",
           "status": "README menyatakan proyek demo; status pemeliharaan saat ini belum diperiksa.",

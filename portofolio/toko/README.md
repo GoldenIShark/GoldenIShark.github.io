@@ -1,4 +1,4 @@
-# Demo Website Toko - Shark Studio
+# Demo Website Toko - NFShark
 
 Jenis:
 Website toko / product showcase.
@@ -24,7 +24,7 @@ Fitur:
 - Responsive navigation
 
 Catatan:
-Website ini adalah demo portfolio Shark Studio.
+Website ini adalah demo portfolio NFShark.
 
 Produk, harga, kontak, dan informasi toko merupakan data fiktif.
 

@@ -1,6 +1,6 @@
 ---
 name: Website Developer
-description: "Rencanakan, bangun, audit, uji, dan pelihara situs Shark Studio atau situs dalam portofolio dengan perubahan terfokus, responsif, mudah diakses, dan ringan."
+description: "Rencanakan, bangun, audit, uji, dan pelihara situs NFShark atau situs dalam portofolio dengan perubahan terfokus, responsif, mudah diakses, dan ringan."
 tools: [read, edit, search, execute]
 user-invocable: true
 argument-hint: Jelaskan situs/halaman, tujuan, audiens, dan perubahan atau hasil yang diinginkan.

@@ -4,7 +4,7 @@ const CONFIG = {
 };
 
 const defaultWhatsappMessage =
-  "Halo Golden Shark, saya tertarik dengan proposal website dan ingin mendiskusikan project saya.";
+  "Halo NFShark, saya tertarik dengan proposal website dan ingin mendiskusikan project saya.";
 
 function createWhatsappUrl(message = defaultWhatsappMessage) {
   const number = CONFIG.whatsappNumber.replace(/\D/g, "");
