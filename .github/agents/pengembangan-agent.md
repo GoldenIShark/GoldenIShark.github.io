@@ -1,7 +1,7 @@
 ---
 name: Pengembangan Agent
 description: "Perancang pengembangan website NFShark. Menganalisis ide penambahan atau peningkatan, menyusun rencana bertahap, dan menyiapkan prompt tugas yang terarah untuk agent pelaksana."
-tools: [read, search]
+tools: [read, agent, search]
 user-invocable: true
 argument-hint: "Jelaskan ide, masalah, atau peningkatan website NFShark yang ingin direncanakan. Sebutkan tujuan atau batasan jika ada."
 ---

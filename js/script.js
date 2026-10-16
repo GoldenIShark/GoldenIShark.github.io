@@ -34,8 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
           <span>${domainMessage}</span>
         </div>
         ${pkg.customNote ? `<p class="package-custom-note">${pkg.customNote}</p>` : ''}
-        <a href="${pkg.href}" data-package-name="${pkg.name}" data-package-price="${pkg.price}" class="btn package-order ${pkg.name === 'Custom' ? 'btn-secondary' : 'btn-primary'}">${pkg.button}</a>
-        <a href="brief.html?paket=${encodeURIComponent(pkg.name)}" class="btn btn-secondary package-brief">Pesan dengan Brief</a>
+        <details class="package-order-options">
+          <summary class="btn ${pkg.name === 'Custom' ? 'btn-secondary' : 'btn-primary'}">${pkg.button}</summary>
+          <div class="package-order-choices">
+            <a href="${pkg.href}" data-package-name="${pkg.name}" data-package-price="${pkg.price}" class="btn btn-primary package-order">WhatsApp</a>
+            <a href="brief.html?paket=${encodeURIComponent(pkg.name)}" class="btn btn-secondary package-brief">Pesan dengan Brief</a>
+          </div>
+        </details>
       </article>
     `;
   };
