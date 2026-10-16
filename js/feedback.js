@@ -80,20 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Halaman/Fitur', report.location],
       ['Perangkat/Browser', report.environment],
     ];
-    const body = [
+    const contextFields = optionalFields
+      .filter(([, value]) => typeof value === 'string' && value.trim() !== '')
+      .map(([label, value]) => `${label}: ${value.trim()}`);
+    const bodySections = [
       'Kepada: NFShark',
-      '',
-      '=== LAPORAN FEEDBACK ===',
-      '',
-      `Jenis: ${report.type}`,
-      `Judul: ${String(report.title).trim()}`,
-      ...optionalFields
-        .filter(([, value]) => typeof value === 'string' && value.trim() !== '')
-        .map(([label, value]) => `${label}: ${value.trim()}`),
-      '',
-      'Deskripsi:',
-      String(report.description).trim().replace(/\r\n?/g, '\n'),
-    ].join('\r\n');
+      [
+        '=== IDENTITAS LAPORAN ===',
+        `Jenis: ${report.type}`,
+        `Judul: ${String(report.title).trim()}`,
+      ].join('\r\n'),
+    ];
+
+    if (contextFields.length > 0) {
+      bodySections.push([
+        '=== KONTEKS ===',
+        ...contextFields,
+      ].join('\r\n'));
+    }
+
+    bodySections.push([
+      '=== DESKRIPSI ===',
+      String(report.description).replace(/\r\n?/g, '\n'),
+    ].join('\r\n'));
+
+    const body = bodySections.join('\r\n\r\n');
     const mailtoUrl = `mailto:${FEEDBACK_CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     status.textContent = 'Aplikasi email akan dibuka. Email belum terkirim sampai Anda menekan Kirim di aplikasi email.';
