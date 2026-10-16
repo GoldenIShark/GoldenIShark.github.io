@@ -115,11 +115,50 @@
 
         <section class="faq-contact" aria-labelledby="faq-contact-heading">
           <div>
-            <p class="eyebrow">Belum menemukan jawaban?</p>
-            <h2 id="faq-contact-heading">Mari bahas kebutuhan website Anda.</h2>
+            <p class="eyebrow">Pusat Bantuan</p>
+            <h2 id="faq-contact-heading">Belum Menemukan Jawaban?</h2>
+            <p class="faq-question-description">Kirimkan pertanyaan yang belum terjawab di halaman ini. Pertanyaanmu akan kami tinjau dan dapat dijadikan tambahan FAQ agar membantu pelanggan lainnya.</p>
           </div>
-          <a class="btn btn-primary" href="brief.html">Isi Brief Website</a>
-          <a class="btn btn-secondary" href="https://wa.me/6289630984238" target="_blank" rel="noreferrer">Hubungi WhatsApp</a>
+
+          <form class="faq-question-form" id="faq-question-form" novalidate>
+            <div class="faq-question-field-grid">
+              <div class="faq-question-field">
+                <label for="faq-question-name">Nama <span class="faq-field-optional">Opsional</span></label>
+                <input id="faq-question-name" name="name" type="text" autocomplete="name" />
+              </div>
+              <div class="faq-question-field">
+                <label for="faq-question-email">Alamat email <span class="faq-field-optional">Opsional</span></label>
+                <input id="faq-question-email" name="email" type="email" autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="faq-question-field">
+              <label for="faq-question-category">Kategori pertanyaan <span class="faq-field-required">Wajib</span></label>
+              <select id="faq-question-category" name="category" required>
+                <option value="">Pilih kategori</option>
+                <option value="Desain">Desain</option>
+                <option value="Revisi">Revisi</option>
+                <option value="Harga">Harga</option>
+                <option value="Lisensi/Penyerahan">Lisensi/Penyerahan</option>
+                <option value="Pemeliharaan">Pemeliharaan</option>
+                <option value="Bantuan">Bantuan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="faq-question-field">
+              <label for="faq-question-message">Pertanyaan <span class="faq-field-required">Wajib</span></label>
+              <textarea id="faq-question-message" name="question" rows="6" required></textarea>
+            </div>
+
+            <div class="faq-question-consent">
+              <input id="faq-question-consent" name="publicationConsent" type="checkbox" required />
+              <label for="faq-question-consent">Saya memahami bahwa pertanyaan dapat diringkas, disunting, dan ditambahkan ke halaman FAQ publik tanpa menampilkan nama atau alamat email saya.</label>
+            </div>
+
+            <p class="faq-question-status" id="faq-question-status" role="status" aria-live="polite" data-state="notice">Tombol ini akan membuka aplikasi email di perangkatmu. Pertanyaan belum terkirim sampai kamu menekan Kirim di aplikasi email.</p>
+            <button class="btn btn-primary faq-question-submit" type="submit">Kirim Pertanyaan</button>
+          </form>
         </section>
       </div>
     </main>
