@@ -7,10 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
   const siteHeader = document.querySelector('.site-header');
   const packageList = document.querySelector('#package-list');
+  const packageStatus = document.querySelector('#package-status');
   const portfolioGrid = document.querySelector('.portfolio-grid');
   const portfolioToggle = document.querySelector('.portfolio-toggle');
   const portfolioCards = portfolioGrid ? Array.from(portfolioGrid.querySelectorAll('.portfolio-card')) : [];
   const portfolioLimit = 10;
+  const previewDialog = document.querySelector('#portfolio-preview');
+  const previewFrame = document.querySelector('#preview-dialog-frame');
+  const previewTitle = document.querySelector('#preview-dialog-title');
+  const previewStatus = document.querySelector('#preview-dialog-status');
+  const previewDirectLink = document.querySelector('#preview-dialog-direct-link');
+  const previewCloseButton = document.querySelector('.preview-dialog-close');
+  let activePreviewTrigger = null;
+  let previewLoadTimeout = null;
 
   const renderPackageCard = (pkg) => {
     const tierClass = `package-card--${pkg.name.toLowerCase()}`;
@@ -64,6 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const observer = 'IntersectionObserver' in window
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('reveal-pending');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.add('reveal-pending');
+        }
+      });
+    }, { threshold: 0.15 })
+    : null;
+
   // Toggle hamburger menu pada layar mobile
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', () => {
@@ -84,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (card.hidden) {
           card.classList.remove('visible');
         } else if (showAll && !card.classList.contains('visible')) {
-          observer.observe(card);
+          observer?.observe(card);
         }
       });
       portfolioToggle.setAttribute('aria-expanded', String(showAll));
@@ -104,6 +128,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  if (previewDialog && previewFrame && previewTitle && previewStatus && previewDirectLink && previewCloseButton) {
+    document.querySelectorAll('.portfolio-preview-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const demoUrl = trigger.dataset.demoUrl;
+        const demoTitle = trigger.dataset.demoTitle;
+        if (!demoUrl || !demoTitle || typeof previewDialog.showModal !== 'function') return;
+
+        activePreviewTrigger = trigger;
+        previewTitle.textContent = demoTitle;
+        previewFrame.title = `Pratinjau ${demoTitle}`;
+        previewDirectLink.href = demoUrl;
+        previewStatus.textContent = 'Memuat pratinjau. Jika tidak tampil, gunakan Buka demo langsung.';
+
+        previewDialog.showModal();
+        previewFrame.src = demoUrl;
+        previewLoadTimeout = window.setTimeout(() => {
+          previewStatus.textContent = 'Pratinjau belum merespons setelah 12 detik. Anda dapat membuka demo langsung.';
+        }, 12000);
+      });
+    });
+
+    previewFrame.addEventListener('load', () => {
+      if (!previewDialog.open) return;
+      window.clearTimeout(previewLoadTimeout);
+      previewStatus.textContent = 'Status isi pratinjau tidak dapat dipastikan oleh browser. Jika kosong atau gagal, buka demo langsung.';
+    });
+
+    previewDialog.addEventListener('close', () => {
+      if (previewDialog.open) return;
+      window.clearTimeout(previewLoadTimeout);
+      previewFrame.removeAttribute('src');
+      previewStatus.textContent = 'Pratinjau belum dimuat.';
+      if (activePreviewTrigger?.isConnected) activePreviewTrigger.focus();
+      activePreviewTrigger = null;
+    });
+
+    previewCloseButton.addEventListener('click', () => previewDialog.close());
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && previewDialog.open) {
+        event.preventDefault();
+        previewDialog.close();
+      }
+    });
+
+    previewDialog.addEventListener('click', (event) => {
+      if (event.target === previewDialog) previewDialog.close();
+    });
+  }
+
   // Smooth scrolling untuk tautan internal
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (event) => {
@@ -119,6 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Render daftar paket dari file JSON
   if (packageList) {
+    packageList.setAttribute('aria-busy', 'true');
+    if (packageStatus) {
+      packageStatus.hidden = false;
+      packageStatus.textContent = 'Memuat informasi paket…';
+    }
+
     fetch('data/packages.json')
       .then((response) => {
         if (!response.ok) throw new Error('Gagal memuat data paket');
@@ -128,8 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
         packageList.innerHTML = packages.map(renderPackageCard).join('');
 
         const newRevealItems = packageList.querySelectorAll('.reveal');
-        newRevealItems.forEach((item) => observer.observe(item));
+        newRevealItems.forEach((item) => observer?.observe(item));
         bindPackageButtons();
+        if (packageStatus) packageStatus.textContent = 'Informasi paket berhasil dimuat.';
       })
       .catch(() => {
         packageList.innerHTML = renderPackageCard({
@@ -149,25 +229,16 @@ document.addEventListener('DOMContentLoaded', () => {
           href: '#contact',
         });
         const fallbackItem = packageList.querySelector('.reveal');
-        if (fallbackItem) observer.observe(fallbackItem);
+        if (fallbackItem) observer?.observe(fallbackItem);
         bindPackageButtons();
+        if (packageStatus) packageStatus.textContent = 'Data paket belum tersedia. Menampilkan paket Basic.';
+      })
+      .finally(() => {
+        packageList.setAttribute('aria-busy', 'false');
       });
   }
 
-  // Animasi saat section masuk tampilan
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => observer?.observe(item));
 
   // Tombol kembali ke atas
   const toggleScrollTop = () => {

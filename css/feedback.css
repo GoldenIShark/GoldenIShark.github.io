@@ -1,14 +1,5 @@
 html.feedback-document { scroll-behavior: auto; }
 
-.feedback-page,
-.feedback-page *,
-.feedback-page *::before,
-.feedback-page *::after {
-  animation: none !important;
-  scroll-behavior: auto !important;
-  transition: none !important;
-}
-
 .feedback-header { background: rgba(7, 17, 20, 0.96); }
 .feedback-home-link { padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-weight: 700; }
 .feedback-home-link:hover, .feedback-home-link:focus-visible { border-color: var(--green); color: var(--green); }
@@ -38,7 +29,6 @@ html.feedback-document { scroll-behavior: auto; }
 .report-type-options input { width: 18px; height: 18px; margin: 0; accent-color: var(--green); }
 .report-type input:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 .feedback-submit { width: 100%; cursor: pointer; }
-.feedback-page .btn { transition: var(--button-transition) !important; }
 .feedback-send-note, .feedback-fallback { margin: -0.65rem 0 0; color: var(--text-secondary); font-size: 0.84rem; line-height: 1.55; }
 .feedback-status { min-height: 1.5em; margin: -0.65rem 0 0; color: var(--text-secondary); }
 .feedback-status[data-state="error"] { color: #ffaaaa; }

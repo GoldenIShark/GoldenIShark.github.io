@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pratinjau komponen UI NFShark: tombol Solid Press dan Glass Press, formulir, kartu, panel, serta state interaksi."
+    />
+    <title>Pratinjau Komponen UI — NFShark</title>
+    <link rel="stylesheet" href="css/ui-components.css" />
+  </head>
+  <body class="ui-components ui-preview">
+    <header class="ui-preview-header">
+      <p>NFShark · Sistem komponen UI</p>
+      <h1>Komponen yang terasa jelas saat disentuh.</h1>
+      <p>
+        Contoh tombol dan elemen antarmuka dengan dua pendekatan: Solid Press
+        dan Glass Press. Semua state dapat dilihat, sementara kontrol form tetap
+        memakai elemen HTML native.
+      </p>
+    </header>
+
+    <main class="ui-preview-main">
+      <section class="ui-theme--solid" aria-labelledby="solid-title">
+        <h2 id="solid-title">Solid Press</h2>
+        <p class="ui-section-intro">
+          Tombol utama memakai permukaan grass dengan teks putih; kontrol form
+          memakai permukaan sea. Varian sekunder menggunakan outline grass
+          dengan teks sea. Tekan tombol dengan pointer atau sentuh untuk
+          melihat respons fisik singkat.
+        </p>
+
+        <div class="ui-demo-block">
+          <h3>Tombol dan state</h3>
+          <div class="ui-state-grid">
+            <div class="ui-state-card">
+              <p>Normal · solid / primary</p>
+              <button class="ui-btn ui-btn--solid" type="button">Simpan perubahan</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Hover · secondary</p>
+              <button class="ui-btn ui-btn--secondary is-hovered" type="button">Lihat detail</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Focus visible</p>
+              <button class="ui-btn ui-btn--primary is-focus-demo" type="button">Lanjutkan</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Pressed · contoh state</p>
+              <button class="ui-btn ui-btn--primary is-pressed" type="button">Tombol ditekan</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Pressed · secondary</p>
+              <button class="ui-btn ui-btn--secondary is-pressed" type="button">Aksi alternatif</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Disabled</p>
+              <button class="ui-btn ui-btn--solid" type="button" disabled>Belum tersedia</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Outline · aksi alternatif</p>
+              <button class="ui-btn ui-btn--outline" type="button">Batal</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Icon button · aksi pencarian</p>
+              <button class="ui-btn ui-btn--solid ui-btn--icon" type="button" aria-label="Cari">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                  <path d="m16 16 4.5 4.5"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-demo-block">
+          <h3>Formulir dan status</h3>
+          <form class="ui-form ui-card" action="#" method="get">
+            <div class="ui-demo-grid">
+              <div class="ui-field">
+                <label class="ui-label" for="solid-name">Nama</label>
+                <input class="ui-input" id="solid-name" name="nama" type="text" placeholder="Nama lengkap" aria-describedby="solid-name-help" />
+                <p class="ui-helper" id="solid-name-help">Contoh field teks dengan label dan helper.</p>
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="solid-search">Fokus visible · pencarian</label>
+                <input class="ui-input ui-search is-focus-demo" id="solid-search" name="q" type="search" placeholder="Cari komponen" />
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="solid-select">Jenis proyek</label>
+                <select class="ui-select" id="solid-select" name="jenis">
+                  <option value="">Pilih salah satu</option>
+                  <option value="profil">Website profil</option>
+                  <option value="toko">Toko online</option>
+                </select>
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="solid-message">Pesan</label>
+                <textarea class="ui-textarea" id="solid-message" name="pesan" placeholder="Tulis pesan singkat"></textarea>
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="solid-invalid">Contoh error</label>
+                <input
+                  class="ui-input"
+                  id="solid-invalid"
+                  name="email-error"
+                  type="email"
+                  value="alamat-tidak-valid"
+                  aria-invalid="true"
+                  aria-describedby="solid-invalid-error"
+                />
+                <p class="ui-error" id="solid-invalid-error">Masukkan alamat email dengan format yang benar.</p>
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="solid-valid">Contoh berhasil</label>
+                <input
+                  class="ui-input"
+                  id="solid-valid"
+                  name="email-valid"
+                  type="email"
+                  value="halo@example.com"
+                  aria-invalid="false"
+                  aria-describedby="solid-valid-success"
+                />
+                <p class="ui-success" id="solid-valid-success">Format email terlihat benar.</p>
+              </div>
+            </div>
+            <fieldset class="ui-check-group">
+              <legend>Preferensi kontak</legend>
+              <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="kontak-email" /> Email</label>
+              <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="kontak-telepon" /> Telepon</label>
+            </fieldset>
+            <fieldset class="ui-check-group">
+              <legend>Pilih prioritas</legend>
+              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="prioritas" value="normal" /> Normal</label>
+              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="prioritas" value="tinggi" /> Tinggi</label>
+            </fieldset>
+            <div>
+              <button class="ui-btn ui-btn--primary" type="submit">Kirim contoh</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="ui-demo-block ui-demo-grid">
+          <article class="ui-card">
+            <h3>Kartu</h3>
+            <p>Kartu untuk mengelompokkan informasi terkait dalam satu permukaan.</p>
+            <a href="#glass-title">Lihat contoh Glass Press</a>
+          </article>
+          <aside class="ui-panel" aria-label="Catatan komponen">
+            <h3>Panel informasi</h3>
+            <p>Panel menggunakan penanda tepi grass dan teks sea agar status tidak disampaikan lewat warna saja.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="ui-theme--glass" aria-labelledby="glass-title">
+        <h2 id="glass-title">Glass Press</h2>
+        <p class="ui-section-intro">
+          Permukaan transparan memakai fallback warna alpha saat
+          <code>backdrop-filter</code> tidak tersedia. Contoh disajikan pada
+          latar sea dan putih agar keterbacaan tetap terjaga.
+        </p>
+
+        <div class="ui-glass-board ui-surface--sea">
+          <h3>Latar sea · glass terang</h3>
+          <div class="ui-state-grid">
+            <div class="ui-state-card">
+              <p>Normal</p>
+              <button class="ui-btn ui-btn--glass" type="button">Mulai sekarang</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Hover</p>
+              <button class="ui-btn ui-btn--glass is-hovered" type="button">Buka detail</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Focus visible</p>
+              <button class="ui-btn ui-btn--glass is-focus-demo" type="button">Teruskan</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Pressed · contoh state</p>
+              <button class="ui-btn ui-btn--glass is-pressed" type="button">Tombol ditekan</button>
+            </div>
+            <div class="ui-state-card">
+              <p>Disabled</p>
+              <button class="ui-btn ui-btn--glass" type="button" disabled>Tidak aktif</button>
+            </div>
+          </div>
+          <div class="ui-glass-layout">
+            <article class="ui-card">
+              <h3>Kartu glass</h3>
+              <p>Konten tetap terbaca di atas permukaan sea.</p>
+            </article>
+            <aside class="ui-panel" aria-label="Panel glass">
+              <h3>Panel glass</h3>
+              <p>Efek blur bersifat dekoratif; batas dan kontras tetap ada sebagai fallback.</p>
+            </aside>
+          </div>
+          <form class="ui-form ui-card" action="#" method="get">
+            <h3>Kontrol glass di latar sea</h3>
+            <div class="ui-demo-grid">
+              <div class="ui-field">
+                <label class="ui-label" for="glass-dark-search">Fokus visible · pencarian</label>
+                <input class="ui-input ui-search is-focus-demo" id="glass-dark-search" name="q-dark" type="search" placeholder="Cari di sini" />
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="glass-dark-select">Kategori</label>
+                <select class="ui-select" id="glass-dark-select" name="kategori-dark">
+                  <option value="">Pilih kategori</option>
+                  <option value="komponen">Komponen UI</option>
+                  <option value="form">Formulir</option>
+                </select>
+              </div>
+            </div>
+            <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="ingat-dark" /> Ingat pilihan saya</label>
+          </form>
+        </div>
+
+        <div class="ui-glass-board ui-surface--light">
+          <h3>Latar putih · glass sea</h3>
+          <div class="ui-theme--glass ui-glass-layout">
+            <div class="ui-state-grid">
+              <div class="ui-state-card">
+                <p>Normal</p>
+                <button class="ui-btn ui-btn--glass" type="button">Pilih opsi</button>
+              </div>
+              <div class="ui-state-card">
+                <p>Hover</p>
+                <button class="ui-btn ui-btn--glass is-hovered" type="button">Lihat pilihan</button>
+              </div>
+              <div class="ui-state-card">
+                <p>Focus visible</p>
+                <button class="ui-btn ui-btn--glass is-focus-demo" type="button">Buka berikutnya</button>
+              </div>
+              <div class="ui-state-card">
+                <p>Pressed · contoh state</p>
+                <button class="ui-btn ui-btn--glass is-pressed" type="button">Tombol ditekan</button>
+              </div>
+              <div class="ui-state-card">
+                <p>Disabled</p>
+                <button class="ui-btn ui-btn--glass" type="button" disabled>Tidak tersedia</button>
+              </div>
+            </div>
+            <div class="ui-control-stack">
+              <article class="ui-card">
+                <h3>Kartu glass terang</h3>
+                <p>Panel transparan memiliki batas sea untuk membedakannya dari latar putih.</p>
+              </article>
+              <aside class="ui-panel" aria-label="Catatan pada latar putih">
+                <h3>Panel informasi</h3>
+                <p>Komposisi sederhana menjaga teks tetap mudah dibaca.</p>
+              </aside>
+            </div>
+          </div>
+          <form class="ui-theme--glass ui-card ui-form" action="#" method="get">
+            <h3>Kontrol glass di latar putih</h3>
+            <div class="ui-demo-grid">
+              <div class="ui-field">
+                <label class="ui-label" for="glass-light-name">Nama</label>
+                <input class="ui-input" id="glass-light-name" name="nama-light" type="text" placeholder="Nama lengkap" />
+              </div>
+              <div class="ui-field">
+                <label class="ui-label" for="glass-light-message">Fokus visible · pesan</label>
+                <textarea class="ui-textarea is-focus-demo" id="glass-light-message" name="pesan-light" placeholder="Tulis pesan"></textarea>
+              </div>
+            </div>
+            <fieldset class="ui-check-group">
+              <legend>Metode pemberitahuan</legend>
+              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="notifikasi" value="email" /> Email</label>
+              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="notifikasi" value="web" /> Web</label>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section aria-labelledby="usage-title">
+        <h2 id="usage-title">Cara pakai</h2>
+        <p class="ui-section-intro">
+          Muat <code>css/ui-components.css</code>, lalu tempatkan komponen di
+          dalam wrapper <code>.ui-components</code>. Gunakan
+          <code>.ui-theme--glass</code> pada grup Glass Press dan
+          <code>.ui-surface--sea</code> atau <code>.ui-surface--light</code>
+          untuk memilih latar demo. Tekan nyata menggunakan state native
+          <code>:active</code>; kelas <code>.is-hovered</code>,
+          <code>.is-focus-demo</code>, dan <code>.is-pressed</code> hanya untuk
+          menampilkan contoh state.
+        </p>
+        <pre class="ui-card"><code>&lt;div class="ui-components"&gt;
+  &lt;div class="ui-theme--glass"&gt;
+    &lt;div class="ui-surface--sea"&gt;
+      &lt;button class="ui-btn ui-btn--glass" type="button"&gt;Lanjutkan&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+    </main>
+
+    <footer class="ui-preview-footer">
+      <p>NFShark · Pratinjau sistem komponen UI</p>
+    </footer>
+  </body>
+</html>
