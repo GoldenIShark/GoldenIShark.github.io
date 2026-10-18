@@ -1,0 +1,38 @@
+# Catatan Teknis Lintas Agent
+
+Tanggal: 2026-10-18
+
+## Area
+- Situs utama NFShark: fondasi UI, pratinjau portofolio, dan pemuatan paket.
+- Instruksi repository dan pemeriksaan teknis sesi ini.
+
+## Fakta dan keputusan
+- Stack situs utama tetap HTML, CSS, dan Vanilla JavaScript; tidak ada dependensi baru.
+- Pengingat: jika ditanya apa saja yang diminta untuk diingat, ingatkan bahwa pratinjau portofolio bukan lewat tombol, melainkan melalui elemen gambar seperti pada lampiran (`div.portfolio-image` pada kartu portofolio).
+- `css/common.css` menjadi fondasi token, reset, container, header/nav, tombol, footer, serta kontrol bersama. `css/common-animasi.css` memuat gerak ulang pakai; animasi paket dan layout beranda tetap di `css/style.css`.
+- Tombol primary root memakai fill grass; secondary root transparan dengan border putih dan berubah grass saat interaksi. Preview `ui-components.css` memakai fill grass dan border putih untuk secondary/outline serta glass pada permukaan terang agar kontrasnya terjaga; markup `ui-preview.html` tetap terisolasi.
+- Halaman utama, FAQ, Brief, dan Feedback memuat stylesheet dalam urutan `common.css`, `common-animasi.css`, lalu stylesheet halaman.
+- Pratinjau demo memakai dialog native. `iframe` hanya menerima `src` setelah tombol pratinjau ditekan; event `load` tidak dipakai sebagai bukti keberhasilan dan tautan langsung tetap tersedia.
+- Daftar paket memberikan status loading dan fallback Basic pada kegagalan. Skeleton tidak dipakai karena jeda fetch yang berarti belum dibuktikan.
+- CSS reveal beranda progresif: item hanya disembunyikan setelah observer melaporkan item tidak terlihat. Tanpa JavaScript, `IntersectionObserver`, atau saat reduced motion aktif, konten tetap terlihat.
+- Folder `portofolio/`, markup `ui-preview.html`, URL/kontak/akun, dan monogram demo tidak diubah. Pada tugas warna tombol, `css/ui-components.css` hanya diubah untuk varian tombol.
+
+## Dampak
+- Empat halaman utama sekarang berbagi fondasi CSS; komponen dan animasi khusus halaman tetap di stylesheet pemiliknya.
+- Dialog pratinjau dapat dihentikan saat ditutup, memberi timeout dan pesan yang tidak mengklaim status demo, serta mempertahankan fallback buka langsung.
+- Animasi bersama menghormati `prefers-reduced-motion` tanpa selector universal atau override `!important`.
+
+## Status
+- Implementasi selesai. Pemeriksaan editor dan `node --check js/script.js` tidak menemukan error.
+- Empat halaman utama diperiksa pada lebar 320, 375, 390, 414, 768, 1024, dan 1280 px. Semua stylesheet termuat dalam urutan yang dimaksud dan tidak ditemukan overflow horizontal atau error console pada halaman utama.
+- Dialog diuji dengan aktivasi keyboard, Escape, tombol tutup, pemulihan fokus, fallback link, pemuatan lokal, route gagal, timeout 12 detik, dan buka-tutup cepat. Dialog tidak overflow pada ketujuh lebar yang diuji.
+- Fetch paket diuji sukses dan gagal; masing-masing mengakhiri `aria-busy=false`, dengan empat paket atau fallback Basic. Reduced motion, menu keyboard, screenshot beranda desktop 1280 px, dan modal mobile 375 px juga diperiksa.
+- Warna tombol diperiksa pada halaman root: primary hijau; secondary transparan dengan teks/border putih; hover/active hijau. Preview terisolasi diuji untuk secondary, outline, hover, pressed, glass terang, dan disabled.
+- Server lokal mencatat 404 untuk permintaan otomatis browser ke `/favicon.ico`; tidak ada referensi favicon yang ditambahkan dalam tugas ini dan temuan tersebut tidak diubah karena di luar file sasaran.
+- Skeleton sengaja tidak ditambahkan karena latensi fetch yang bermakna belum terukur.
+
+## Command dan batasan
+- `git status --short --branch`, `git diff --stat`, dan `git diff --name-only` tersedia dan berhasil dijalankan sebelum edit.
+- Perubahan lokal yang teramati sebelum tugas: `.github/agents/website-developer.agent.md` berubah; `css/ui-components.css` dan `ui-preview.html` belum dilacak. CSS preview kemudian diubah hanya untuk warna tombol sesuai permintaan; markup preview dan semua demo portofolio dipertahankan.
+- `node --check js/script.js` tersedia dan berhasil. `git diff --check` default melaporkan karakter CR pada akhir baris file CRLF; pemeriksaan read-only `git -c core.whitespace=cr-at-eol diff --check` selesai tanpa temuan.
+- Tidak ada command yang diblokir atau tidak tersedia pada sesi ini. Jika command kelak tidak tersedia, gunakan pemeriksaan read-only editor/VS Code dan catat sebagai keterbatasan, bukan sebagai command yang gagal.

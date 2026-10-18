@@ -15,12 +15,13 @@
 
 ## Cara bekerja
 - Sebelum mengedit, baca file dan pola di area sasaran; periksa status Git agar perubahan yang sudah ada tidak tertimpa. Jangan mengedit `.git/`.
-- Untuk website baru atau perombakan besar, pahami proyek dan susun rencana sebelum mulai coding. Pengecualian: perubahan kecil yang terfokus pada situs yang sudah ada boleh langsung dikerjakan setelah memeriksa konteks dan dampaknya.
-- Tentukan tujuan halaman, audiens, CTA, hierarki konten, dan batasan sebelum menyusun atau merombak antarmuka.
-- Gunakan skill yang paling relevan dari `.github/skills/`; baca seluruh `SKILL.md` skill tersebut sebelum menerapkannya. Untuk permintaan lintas bidang, kombinasikan skill yang diperlukan, bukan semuanya secara otomatis.
-- Pertahankan bahasa Indonesia pada antarmuka dan dokumentasi bila sesuai konteks situs. Gunakan label, instruksi, dan pesan kesalahan yang lugas dan konsisten.
-- Jangan mengubah file di luar lingkup, menambah dependensi, atau melakukan perubahan destruktif tanpa izin. Jangan mengklaim pengujian telah dilakukan jika belum.
-- Setelah perubahan, jalankan validasi paling relevan yang tersedia tanpa instalasi dependensi baru; periksa diff dan pastikan hanya file yang dimaksud berubah. Laporkan keterbatasan pengujian secara jujur.
+2. Baca `catatan.md` di root sebelum bekerja dan perbarui bila fakta atau keputusan teknis lintas agent berubah. Catat area, dampak, status, serta batasan command yang benar-benar diamati; jangan menyalin seluruh catatan ke instruksi atau menyimpan informasi sensitif.
+3. Untuk website baru atau perombakan besar, pahami proyek dan susun rencana sebelum mulai coding. Pengecualian: perubahan kecil yang terfokus pada situs yang sudah ada boleh langsung dikerjakan setelah memeriksa konteks dan dampaknya.
+4. Tentukan tujuan halaman, audiens, CTA, hierarki konten, dan batasan sebelum menyusun atau merombak antarmuka.
+5. Gunakan skill yang paling relevan dari `.github/skills/`; baca seluruh `SKILL.md` skill tersebut sebelum menerapkannya. Untuk permintaan lintas bidang, kombinasikan skill yang diperlukan, bukan semuanya secara otomatis.
+6. Pertahankan bahasa Indonesia pada antarmuka dan dokumentasi bila sesuai konteks situs. Gunakan label, instruksi, dan pesan kesalahan yang lugas dan konsisten.
+7. Jangan mengubah file di luar lingkup, menambah dependensi, atau melakukan perubahan destruktif tanpa izin. Jangan mengklaim pengujian telah dilakukan jika belum.
+8. Setelah perubahan, jalankan validasi paling relevan yang tersedia tanpa instalasi dependensi baru; periksa diff dan pastikan hanya file yang dimaksud berubah. Laporkan keterbatasan pengujian secara jujur.
 
 ## Peta skill
 - Perencanaan dan struktur halaman: `website-planning`

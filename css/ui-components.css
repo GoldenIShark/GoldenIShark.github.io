@@ -1,0 +1,761 @@
+:root {
+  --ui-grass: #39B54A;
+  --ui-sea: #087E8B;
+  --ui-white: #FFFFFF;
+}
+
+/*
+ * NFShark UI components
+ * Muat di halaman yang memiliki wrapper .ui-components.
+ * Palet sengaja dibatasi ke grass, sea, white, dan varian transparannya.
+ */
+.ui-components {
+  color: var(--ui-sea);
+  accent-color: var(--ui-sea);
+}
+
+.ui-components,
+.ui-components *,
+.ui-components *::before,
+.ui-components *::after {
+  box-sizing: border-box;
+}
+
+.ui-components .ui-btn {
+  display: inline-flex;
+  min-height: 2.875rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  color: var(--ui-white);
+  background-color: var(--ui-sea);
+  box-shadow:
+    0 0.25rem 0 rgba(8, 126, 139, 0.3),
+    0 0.45rem 0.8rem rgba(8, 126, 139, 0.14);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease,
+    border-color 140ms ease;
+}
+
+.ui-components .ui-btn--solid,
+.ui-components .ui-btn--primary {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-grass);
+  box-shadow:
+    0 0.25rem 0 rgba(57, 181, 74, 0.58),
+    0 0.45rem 0.8rem rgba(57, 181, 74, 0.2);
+}
+
+.ui-components .ui-btn--secondary,
+.ui-components .ui-btn--outline {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-grass);
+  box-shadow:
+    0 0.25rem 0 rgba(57, 181, 74, 0.42),
+    0 0.45rem 0.8rem rgba(57, 181, 74, 0.16);
+}
+
+.ui-components .ui-btn--icon {
+  width: 2.875rem;
+  min-width: 2.875rem;
+  padding: 0.65rem;
+}
+
+.ui-components .ui-btn--icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.ui-components .ui-btn--glass {
+  border-color: rgba(255, 255, 255, 0.82);
+  color: var(--ui-white);
+  background-color: rgba(8, 126, 139, 0.24);
+  box-shadow:
+    0 0.25rem 0 rgba(255, 255, 255, 0.2),
+    0 0.45rem 0.8rem rgba(8, 126, 139, 0.2);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-btn:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn.is-hovered:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(-1px);
+  box-shadow: 0 0.34rem 0 rgba(8, 126, 139, 0.28);
+}
+
+.ui-components .ui-btn--solid:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--primary:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--solid.is-hovered:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--primary.is-hovered:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--ui-sea);
+  box-shadow:
+    0 0.32rem 0 rgba(8, 126, 139, 0.58),
+    0 0.55rem 0.9rem rgba(8, 126, 139, 0.22);
+}
+
+.ui-components .ui-btn--secondary:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--outline:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--secondary.is-hovered:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--outline.is-hovered:not(:disabled):not([aria-disabled="true"]) {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-sea);
+}
+
+.ui-components .ui-btn--glass:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--glass.is-hovered:not(:disabled):not([aria-disabled="true"]) {
+  border-color: var(--ui-white);
+  background-color: var(--ui-sea);
+  box-shadow:
+    0 0.32rem 0 rgba(255, 255, 255, 0.24),
+    0 0.55rem 0.9rem rgba(8, 126, 139, 0.22);
+}
+
+.ui-components .ui-btn:active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn.is-pressed:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(2px);
+  box-shadow:
+    0 0.06rem 0 rgba(8, 126, 139, 0.28),
+    0 0.12rem 0.25rem rgba(8, 126, 139, 0.12);
+}
+
+.ui-components .ui-btn:not(.ui-btn--glass):active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn:not(.ui-btn--glass).is-pressed:not(:disabled):not([aria-disabled="true"]) {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-grass);
+}
+
+.ui-components .ui-btn--solid:active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--primary:active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--solid.is-pressed:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--primary.is-pressed:not(:disabled):not([aria-disabled="true"]) {
+  box-shadow:
+    0 0.06rem 0 rgba(57, 181, 74, 0.3),
+    0 0.12rem 0.25rem rgba(57, 181, 74, 0.14);
+}
+
+.ui-components .ui-btn--glass:active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-btn--glass.is-pressed:not(:disabled):not([aria-disabled="true"]) {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-grass);
+  box-shadow:
+    0 0.06rem 0 rgba(57, 181, 74, 0.4),
+    0 0.12rem 0.25rem rgba(8, 126, 139, 0.14);
+}
+
+.ui-components .ui-btn:focus-visible,
+.ui-components .ui-btn.is-focus-demo {
+  outline: 3px solid var(--ui-sea);
+  outline-offset: 3px;
+}
+
+.ui-components .ui-btn:disabled,
+.ui-components .ui-btn[aria-disabled="true"] {
+  border-color: rgba(8, 126, 139, 0.42);
+  color: rgba(8, 126, 139, 0.72);
+  background-color: rgba(8, 126, 139, 0.16);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+  transform: none;
+}
+
+.ui-components .ui-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: inherit;
+  font-weight: 700;
+}
+
+.ui-components .ui-field {
+  min-width: 0;
+}
+
+.ui-components .ui-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.ui-components .ui-input,
+.ui-components .ui-search,
+.ui-components .ui-textarea,
+.ui-components .ui-select {
+  display: block;
+  width: 100%;
+  min-height: 2.875rem;
+  padding: 0.7rem 0.8rem;
+  border: 2px solid var(--ui-white);
+  border-radius: 0.65rem;
+  color: var(--ui-white);
+  background-color: var(--ui-sea);
+  font: inherit;
+  line-height: 1.4;
+}
+
+.ui-components .ui-textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.ui-components .ui-input::placeholder,
+.ui-components .ui-search::placeholder,
+.ui-components .ui-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.76);
+  opacity: 1;
+}
+
+.ui-components .ui-input:focus-visible,
+.ui-components .ui-input.is-focus-demo,
+.ui-components .ui-search:focus-visible,
+.ui-components .ui-search.is-focus-demo,
+.ui-components .ui-textarea:focus-visible,
+.ui-components .ui-textarea.is-focus-demo,
+.ui-components .ui-select:focus-visible,
+.ui-components .ui-select.is-focus-demo {
+  border-color: var(--ui-grass);
+  color: var(--ui-grass);
+  background-color: var(--ui-white);
+  outline: 3px solid var(--ui-sea);
+  outline-offset: 3px;
+}
+
+.ui-components .ui-input[aria-invalid="true"],
+.ui-components .ui-search[aria-invalid="true"],
+.ui-components .ui-textarea[aria-invalid="true"],
+.ui-components .ui-select[aria-invalid="true"] {
+  border-color: var(--ui-grass);
+  border-style: dashed;
+}
+
+.ui-components .ui-input[aria-invalid="false"],
+.ui-components .ui-search[aria-invalid="false"],
+.ui-components .ui-textarea[aria-invalid="false"],
+.ui-components .ui-select[aria-invalid="false"] {
+  border-color: var(--ui-grass);
+}
+
+.ui-components .ui-helper,
+.ui-components .ui-error,
+.ui-components .ui-success {
+  margin: 0.4rem 0 0;
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.ui-components .ui-error {
+  font-weight: 700;
+}
+
+.ui-components .ui-success {
+  font-weight: 700;
+}
+
+.ui-components .ui-check {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.65rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ui-components .ui-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--ui-grass);
+}
+
+.ui-components .ui-checkbox,
+.ui-components .ui-radio {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--ui-grass);
+}
+
+.ui-components .ui-check-input:focus-visible,
+.ui-components .ui-checkbox:focus-visible,
+.ui-components .ui-radio:focus-visible {
+  outline: 3px solid var(--ui-sea);
+  outline-offset: 3px;
+}
+
+.ui-components .ui-card,
+.ui-components .ui-panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(8, 126, 139, 0.34);
+  border-radius: 1rem;
+  color: var(--ui-sea);
+  background-color: var(--ui-white);
+  box-shadow: 0 0.35rem 1rem rgba(8, 126, 139, 0.08);
+}
+
+.ui-components .ui-card > :first-child,
+.ui-components .ui-panel > :first-child {
+  margin-top: 0;
+}
+
+.ui-components .ui-card > :last-child,
+.ui-components .ui-panel > :last-child {
+  margin-bottom: 0;
+}
+
+.ui-components .ui-panel {
+  border-inline-start: 0.3rem solid var(--ui-grass);
+}
+
+.ui-components .ui-surface--sea {
+  color: var(--ui-white);
+  background-color: var(--ui-sea);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-btn:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-btn.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-select:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-select.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-check-input:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-checkbox:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-radio:focus-visible {
+  outline-color: var(--ui-white);
+}
+
+.ui-components .ui-theme--glass .ui-card,
+.ui-components .ui-theme--glass .ui-panel {
+  border-color: rgba(255, 255, 255, 0.82);
+  color: var(--ui-white);
+  background-color: rgba(8, 126, 139, 0.28);
+  box-shadow: 0 0.35rem 1rem rgba(8, 126, 139, 0.12);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-theme--glass .ui-panel {
+  border-inline-start-color: var(--ui-grass);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-state-card {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--ui-white);
+  background-color: rgba(8, 126, 139, 0.34);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-btn:disabled,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-btn[aria-disabled="true"] {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.72);
+  background-color: rgba(57, 181, 74, 0.16);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: var(--ui-grass);
+  box-shadow: 0 0.25rem 0 rgba(57, 181, 74, 0.42);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass:hover:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass.is-hovered:not(:disabled):not([aria-disabled="true"]) {
+  border-color: var(--ui-white);
+  background-color: var(--ui-sea);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass:disabled,
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass[aria-disabled="true"] {
+  border-color: rgba(8, 126, 139, 0.42);
+  color: rgba(8, 126, 139, 0.58);
+  background-color: rgba(57, 181, 74, 0.16);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass:active:not(:disabled):not([aria-disabled="true"]),
+.ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass.is-pressed:not(:disabled):not([aria-disabled="true"]) {
+  box-shadow:
+    0 0.06rem 0 rgba(57, 181, 74, 0.4),
+    0 0.12rem 0.25rem rgba(8, 126, 139, 0.14);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-card,
+.ui-components .ui-surface--light .ui-theme--glass .ui-panel {
+  border-color: rgba(8, 126, 139, 0.42);
+  color: var(--ui-sea);
+  background-color: rgba(255, 255, 255, 0.68);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-state-card {
+  border-color: rgba(8, 126, 139, 0.35);
+  color: var(--ui-sea);
+  background-color: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-input,
+.ui-components .ui-surface--light .ui-theme--glass .ui-search,
+.ui-components .ui-surface--light .ui-theme--glass .ui-textarea,
+.ui-components .ui-surface--light .ui-theme--glass .ui-select {
+  border-color: rgba(8, 126, 139, 0.58);
+  color: var(--ui-sea);
+  background-color: rgba(255, 255, 255, 0.64);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-input::placeholder,
+.ui-components .ui-surface--light .ui-theme--glass .ui-search::placeholder,
+.ui-components .ui-surface--light .ui-theme--glass .ui-textarea::placeholder {
+  color: var(--ui-sea);
+}
+
+.ui-components .ui-surface--light .ui-theme--glass .ui-input:focus-visible,
+.ui-components .ui-surface--light .ui-theme--glass .ui-input.is-focus-demo,
+.ui-components .ui-surface--light .ui-theme--glass .ui-search:focus-visible,
+.ui-components .ui-surface--light .ui-theme--glass .ui-search.is-focus-demo,
+.ui-components .ui-surface--light .ui-theme--glass .ui-textarea:focus-visible,
+.ui-components .ui-surface--light .ui-theme--glass .ui-textarea.is-focus-demo,
+.ui-components .ui-surface--light .ui-theme--glass .ui-select:focus-visible,
+.ui-components .ui-surface--light .ui-theme--glass .ui-select.is-focus-demo {
+  border-color: var(--ui-grass);
+  color: var(--ui-sea);
+  background-color: rgba(57, 181, 74, 0.16);
+  outline-color: var(--ui-sea);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-select {
+  border-color: rgba(255, 255, 255, 0.82);
+  color: var(--ui-white);
+  background-color: rgba(8, 126, 139, 0.24);
+  -webkit-backdrop-filter: blur(0.7rem);
+  backdrop-filter: blur(0.7rem);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea.is-focus-demo,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-select:focus-visible,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-select.is-focus-demo {
+  border-color: var(--ui-white);
+  color: var(--ui-white);
+  background-color: rgba(57, 181, 74, 0.18);
+  outline-color: var(--ui-white);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea::placeholder {
+  color: var(--ui-white);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input:focus-visible::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-input.is-focus-demo::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search:focus-visible::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-search.is-focus-demo::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea:focus-visible::placeholder,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-textarea.is-focus-demo::placeholder {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-check {
+  color: var(--ui-white);
+}
+
+.ui-components .ui-theme--glass .ui-surface--sea .ui-checkbox,
+.ui-components .ui-theme--glass .ui-surface--sea .ui-radio {
+  accent-color: var(--ui-grass);
+}
+
+.ui-components.ui-preview {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ui-sea);
+  background-color: var(--ui-white);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ui-preview a {
+  color: inherit;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.16em;
+}
+
+.ui-preview a:focus-visible {
+  outline: 3px solid var(--ui-sea);
+  outline-offset: 3px;
+}
+
+.ui-preview-header {
+  padding: clamp(2rem, 7vw, 5rem) max(1rem, 5vw);
+  color: var(--ui-white);
+  background-color: var(--ui-sea);
+}
+
+.ui-preview-header h1 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.ui-preview-header p {
+  max-width: 62ch;
+  margin: 1rem 0 0;
+}
+
+.ui-preview-main {
+  width: calc(100% - 2rem);
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-block: 2rem 4rem;
+}
+
+.ui-preview-main > section + section {
+  margin-top: clamp(2.5rem, 7vw, 5rem);
+}
+
+.ui-preview h2,
+.ui-preview h3 {
+  color: inherit;
+  line-height: 1.2;
+}
+
+.ui-preview h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+}
+
+.ui-preview h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.ui-preview .ui-section-intro {
+  max-width: 66ch;
+  margin: 0.55rem 0 1.5rem;
+}
+
+.ui-preview .ui-demo-block + .ui-demo-block {
+  margin-top: 1.5rem;
+}
+
+.ui-preview .ui-state-grid,
+.ui-preview .ui-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+}
+
+.ui-preview .ui-state-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(8, 126, 139, 0.28);
+  border-radius: 0.85rem;
+  color: var(--ui-sea);
+  background-color: var(--ui-white);
+}
+
+.ui-preview .ui-state-card p {
+  margin: 0 0 0.85rem;
+  font-weight: 700;
+}
+
+.ui-preview pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ui-preview .ui-control-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.ui-preview .ui-check-group {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ui-preview .ui-check-group legend {
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.ui-preview .ui-glass-board {
+  display: grid;
+  position: relative;
+  isolation: isolate;
+  gap: 1.25rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(8, 126, 139, 0.35);
+  border-radius: 1.25rem;
+}
+
+.ui-preview .ui-glass-board::before,
+.ui-preview .ui-glass-board::after {
+  position: absolute;
+  z-index: 0;
+  width: clamp(7rem, 22vw, 13rem);
+  aspect-ratio: 1;
+  border-radius: 1.5rem;
+  content: "";
+  pointer-events: none;
+}
+
+.ui-preview .ui-glass-board::before {
+  top: 20%;
+  right: 8%;
+  background-color: rgba(57, 181, 74, 0.72);
+}
+
+.ui-preview .ui-glass-board::after {
+  bottom: 8%;
+  left: 9%;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.ui-preview .ui-glass-board > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ui-preview .ui-surface--light.ui-glass-board::before {
+  background-color: rgba(8, 126, 139, 0.28);
+}
+
+.ui-preview .ui-surface--light.ui-glass-board::after {
+  background-color: rgba(57, 181, 74, 0.24);
+}
+
+.ui-preview .ui-glass-board > h3 {
+  margin: 0;
+}
+
+.ui-preview .ui-glass-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+}
+
+.ui-preview .ui-surface--sea.ui-glass-board {
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .ui-components .ui-btn--glass {
+    background-color: rgba(8, 126, 139, 0.82);
+  }
+
+  .ui-components .ui-theme--glass .ui-card,
+  .ui-components .ui-theme--glass .ui-panel {
+    background-color: rgba(8, 126, 139, 0.82);
+  }
+
+  .ui-components .ui-theme--glass .ui-surface--sea .ui-state-card {
+    background-color: rgba(8, 126, 139, 0.82);
+  }
+
+  .ui-components .ui-surface--light .ui-theme--glass .ui-btn--glass {
+    background-color: var(--ui-grass);
+  }
+
+  .ui-components .ui-surface--light .ui-theme--glass .ui-card,
+  .ui-components .ui-surface--light .ui-theme--glass .ui-panel,
+  .ui-components .ui-surface--light .ui-theme--glass .ui-state-card {
+    background-color: rgba(255, 255, 255, 0.92);
+  }
+
+  .ui-components .ui-theme--glass .ui-surface--sea .ui-input,
+  .ui-components .ui-theme--glass .ui-surface--sea .ui-search,
+  .ui-components .ui-theme--glass .ui-surface--sea .ui-textarea,
+  .ui-components .ui-theme--glass .ui-surface--sea .ui-select {
+    background-color: rgba(8, 126, 139, 0.9);
+  }
+
+  .ui-components .ui-surface--light .ui-theme--glass .ui-input,
+  .ui-components .ui-surface--light .ui-theme--glass .ui-search,
+  .ui-components .ui-surface--light .ui-theme--glass .ui-textarea,
+  .ui-components .ui-surface--light .ui-theme--glass .ui-select {
+    background-color: rgba(255, 255, 255, 0.94);
+  }
+}
+
+.ui-preview-footer {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(8, 126, 139, 0.3);
+  text-align: center;
+}
+
+@media (max-width: 36rem) {
+  .ui-preview-header {
+    padding-inline: 1rem;
+  }
+
+  .ui-preview-main {
+    width: calc(100% - 1.25rem);
+  }
+
+  .ui-components .ui-btn {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-components .ui-btn {
+    transition: none;
+  }
+
+  .ui-components .ui-btn:hover:not(:disabled):not([aria-disabled="true"]),
+  .ui-components .ui-btn.is-hovered:not(:disabled):not([aria-disabled="true"]),
+  .ui-components .ui-btn:active:not(:disabled):not([aria-disabled="true"]),
+  .ui-components .ui-btn.is-pressed:not(:disabled):not([aria-disabled="true"]) {
+    transform: none;
+  }
+}

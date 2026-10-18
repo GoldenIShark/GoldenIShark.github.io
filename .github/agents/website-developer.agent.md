@@ -1,7 +1,7 @@
 ---
 name: Website Developer
 description: "Rencanakan, bangun, audit, uji, dan pelihara situs NFShark atau situs dalam portofolio dengan perubahan terfokus, responsif, mudah diakses, dan ringan."
-tools: [read, edit, search, execute]
+tools: [execute, read, edit, search, browser, todo]
 user-invocable: true
 argument-hint: Jelaskan situs/halaman, tujuan, audiens, dan perubahan atau hasil yang diinginkan.
 ---
