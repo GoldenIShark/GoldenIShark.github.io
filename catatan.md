@@ -9,6 +9,10 @@ Tanggal: 2026-10-18
 ## Fakta dan keputusan
 - Stack situs utama tetap HTML, CSS, dan Vanilla JavaScript; tidak ada dependensi baru.
 - Pengingat: jika ditanya apa saja yang diminta untuk diingat, ingatkan bahwa pratinjau portofolio bukan lewat tombol, melainkan melalui elemen gambar seperti pada lampiran (`div.portfolio-image` pada kartu portofolio).
+- Pengingat desain: bagian navbar dan footer dibuat profesional dengan susunan dua kolom.
+- Rencana perubahan berikutnya: perbarui kontak email dan media sosial; pada halaman Brief, gunakan `iframe` Google Forms untuk pengisian data dan jadikan pertanyaan pertama “Bagaimana Anda menemukan website ini?”; saran dan laporan bug juga menggunakan Google Forms. Alamat email, akun sosial, dan URL form belum diberikan, jadi jangan mengarang atau menggantinya sebelum tersedia.
+- Catatan kelayakan: Google Forms dapat disematkan di halaman menggunakan `iframe` dari opsi “Kirim/Send” > “Sematkan HTML/Embed HTML”. Gunakan URL embed form yang benar; form perlu dapat diakses oleh pengisi dan ukuran iframe perlu disesuaikan untuk tampilan mobile. Pengumpulan serta penyimpanan jawaban dikelola Google Forms.
+- Pengingat tambahan: pengedit Figma sebagai pelengkap.
 - `css/common.css` menjadi fondasi token, reset, container, header/nav, tombol, footer, serta kontrol bersama. `css/common-animasi.css` memuat gerak ulang pakai; animasi paket dan layout beranda tetap di `css/style.css`.
 - Tombol primary root memakai fill grass; secondary root transparan dengan border putih dan berubah grass saat interaksi. Preview `ui-components.css` memakai fill grass dan border putih untuk secondary/outline serta glass pada permukaan terang agar kontrasnya terjaga; markup `ui-preview.html` tetap terisolasi.
 - Halaman utama, FAQ, Brief, dan Feedback memuat stylesheet dalam urutan `common.css`, `common-animasi.css`, lalu stylesheet halaman.
