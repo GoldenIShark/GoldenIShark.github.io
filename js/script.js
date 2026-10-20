@@ -12,14 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioToggle = document.querySelector('.portfolio-toggle');
   const portfolioCards = portfolioGrid ? Array.from(portfolioGrid.querySelectorAll('.portfolio-card')) : [];
   const portfolioLimit = 10;
-  const previewDialog = document.querySelector('#portfolio-preview');
-  const previewFrame = document.querySelector('#preview-dialog-frame');
-  const previewTitle = document.querySelector('#preview-dialog-title');
-  const previewStatus = document.querySelector('#preview-dialog-status');
-  const previewDirectLink = document.querySelector('#preview-dialog-direct-link');
-  const previewCloseButton = document.querySelector('.preview-dialog-close');
-  let activePreviewTrigger = null;
-  let previewLoadTimeout = null;
 
   const renderPackageCard = (pkg) => {
     const tierClass = `package-card--${pkg.name.toLowerCase()}`;
@@ -127,55 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  if (previewDialog && previewFrame && previewTitle && previewStatus && previewDirectLink && previewCloseButton) {
-    document.querySelectorAll('.portfolio-preview-trigger').forEach((trigger) => {
-      trigger.addEventListener('click', () => {
-        const demoUrl = trigger.dataset.demoUrl;
-        const demoTitle = trigger.dataset.demoTitle;
-        if (!demoUrl || !demoTitle || typeof previewDialog.showModal !== 'function') return;
-
-        activePreviewTrigger = trigger;
-        previewTitle.textContent = demoTitle;
-        previewFrame.title = `Pratinjau ${demoTitle}`;
-        previewDirectLink.href = demoUrl;
-        previewStatus.textContent = 'Memuat pratinjau. Jika tidak tampil, gunakan Buka demo langsung.';
-
-        previewDialog.showModal();
-        previewFrame.src = demoUrl;
-        previewLoadTimeout = window.setTimeout(() => {
-          previewStatus.textContent = 'Pratinjau belum merespons setelah 12 detik. Anda dapat membuka demo langsung.';
-        }, 12000);
-      });
-    });
-
-    previewFrame.addEventListener('load', () => {
-      if (!previewDialog.open) return;
-      window.clearTimeout(previewLoadTimeout);
-      previewStatus.textContent = 'Status isi pratinjau tidak dapat dipastikan oleh browser. Jika kosong atau gagal, buka demo langsung.';
-    });
-
-    previewDialog.addEventListener('close', () => {
-      if (previewDialog.open) return;
-      window.clearTimeout(previewLoadTimeout);
-      previewFrame.removeAttribute('src');
-      previewStatus.textContent = 'Pratinjau belum dimuat.';
-      if (activePreviewTrigger?.isConnected) activePreviewTrigger.focus();
-      activePreviewTrigger = null;
-    });
-
-    previewCloseButton.addEventListener('click', () => previewDialog.close());
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && previewDialog.open) {
-        event.preventDefault();
-        previewDialog.close();
-      }
-    });
-
-    previewDialog.addEventListener('click', (event) => {
-      if (event.target === previewDialog) previewDialog.close();
-    });
-  }
 
   // Smooth scrolling untuk tautan internal
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

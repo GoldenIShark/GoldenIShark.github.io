@@ -102,17 +102,15 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 .btn-secondary { border-color: var(--ui-white); color: var(--ui-white); background: transparent; box-shadow: 0 0.25rem 0 rgba(255, 255, 255, 0.2), 0 0.45rem 0.8rem rgba(8, 126, 139, 0.2); }
 .btn:hover:not(:disabled):not([aria-disabled="true"]),
 .menu-toggle:hover,
-.section-toggle:hover,
-.portfolio-preview-trigger:hover { transform: translateY(-1px); box-shadow: 0 0.34rem 0 rgba(8, 126, 139, 0.28); }
+.section-toggle:hover { transform: translateY(-1px); box-shadow: 0 0.34rem 0 rgba(8, 126, 139, 0.28); }
 .btn-primary:hover:not(:disabled):not([aria-disabled="true"]) { border-color: var(--ui-white); color: var(--ui-white); background: var(--ui-sea); box-shadow: 0 0.32rem 0 rgba(8, 126, 139, 0.58), 0 0.55rem 0.9rem rgba(8, 126, 139, 0.22); }
 .btn-secondary:hover:not(:disabled):not([aria-disabled="true"]) { border-color: var(--ui-white); color: var(--ui-white); background: var(--ui-sea); box-shadow: 0 0.32rem 0 rgba(255, 255, 255, 0.24), 0 0.55rem 0.9rem rgba(8, 126, 139, 0.22); }
 .btn:active:not(:disabled):not([aria-disabled="true"]),
 .menu-toggle:active,
-.section-toggle:active,
-.portfolio-preview-trigger:active { transform: translateY(2px); box-shadow: 0 0.06rem 0 rgba(8, 126, 139, 0.28), 0 0.12rem 0.25rem rgba(8, 126, 139, 0.12); }
+.section-toggle:active { transform: translateY(2px); box-shadow: 0 0.06rem 0 rgba(8, 126, 139, 0.28), 0 0.12rem 0.25rem rgba(8, 126, 139, 0.12); }
 .btn:not(.btn-primary):active:not(:disabled):not([aria-disabled="true"]) { border-color: var(--ui-white); color: var(--ui-white); background: var(--ui-grass); }
 .btn-primary:active:not(:disabled):not([aria-disabled="true"]) { box-shadow: 0 0.06rem 0 rgba(57, 181, 74, 0.3), 0 0.12rem 0.25rem rgba(57, 181, 74, 0.14); }
-.btn:focus-visible, .menu-toggle:focus-visible, .section-toggle:focus-visible, .portfolio-preview-trigger:focus-visible, .scroll-top:focus-visible, .mockup-hero button:focus-visible { outline: 3px solid var(--ui-sea); outline-offset: 3px; }
+.btn:focus-visible, .menu-toggle:focus-visible, .section-toggle:focus-visible, .scroll-top:focus-visible, .mockup-hero button:focus-visible { outline: 3px solid var(--ui-sea); outline-offset: 3px; }
 .btn:disabled, .btn[aria-disabled="true"] { border-color: rgba(8, 126, 139, 0.42); color: rgba(8, 126, 139, 0.72); background: rgba(8, 126, 139, 0.16); box-shadow: none; cursor: not-allowed; opacity: 1; transform: none; }
 
 .site-footer { padding: 1.3rem 0 2rem; border-top: 1px solid var(--border); background: var(--bg-primary); }

@@ -5,7 +5,6 @@ html { scroll-behavior: smooth; }
 .btn,
 .menu-toggle,
 .section-toggle,
-.portfolio-preview-trigger,
 .mockup-hero button { transition: var(--button-transition); }
 
 @media (max-width: 1023px) {
@@ -35,12 +34,10 @@ html { scroll-behavior: smooth; }
   .btn,
   .menu-toggle,
   .section-toggle,
-  .portfolio-preview-trigger,
   .mockup-hero button { transition: none; }
   .main-nav.open li { animation: none; }
   .btn:hover, .btn:focus-visible, .btn:active,
   .menu-toggle:hover, .menu-toggle:active,
   .section-toggle:hover, .section-toggle:active,
-  .portfolio-preview-trigger:hover, .portfolio-preview-trigger:active,
   .mockup-hero button:hover, .mockup-hero button:active { transform: none; }
 }
