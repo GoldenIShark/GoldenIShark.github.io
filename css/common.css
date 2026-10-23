@@ -115,6 +115,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 
 .site-footer { padding: 1.3rem 0 2rem; border-top: 1px solid var(--border); background: var(--bg-primary); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer-nav-inner { justify-content: flex-end; margin-top: 1rem; }
 .footer-inner p { margin: 0; color: var(--text-secondary); }
 .footer-brand { display: flex; align-items: center; gap: 0.65rem; }
 .footer-brand img { width: 40px; height: 40px; border-radius: 7px; background: #fff; object-fit: contain; }
