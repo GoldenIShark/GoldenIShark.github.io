@@ -30,20 +30,28 @@
           <p class="eyebrow">NFShark</p>
           <h1>Ceritakan website yang ingin dibuat.</h1>
           <p>Isi informasi yang sudah Anda ketahui. Bagian desain dan aset boleh dikosongkan bila belum siap.</p>
-          <p class="draft-note">Data brief dikirim melalui Google Form. Gunakan formulir di bawah ini untuk mengirimkan kebutuhan website Anda.</p>
+          <p class="draft-note">Pilih salah satu metode pengisian di bawah ini untuk mengirimkan kebutuhan website Anda.</p>
         </header>
 
         <section class="google-form-panel" aria-labelledby="brief-form-heading">
           <div class="google-form-heading">
             <h2 id="brief-form-heading">Formulir Brief Website</h2>
-            <p>Lengkapi pertanyaan di Google Form, lalu ikuti petunjuk pengiriman yang tersedia di dalam formulir.</p>
-            <a class="google-form-fallback" href="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?usp=header" target="_blank" rel="noopener noreferrer">Buka formulir di tab baru</a>
+            <p>Pilih cara pengisian sebelum memasukkan data. Anda dapat menggunakan Google Form atau formulir alternatif.</p>
           </div>
-          <iframe class="google-form-embed" title="Formulir Brief Website NFShark" src="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?embedded=true" loading="lazy"></iframe>
+          <div class="google-form-options" role="group" aria-label="Pilih cara pengisian brief">
+            <button class="btn btn-primary" type="button" data-form-choice="google" aria-controls="brief-google-form" aria-pressed="false">Isi dengan Google Form</button>
+            <button class="btn btn-secondary" type="button" data-form-choice="manual" aria-controls="brief-legacy-form" aria-pressed="false">Isi formulir alternatif</button>
+          </div>
+          <p class="google-form-status" data-form-status role="status" aria-live="polite">Belum ada metode dipilih. Pilih salah satu tombol untuk mulai mengisi.</p>
+          <div class="google-form-content" data-google-form-content hidden>
+            <a class="google-form-fallback" href="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?usp=header" target="_blank" rel="noopener noreferrer">Buka formulir di tab baru</a>
+            <iframe id="brief-google-form" class="google-form-embed" title="Formulir Brief Website NFShark" data-src="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?embedded=true" loading="lazy"></iframe>
+          </div>
         </section>
-        <details class="legacy-form-fallback">
+        <details class="legacy-form-fallback" id="brief-legacy-form" data-legacy-form>
           <summary>Jika Google Form tidak dapat dibuka, gunakan pengisian lama</summary>
           <p class="legacy-form-note">Gunakan opsi ini bila formulir di atas tidak dapat diakses. Pengisian lama menyimpan draft di browser dan menyiapkan pesan WhatsApp.</p>
+          <p class="legacy-form-note" id="draft-status" role="status" aria-live="polite"></p>
           <form id="brief-form" novalidate>
           <section class="brief-section brief-section-a" data-section-title="A. DATA PELANGGAN">
             <div class="brief-section-heading">
@@ -236,5 +244,7 @@
       </div>
     </footer>
 
+    <script src="js/google-form-choice.js"></script>
+    <script src="js/brief.js"></script>
   </body>
 </html>
