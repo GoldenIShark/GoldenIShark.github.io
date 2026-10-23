@@ -3,6 +3,24 @@
 Tanggal: 2026-10-23
 
 ## Area
+- Kartu portofolio situs restoran Basic di halaman utama (`index.html`).
+
+## Fakta dan keputusan
+- Demo `portofolio/restoran-basic/index.html` ditambahkan sebagai kartu tersendiri setelah demo restoran yang sudah ada.
+- Kartu mengikuti struktur portofolio beranda: pratinjau iframe, deskripsi, dan tautan langsung. Toggle tidak perlu diubah karena batas tampilnya 10 kartu.
+
+## Dampak
+- Pengunjung dapat melihat pratinjau dan membuka demo Aura Rasa dari bagian Portofolio halaman utama.
+
+## Status
+- Implementasi selesai; `portofolio/restoran-basic/index.html` terverifikasi ada, dengan satu pratinjau iframe dan satu tautan langsung pada beranda.
+
+## Command dan batasan
+- `git status --short` dijalankan sebelum edit dan tidak menampilkan perubahan lokal.
+- Pemeriksaan PowerShell `Test-Path` dan pencocokan pola pada `index.html` lulus. Pemeriksaan tampilan browser belum dilakukan.
+- `git -c core.whitespace=cr-at-eol diff --check` lulus; pemeriksaan standar menandai CRLF file sebagai trailing whitespace.
+
+## Area
 - Pengaturan instruksi repository `.github/copilot-instructions.md`.
 - Penambahan skill & tooling baru di `.github/skills/skill-creator/` dan `.github/skills/convert-images-to-webp/`.
 - Pemisahan portofolio restoran:
