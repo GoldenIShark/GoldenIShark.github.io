@@ -36,6 +36,11 @@
 - Pemeriksaan perilaku dan regresi: `website-testing`
 - Operasi Git/GitHub dan tinjauan perubahan: `github-management`
 - Pemeliharaan, audit, dan perbaikan bertahap: `website-maintenance`
+- Pembuatan/penambahan skill dan tooling otomatis baru: `skill-creator`
+
+## Aturan Pencatatan File (Wajib)
+Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository ini, pengembang/agent **WAJIB** mencatat perubahan tersebut ke file `/catatan.md` di root dengan mencantumkan tanggal, area yang disentuh, fakta & keputusan teknis, dampak, status verifikasi, dan command yang digunakan.
 
 ## Aturan khusus aset portofolio
-Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `.github/skills/convert-images-to-webp/SKILL.md` bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
+Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `.github/skills/convert-images-to-webp/SKILL.md` (beserta tool Python `convert_to_webp.py`) bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
+

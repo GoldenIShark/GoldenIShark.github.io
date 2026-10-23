@@ -1,5 +1,41 @@
 # Catatan Teknis Lintas Agent
 
+Tanggal: 2026-10-23
+
+## Area
+- Pengaturan instruksi repository `.github/copilot-instructions.md`.
+- Penambahan skill & tooling baru di `.github/skills/skill-creator/` dan `.github/skills/convert-images-to-webp/`.
+- Pemisahan portofolio restoran:
+  - `portofolio/restoran/`: Dikembalikan ke versi asli (Ruang Rasa - gaya Popular/Premium dengan animasi, filter menu, dan lightbox).
+  - `portofolio/restoran-basic/`: Dibuat folder baru khusus untuk demo Paket Basic NFShark (Aura Rasa).
+
+## Fakta dan keputusan
+- Folder `portofolio/restoran/` (Ruang Rasa) dipertahankan 100% utuh tanpa perubahan sedikit pun dari versi asli repository (`git checkout HEAD`).
+- Folder baru `portofolio/restoran-basic/` (Aura Rasa) resmi ditambahkan khusus untuk mendemonstrasikan **Paket Basic NFShark**:
+  - Struktur 1 halaman fokus, cepat, dan responsif.
+  - Slogan performa NFShark: *"Website Cepat, Ringan & Responsif — Mengutamakan Performa untuk Bisnis Nyata"*.
+  - Palet warna: Biru Gelap Luar Angkasa (`#0B1325`), Hijau Segar (`#10B981`), Biru Langit (`#38BDF8`), dengan 3 warna pelengkap: Mint Ice (`#F0FDF4`), Slate Gray (`#94A3B8`), dan Soft White (`#F8FAFC`).
+  - Gambar produk menggunakan satu gambar pratinjau tunggal teroptimasi WebP seragam: `preview.webp` (~10 KB).
+  - Vanilla JS ultra-ringan tanpa library berat, ramah aksesibilitas keyboard (Escape & fokus).
+- Tooling otomatis WebP: Tersedia script Python CLI yang reusable (`.github/skills/convert-images-to-webp/convert_to_webp.py`).
+- Skill Creator: Panduan pembuatan skill baru didokumentasikan di `.github/skills/skill-creator/SKILL.md`.
+- Aturan pencatatan file: Setiap perubahan file di repository wajib dicatat di `/catatan.md`.
+
+## Dampak
+- Folder portofolio asli `restoran/` tetap aman dan tidak mengalami modifikasi.
+- Portofolio baru `restoran-basic/` tersedia mandiri sebagai representasi akurat website Paket Basic NFShark.
+
+## Status
+- `git diff portofolio/restoran/` bersih tanpa perubahan (0 diff).
+- `node --check portofolio/restoran/script.js` dan `node --check portofolio/restoran-basic/script.js` lulus validasi sintaks.
+- Script python `convert_to_webp.py` terverifikasi.
+
+## Command dan batasan
+- `git checkout HEAD -- portofolio/restoran/` sukses memulihkan seluruh file asli `portofolio/restoran/`.
+- `git status --short` mengonfirmasi `portofolio/restoran/` tidak termodifikasi, dan `portofolio/restoran-basic/` telah ditambahkan.
+
+---
+
 Tanggal: 2026-10-18
 
 ## Area
