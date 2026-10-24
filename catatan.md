@@ -3,6 +3,28 @@
 Tanggal: 2026-10-24
 
 ## Area
+- Judul kartu demo pada bagian Portofolio halaman utama (`index.html`).
+
+## Fakta dan keputusan
+- Lima judul kartu disamakan dengan identitas demo dan kategori paket: Aura Rasa — Basic, Ruang Rasa — Popular, NAYA SUPPLY — Premium, SMA Cakrawala Nusa — Premium, dan NEXORA Business — Popular.
+- Judul aksesibel pada iframe pratinjau juga diperbarui. Path demo dan urutan kartu dipertahankan.
+
+## Dampak
+- Pengunjung dapat mengenali nama demo dan kategori paket pada daftar portofolio beranda.
+
+## Status
+- Pemeriksaan DOM browser lulus untuk kelima judul, judul aksesibel iframe, path pratinjau, dan tautan langsung.
+
+## Command dan batasan
+- `git status --short` sebelum edit tidak menampilkan perubahan lokal.
+- Nama dan tujuan demo dicocokkan dengan file HTML masing-masing di `portofolio/`.
+- Pemeriksaan PowerShell dengan pencocokan literal Unicode menghasilkan false negative; pemeriksaan ulang melalui DOM browser lulus untuk seluruh lima kartu.
+
+---
+
+Tanggal: 2026-10-24
+
+## Area
 - Website demo restoran `portofolio/restoran-basic/` (HTML, CSS, JavaScript, README).
 
 ## Fakta dan keputusan
