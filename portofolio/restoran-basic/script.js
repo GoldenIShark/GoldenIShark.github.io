@@ -9,30 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.site-nav a');
 
   if (menuToggle && siteNav) {
-    function toggleNav() {
-      const isOpen = siteNav.classList.toggle('open');
+    const setNavOpen = (isOpen) => {
+      siteNav.classList.toggle('open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Tutup navigasi' : 'Buka navigasi');
       document.body.classList.toggle('menu-open', isOpen);
-    }
+    };
 
-    function closeNav() {
-      siteNav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-    }
-
-    menuToggle.addEventListener('click', toggleNav);
-
-    navLinks.forEach((link) => {
-      link.addEventListener('click', closeNav);
+    menuToggle.addEventListener('click', () => {
+      setNavOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    // Tutup navigasi bila tombol Escape ditekan
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && siteNav.classList.contains('open')) {
-        closeNav();
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => setNavOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+        setNavOpen(false);
         menuToggle.focus();
       }
+    });
+
+    window.matchMedia('(min-width: 861px)').addEventListener('change', (event) => {
+      if (event.matches) setNavOpen(false);
     });
   }
 });

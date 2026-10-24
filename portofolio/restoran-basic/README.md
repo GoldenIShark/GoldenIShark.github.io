@@ -1,21 +1,18 @@
-# Aura Rasa — Demo Portofolio Restoran (Paket Basic NFShark)
+# Aura Rasa — Demo Portofolio Restoran
 
-Demo website restoran modern berbobot sangat ringan untuk mendemonstrasikan keunggulan **Paket Basic NFShark** yang mengutamakan kecepatan muat, efisiensi kuota, dan pengalaman responsif.
+Halaman satu halaman untuk mendemonstrasikan struktur website restoran pada Paket Basic NFShark. Nama Aura Rasa berasal dari materi demo yang sudah ada; identitas dan informasi bisnis perlu dikonfirmasi sebelum situs digunakan oleh restoran nyata.
 
-## Spesifikasi & Karakteristik
-- **Paket**: Basic NFShark (1 Halaman Fokus, Tanpa Backend/Database)
-- **Slogan**: *"Website Cepat, Ringan & Responsif — Mengutamakan Performa untuk Bisnis Nyata"*
-- **Sistem Warna**:
-  - Warna Utama: Biru Gelap Luar Angkasa (`#0B1325`, `#070C18`)
-  - Aksen 1: Hijau Segar Nusantara (`#10B981`, `#059669`)
-  - Aksen 2: Biru Langit Modern (`#38BDF8`)
-  - Warna Pelengkap: Mint Ice (`#F0FDF4`), Slate Gray (`#94A3B8`), dan Soft White (`#F8FAFC`)
-- **Aset Gambar**: Menggunakan satu format gambar pratinjau tunggal teroptimasi WebP (`assets/images/preview.webp`).
+## Status Materi
+- Nama restoran: Aura Rasa (nama demo, perlu konfirmasi untuk penggunaan nyata).
+- Cerita, jenis masakan, daftar menu, dan harga: perlu materi.
+- Alamat, jam operasional, kanal kontak, dan URL peta: perlu konfirmasi.
+- Foto hidangan, interior, dan eksterior: belum tersedia.
+- Warna saat ini merupakan arah visual sementara dan perlu konfirmasi pemilik restoran.
+- `assets/images/preview.webp` adalah ilustrasi abstrak NFShark, bukan foto restoran, sehingga tidak digunakan sebagai foto halaman.
 
 ## Teknologi
-- HTML5 Semantik
-- CSS3 Modern (Custom properties, Flexbox, CSS Grid, Media Queries)
-- Vanilla JavaScript ultra-ringan (Aksesibel keyboard & zero external library)
+- HTML semantik, CSS, dan Vanilla JavaScript.
+- Tidak menggunakan backend, layanan eksternal, atau dependensi tambahan.
 
 ## Struktur Folder
 ```text

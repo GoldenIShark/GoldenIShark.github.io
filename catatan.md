@@ -1,5 +1,33 @@
 # Catatan Teknis Lintas Agent
 
+Tanggal: 2026-10-24
+
+## Area
+- Website demo restoran `portofolio/restoran-basic/` (HTML, CSS, JavaScript, README).
+
+## Fakta dan keputusan
+- Alur halaman disusun menjadi Beranda, Tentang, Menu, Galeri, Lokasi/Kontak, dan Footer; navigasi menggunakan anchor internal.
+- Nama Aura Rasa dipertahankan sebagai identitas demo yang tertera pada README. Harga, hidangan, cerita, alamat, jam buka, nomor WhatsApp, dan URL peta lama dihapus karena tidak memiliki sumber terverifikasi.
+- Satu-satunya gambar, `assets/images/preview.webp` (10.720 byte), adalah ilustrasi abstrak NFShark, bukan foto restoran. Slot hero dan galeri ditandai perlu materi; aset tidak diubah.
+- Palet hangat dan font sistem bersifat sementara; font eksternal dan tautan layanan yang tidak valid dihapus. Tidak ada dependensi atau backend baru.
+
+## Dampak
+- Pengunjung dapat menavigasi semua section dan melihat dengan jelas informasi restoran yang masih menunggu konfirmasi, tanpa klaim bisnis atau CTA eksternal palsu.
+- Menu mobile menyampaikan state aksesibel dan dapat ditutup dengan Escape atau setelah tautan dipilih.
+
+## Status
+- Selesai. Browser lokal menguji lebar 320, 375, 390, 414, 768, 1024, dan 1280 px tanpa horizontal overflow.
+- Navigasi diuji dengan keyboard: Enter membuka, Escape menutup dan mengembalikan fokus, tautan menutup menu serta menuju anchor yang benar. Tidak ada console error atau request eksternal.
+- Satu `h1`, semua target anchor, metadata halaman, dan status reduced motion terverifikasi. Rasio kontras label aksen terhadap latar terang 5,52:1.
+- Foto tidak dapat diverifikasi karena tidak ada foto restoran tersedia; halaman memakai placeholder berlabel materi dan tidak memiliki elemen gambar yang rusak.
+
+## Command dan batasan
+- Status Git sebelum edit bersih. `Get-Item` mengonfirmasi aset `preview.webp` berukuran 10.720 byte.
+- `node --check portofolio/restoran-basic/script.js` lulus. Pemeriksaan browser dilakukan pada file lokal `index.html`.
+- Belum ada data restoran maupun foto autentik yang dapat dimasukkan; materi tersebut tetap perlu dikonfirmasi pemilik.
+
+---
+
 Tanggal: 2026-10-23
 
 ## Area
