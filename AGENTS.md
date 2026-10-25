@@ -71,3 +71,7 @@ Setelah menyelesaikan tugas, jelaskan:
 - Langkah lanjutan jika diperlukan.
 
 Jangan menyatakan pengujian berhasil apabila pengujian tersebut belum benar-benar dilakukan.
+
+## 8. Prinsip Penulisan Kode
+
+- Saat menulis kode, usahakan kode sesingkat, seefisien, dan serapi mungkin; hindari kode bertele‑tele, gunakan sintaks singkat, dan pertahankan keterbacaan.

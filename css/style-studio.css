@@ -1,0 +1,684 @@
+/* ==========================================================================
+   NFShark Studio — Minimalist Editorial Stylesheet
+   Digital Agency / Web Design Studio Single-Page Landing Page
+   ========================================================================== */
+
+/* --- Import Google Fonts (Serif & Sans-Serif) dengan swap display --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --studio-dark: var(--color-dark);
+  --studio-dark-surface: var(--color-dark-surface);
+  --studio-dark-border: var(--color-dark-border);
+  --studio-cream: var(--color-cream);
+  --studio-cream-surface: var(--color-cream-surface);
+  --studio-cream-border: var(--color-cream-border);
+  --studio-mint: var(--color-mint);
+  --studio-lime: var(--color-lime);
+  --studio-dark-text: var(--color-dark-text);
+  --studio-light-text: var(--color-light-text);
+  --studio-muted: var(--color-muted);
+}
+
+/* Reset Scroll Margin untuk Semua Section Target Anchor */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* Body & Base Wrapper */
+.studio-body {
+  background-color: var(--studio-dark);
+  color: var(--studio-light-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Container Umum Studio */
+.studio-container {
+  width: min(100% - 2.5rem, 1180px);
+  margin-inline: auto;
+}
+
+/* Tipografi Editorial */
+.serif-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.serif-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--studio-mint);
+}
+
+/* Eyebrow Label */
+.studio-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--studio-mint);
+  margin-bottom: 0.75rem;
+}
+
+.studio-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+/* Section Dasar */
+.studio-section {
+  padding: 6.5rem 0;
+}
+
+.studio-section--dark {
+  background-color: var(--studio-dark);
+  color: var(--studio-light-text);
+}
+
+.studio-section--cream {
+  background-color: var(--studio-cream);
+  color: var(--studio-dark-text);
+}
+
+/* ==========================================================================
+   1. NAVBAR
+   ========================================================================== */
+.studio-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 74px;
+  background-color: rgba(9, 25, 21, 0.95);
+  border-bottom: 1px solid var(--studio-dark-border);
+}
+
+.studio-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.studio-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--studio-light-text);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.studio-logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
+}
+
+.studio-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.studio-nav-list a {
+  color: #a3b8b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color var(--transition-smooth);
+}
+
+.studio-nav-list a:hover,
+.studio-nav-list a:focus-visible {
+  color: var(--studio-mint);
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.studio-hero {
+  padding: 5rem 0 6rem;
+  border-bottom: 1px solid var(--studio-dark-border);
+}
+
+.hero-editorial-grid {
+  display: grid;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-copy-block {
+  max-width: 820px;
+}
+
+.hero-headline {
+  font-size: clamp(2.35rem, 5.5vw, 4.2rem);
+  color: var(--studio-light-text);
+  margin: 0 0 1.25rem;
+}
+
+.hero-lead-text {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #b5c7c3;
+  max-width: 65ch;
+  margin: 0 0 2.25rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+/* Preview Mockup Frame di Bawah Hero */
+.hero-mockup-wrapper {
+  border: 1px solid var(--studio-dark-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.browser-header-editorial {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  background-color: #0d211c;
+  border-bottom: 1px solid var(--studio-dark-border);
+}
+
+.browser-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.browser-dot:nth-child(1) { background-color: #e06c75; }
+.browser-dot:nth-child(2) { background-color: #e5c07b; }
+.browser-dot:nth-child(3) { background-color: #98c379; }
+
+.browser-address {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: var(--studio-muted);
+}
+
+.hero-preview-canvas {
+  background: linear-gradient(135deg, #0f2b24, #081613);
+  padding: 3rem 2rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero-canvas-inner {
+  max-width: 600px;
+}
+
+.hero-canvas-inner h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   3. PROFIL & PENDEKATAN STUDIO (2 KOLOM: 45/55)
+   ========================================================================== */
+.studio-profile-grid {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.studio-profile-left h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+  color: var(--studio-light-text);
+}
+
+.studio-profile-right {
+  font-size: 1.05rem;
+  color: #b5c7c3;
+  line-height: 1.75;
+}
+
+.studio-profile-right p {
+  margin: 0 0 1.5rem;
+}
+
+.studio-stats-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--studio-dark-border);
+  margin-top: 2rem;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 2rem;
+  font-family: var(--font-serif);
+  color: var(--studio-mint);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-item span {
+  font-size: 0.82rem;
+  color: var(--studio-muted);
+}
+
+/* ==========================================================================
+   4. LAYANAN (LATAR KREM TERANG & ACCORDION)
+   ========================================================================== */
+.studio-section--cream .studio-eyebrow {
+  color: #065f46;
+}
+
+.studio-services-layout {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  gap: 4rem;
+  align-items: start;
+}
+
+.services-intro-col h2 {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  margin: 0 0 1rem;
+  color: var(--studio-dark-text);
+}
+
+.services-intro-col p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+}
+
+.studio-accordion-wrap {
+  border-top: 1px solid var(--studio-cream-border);
+}
+
+.studio-accordion-wrap .accordion-item {
+  border-bottom: 1px solid var(--studio-cream-border);
+}
+
+.studio-accordion-wrap .accordion-trigger {
+  color: var(--studio-dark-text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 1.25rem 0;
+}
+
+.studio-accordion-wrap .accordion-icon {
+  font-size: 1.35rem;
+  color: #065f46;
+  font-weight: 400;
+}
+
+.studio-accordion-wrap .accordion-panel-inner {
+  color: #374151;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   5. PORTOFOLIO (GRID 2 KOLOM)
+   ========================================================================== */
+.portfolio-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.portfolio-grid-studio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-card-studio {
+  display: block;
+  background-color: var(--studio-dark-surface);
+  border: 1px solid var(--studio-dark-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.portfolio-card-studio:hover,
+.portfolio-card-studio:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--studio-mint);
+}
+
+.portfolio-thumb-frame {
+  aspect-ratio: 16 / 10;
+  background-color: #071512;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-thumb-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card-studio:hover .portfolio-thumb-frame img {
+  transform: scale(1.03);
+}
+
+.portfolio-meta-box {
+  padding: 1.4rem;
+}
+
+.portfolio-cat-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--studio-mint);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-meta-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--studio-light-text);
+}
+
+.portfolio-meta-box p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--studio-muted);
+}
+
+/* ==========================================================================
+   6. KEUNGGULAN DAN FITUR (GRID 3 KOLOM)
+   ========================================================================== */
+.features-grid-studio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-col-item {
+  border-top: 1px solid var(--studio-dark-border);
+  padding-top: 1.5rem;
+}
+
+.feature-number {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--studio-mint);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.feature-col-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.75rem;
+  color: var(--studio-light-text);
+}
+
+.feature-col-item p {
+  font-size: 0.92rem;
+  color: var(--studio-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. TABEL PAKET DAN HARGA (LATAR KREM & TABEL SEMANTIK)
+   ========================================================================== */
+.pricing-intro-center {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+}
+
+.pricing-intro-center h2 {
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  margin: 0 0 0.75rem;
+  color: var(--studio-dark-text);
+}
+
+.pricing-intro-center p {
+  color: #4b5563;
+  margin: 0;
+}
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+  background-color: #fff;
+  border: 1px solid var(--studio-cream-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.studio-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  text-align: left;
+}
+
+.studio-pricing-table th,
+.studio-pricing-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--studio-cream-border);
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.studio-pricing-table thead th {
+  background-color: #f9f7f2;
+  font-weight: 700;
+  color: var(--studio-dark-text);
+  border-bottom: 2px solid var(--studio-cream-border);
+}
+
+.studio-pricing-table thead th:first-child {
+  width: 30%;
+}
+
+.studio-pricing-table tbody tr:hover {
+  background-color: #fbf9f5;
+}
+
+.table-plan-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--studio-dark-text);
+  font-size: 1.05rem;
+}
+
+.table-price {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #065f46;
+  white-space: nowrap;
+}
+
+.table-action-cell {
+  text-align: right;
+}
+
+/* ==========================================================================
+   8. CTA & KONTAK (LATAR HIJAU GELAP)
+   ========================================================================== */
+.studio-cta-box {
+  background: linear-gradient(135deg, #0e2b23, #071714);
+  border: 1px solid var(--studio-dark-border);
+  border-radius: var(--radius-lg);
+  padding: 4.5rem 3rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.studio-cta-box h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin: 0 0 1rem;
+  color: var(--studio-light-text);
+}
+
+.studio-cta-box p {
+  color: #b5c7c3;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.cta-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.studio-footer {
+  background-color: #050d0b;
+  border-top: 1px solid var(--studio-dark-border);
+  padding: 4rem 0 2.5rem;
+  color: var(--studio-muted);
+  font-size: 0.9rem;
+}
+
+.studio-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-studio-info h3 {
+  color: var(--studio-light-text);
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+.footer-nav-col strong {
+  display: block;
+  color: var(--studio-light-text);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-nav-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-nav-col a {
+  color: var(--studio-muted);
+  text-decoration: none;
+  transition: color var(--transition-smooth);
+}
+
+.footer-nav-col a:hover,
+.footer-nav-col a:focus-visible {
+  color: var(--studio-mint);
+}
+
+.studio-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .studio-profile-grid,
+  .studio-services-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .portfolio-grid-studio {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid-studio {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .studio-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .studio-nav-list {
+    display: none; /* Dikelola menu toggle pada script.js */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .studio-cta-box {
+    padding: 3rem 1.5rem;
+  }
+
+  .studio-stats-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

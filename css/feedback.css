@@ -79,3 +79,39 @@ html.feedback-document { scroll-behavior: auto; }
   .google-form-content { padding: 0 1rem 1rem; }
   .google-form-embed { min-height: 1400px; }
 }
+
+/* --- Editorial UI/UX Refinement --- */
+.feedback-field input,
+.feedback-field textarea {
+  transition: border-color var(--transition-smooth, 0.2s ease), box-shadow var(--transition-smooth, 0.2s ease);
+}
+
+.feedback-field input:focus,
+.feedback-field textarea:focus {
+  border-color: var(--color-mint, #2dd4bf);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.report-type-options label {
+  transition: border-color var(--transition-smooth, 0.2s ease), background var(--transition-smooth, 0.2s ease);
+}
+
+.report-type-options label:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+}
+
+.report-type-options label:focus-within {
+  border-color: var(--color-mint, #2dd4bf);
+  background: rgba(45, 212, 191, 0.05);
+}
+
+.feedback-home-link {
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+.feedback-home-link:hover,
+.feedback-home-link:focus-visible {
+  border-color: var(--color-mint, #2dd4bf);
+  color: var(--color-mint, #2dd4bf);
+  background: rgba(45, 212, 191, 0.06);
+}

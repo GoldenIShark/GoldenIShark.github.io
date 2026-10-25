@@ -3,6 +3,91 @@
 Tanggal: 2026-10-25
 
 ## Area
+- Tahap 2 Perombakan: Pembuatan `index-studio.html` & `css/style-studio.css` (Minimalist Editorial Digital Studio) serta perombakan UI pada `faq.css` dan `feedback.css`.
+
+## Fakta dan keputusan
+- File asli `index.html` dan `css/style.css` dipertahankan 100% utuh tanpa perubahan (tidak diganti/ditimpa).
+- Dibuat `index-studio.html` dan `css/style-studio.css` yang mewujudkan seluruh ketentuan desain Digital Studio / Web Design Studio:
+  1. Tata letak 9 bagian: Navbar sticky (Escape & focus return), Hero dengan mockup terukur, Profil studio 2 kolom (45/55), Layanan latar krem dengan accordion ARIA, Portofolio grid 2 kolom dengan rasio WebP konsisten, Keunggulan 3 kolom, Tabel paket harga semantik latar krem, CTA kontak WhatsApp/Brief latar hijau gelap, dan Footer.
+  2. Palet warna alternasi: Hijau Gelap Studio (`#091915`), Krem Terang Editorial (`#f6f3eb`), Mint (`#2dd4bf`), dan Lime (`#bef264`).
+  3. Tipografi editorial Playfair Display (Serif) dan Plus Jakarta Sans (Sans-serif) dengan `font-display: swap`.
+  4. Seluruh target anchor memiliki `scroll-margin-top: 84px` agar tidak tertutup header sticky.
+- Halaman `faq.html` dan `feedback.html` dirombak UI/UX-nya melalui `css/faq.css` dan `css/feedback.css`:
+  - Input teks, select, dan textarea diperbarui dengan transisi fokus halus dan ring fokus warna mint (`--color-mint`).
+  - Kategori filter dan tombol tautan beranda diperbarui dengan efek hover dan transisi fluid.
+  - Struktur HTML, logika fungsional, dan desain asli halaman FAQ & Feedback tetap utuh tanpa perubahan destruktif.
+- Seluruh folder `portofolio/` tidak disentuh.
+
+## Dampak
+- Halaman utama memiliki varian baru berstandar Digital Studio modern yang siap dipratinjau secara berdampingan tanpa mengorbankan file asli.
+- Seluruh formulir dan input pada FAQ dan Feedback kini selaras dengan sentuhan UI/UX modern NFShark.
+
+## Status
+- `index-studio.html`, `css/style-studio.css`, `css/faq.css`, dan `css/feedback.css` selesai divalidasi dan bebas error sintaks.
+
+## Command dan batasan
+- Penulisan file dilakukan secara atomik melalui tooling workspace.
+
+---
+
+
+Tanggal: 2026-10-25
+
+## Area
+- Dokumentasi UI & Halaman Pratinjau: Pembuatan `Daftar-UI.md` dan restrukturisasi `ui-preview.html`.
+
+## Fakta dan keputusan
+- Dibuat file `Daftar-UI.md` yang memuat katalog lengkap komponen UI & UX:
+  1. Sistem Token & Variabel CSS (`:root`) untuk warna brand classic, tema Minimalist Editorial, dan tipografi/radius.
+  2. Kategori Tombol: Solid Press, Glass Press, dan Editorial (`.btn-lime`, `.btn-outline-editorial`).
+  3. Kategori Kartu & Permukaan: `.card-editorial`, `.card-editorial-dark`, `.card-editorial-cream`, `.card-interactive`.
+  4. Kategori Formulir & Input: `.form-group-editorial`, `.label-editorial`, `.input-editorial`, `.textarea-editorial`, serta status validasi native.
+  5. Kategori Badge, Accordion ARIA, Media Frame (Anti-CLS), Header, dan Footer.
+- Halaman `ui-preview.html` diperbarui menjadi pusat katalog visual interaktif yang menampilkan seluruh kategori komponen UI beserta label kelas CSS yang digunakan.
+- Ditambahkan skrip interaksi ringan native untuk demonstrasi fungsional accordion pada `ui-preview.html`.
+
+## Dampak
+- Pengembang dan pengarah proyek memiliki referensi dokumentasi markdown terpusat (`Daftar-UI.md`) dan halaman visual (`ui-preview.html`) untuk memeriksa seluruh kelas komponen CSS tanpa harus menebak nama selector.
+
+## Status
+- `Daftar-UI.md` dan `ui-preview.html` selesai dibuat dan divalidasi. Tidak ada error sintaks.
+
+## Command dan batasan
+- Penulisan file dilakukan secara atomik melalui tooling workspace.
+
+---
+
+
+Tanggal: 2026-10-25
+
+## Area
+- Desain Sistem Global: Deklarasi Template UI/UX & Token Minimalist Editorial (`css/common.css`).
+
+## Fakta dan keputusan
+- Ditambahkan token warna editorial ke `:root` di `css/common.css`: `--color-dark` (#091915), `--color-dark-surface` (#102621), `--color-cream` (#f6f3eb), `--color-mint` (#2dd4bf), `--color-lime` (#bef264), dan token tipografi fluid tanpa menghapus variabel lama.
+- Ditambahkan modul template UI & UX siap pakai:
+  1. Card Components: `.card-editorial`, `.card-editorial-dark`, `.card-editorial-cream`, `.card-interactive`.
+  2. Button & Badge: `.btn-lime`, `.btn-outline-editorial`, `.badge-editorial`, `.badge-mint`, `.badge-lime`.
+  3. Form & Input: `.form-group-editorial`, `.label-editorial`, `.input-editorial`, `.textarea-editorial` (target sentuh 48px, fokus mint).
+  4. Accordion Aksesibel: `.accordion-editorial`, `.accordion-trigger` (dengan rotasi ikon & ARIA state), `.accordion-panel` (transisi grid-template-rows zero-layout-shift).
+  5. Frame Media: `.frame-editorial` (aspect-ratio 16/10 anti-CLS).
+- Tidak ada kelas atau variabel lama yang dihapus sehingga halaman pendukung (`brief.html`, `faq.html`, `feedback.html`) tetap berfungsi normal.
+
+## Dampak
+- Seluruh komponen antarmuka untuk perombakan halaman utama (dan halaman lainnya) kini memiliki standar kelas modular yang konsisten, aksesibel, dan terisolasi.
+
+## Status
+- `css/common.css` berhasil diperbarui dan divalidasi melalui `git diff`. Tidak ditemukan error sintaks.
+
+## Command dan batasan
+- Skrip pembantu pembaruan dijalankan secara lokal via python tanpa dependensi eksternal.
+
+---
+
+
+Tanggal: 2026-10-25
+
+## Area
 - Konfigurasi native Antigravity workspace: `.agents/` (`.agents/skills/` dan `.agents/agents/`).
 
 ## Fakta dan keputusan

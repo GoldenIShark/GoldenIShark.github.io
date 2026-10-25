@@ -5,299 +5,410 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Pratinjau komponen UI NFShark: tombol Solid Press dan Glass Press, formulir, kartu, panel, serta state interaksi."
+      content="Katalog Lengkap Pratinjau Komponen UI & UX NFShark: Solid Press, Glass Press, dan Minimalist Editorial Design System."
     />
-    <title>Pratinjau Komponen UI — NFShark</title>
+    <title>Katalog & Pratinjau Komponen UI — NFShark</title>
+    <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/ui-components.css" />
+    <style>
+      /* Styling tata letak preview terpadu */
+      .ui-category-section {
+        padding: 3.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .ui-category-header {
+        margin-bottom: 2rem;
+      }
+      .ui-category-header h2 {
+        font-size: 1.85rem;
+        margin: 0 0 0.5rem;
+        color: var(--color-mint);
+      }
+      .ui-category-header p {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+      .ui-class-tag {
+        display: inline-block;
+        font-family: monospace;
+        font-size: 0.8rem;
+        background: rgba(0, 0, 0, 0.35);
+        color: var(--color-lime);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        margin-bottom: 0.75rem;
+      }
+      .ui-component-preview-box {
+        background: var(--color-dark-surface);
+        border: 1px solid var(--color-dark-border);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+      .ui-component-preview-box--cream {
+        background: var(--color-cream);
+        border-color: var(--color-cream-border);
+        color: var(--color-dark-text);
+      }
+      .ui-component-preview-box--cream .ui-class-tag {
+        background: rgba(0, 0, 0, 0.08);
+        color: #1e3a8a;
+      }
+      .ui-component-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        align-items: start;
+      }
+      .ui-token-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+      .ui-token-table th,
+      .ui-token-table td {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border);
+        text-align: left;
+      }
+      .ui-token-table th {
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--color-mint);
+      }
+      .color-chip {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
   </head>
-  <body class="ui-components ui-preview">
-    <header class="ui-preview-header">
-      <p>NFShark · Sistem komponen UI</p>
-      <h1>Komponen yang terasa jelas saat disentuh.</h1>
-      <p>
-        Contoh tombol dan elemen antarmuka dengan dua pendekatan: Solid Press
-        dan Glass Press. Semua state dapat dilihat, sementara kontrol form tetap
-        memakai elemen HTML native.
-      </p>
+  <body class="ui-components ui-preview" style="background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans);">
+    
+    <!-- HEADER PRATINJAU -->
+    <header class="ui-preview-header" style="background: var(--color-dark); padding: 4rem 1.5rem 3rem; text-align: center; border-bottom: 1px solid var(--color-dark-border);">
+      <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <span class="badge-editorial badge-mint">Design System & UI Kit</span>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.2rem); margin: 1rem 0; color: var(--color-light-text);">
+          Katalog Lengkap Komponen UI & UX
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin: 0 auto; max-width: 680px;">
+          Dokumentasi visual terpadu untuk seluruh token desain, tombol, kartu, kontrol formulir, accordion, dan tata letak responsif NFShark.
+        </p>
+      </div>
     </header>
 
-    <main class="ui-preview-main">
-      <section class="ui-theme--solid" aria-labelledby="solid-title">
-        <h2 id="solid-title">Solid Press</h2>
-        <p class="ui-section-intro">
-          Tombol utama memakai permukaan grass dengan teks putih; kontrol form
-          memakai permukaan sea. Varian sekunder menggunakan outline grass
-          dengan teks sea. Tekan tombol dengan pointer atau sentuh untuk
-          melihat respons fisik singkat.
-        </p>
+    <main class="container" style="max-width: 1120px; margin: 0 auto; padding: 2rem 1.5rem;">
+      
+      <!-- KATEGORI 1: TOKEN DESAIN & PALET WARNA -->
+      <section class="ui-category-section" id="tokens">
+        <div class="ui-category-header">
+          <h2>1. Token Desain & Sistem Warna</h2>
+          <p>Dideklarasikan pada <code>:root</code> di <code>css/common.css</code> untuk konsistensi tema global.</p>
+        </div>
 
-        <div class="ui-demo-block">
-          <h3>Tombol dan state</h3>
-          <div class="ui-state-grid">
-            <div class="ui-state-card">
-              <p>Normal · solid / primary</p>
-              <button class="ui-btn ui-btn--solid" type="button">Simpan perubahan</button>
+        <div class="ui-component-preview-box">
+          <table class="ui-token-table">
+            <thead>
+              <tr>
+                <th>Nama Token (CSS Variable)</th>
+                <th>Nilai Warna / Kode</th>
+                <th>Penerapan / Kategori</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--color-dark</code></td>
+                <td><span class="color-chip" style="background: #091915;"></span> #091915</td>
+                <td>Latar belakang utama tema Digital Studio</td>
+              </tr>
+              <tr>
+                <td><code>--color-dark-surface</code></td>
+                <td><span class="color-chip" style="background: #102621;"></span> #102621</td>
+                <td>Permukaan kartu & elevasi gelap</td>
+              </tr>
+              <tr>
+                <td><code>--color-cream</code></td>
+                <td><span class="color-chip" style="background: #f6f3eb;"></span> #f6f3eb</td>
+                <td>Latar seksi kontras (Layanan, Tabel Harga)</td>
+              </tr>
+              <tr>
+                <td><code>--color-cream-surface</code></td>
+                <td><span class="color-chip" style="background: #ede8dc;"></span> #ede8dc</td>
+                <td>Permukaan kartu krem</td>
+              </tr>
+              <tr>
+                <td><code>--color-mint</code></td>
+                <td><span class="color-chip" style="background: #2dd4bf;"></span> #2dd4bf</td>
+                <td>Aksen teks penekanan & outline fokus aktif</td>
+              </tr>
+              <tr>
+                <td><code>--color-lime</code></td>
+                <td><span class="color-chip" style="background: #bef264;"></span> #bef264</td>
+                <td>Tombol aksi konversi tinggi (CTA) & rekomendasi</td>
+              </tr>
+              <tr>
+                <td><code>--ui-grass</code></td>
+                <td><span class="color-chip" style="background: #39b54a;"></span> #39b54a</td>
+                <td>Hijau rumput brand (Solid Press default)</td>
+              </tr>
+              <tr>
+                <td><code>--ui-sea</code></td>
+                <td><span class="color-chip" style="background: #087e8b;"></span> #087e8b</td>
+                <td>Biru laut brand (Solid Press secondary)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- KATEGORI 2: TOMBOL & AKSI (BUTTONS) -->
+      <section class="ui-category-section" id="buttons">
+        <div class="ui-category-header">
+          <h2>2. Komponen Tombol (Buttons & CTA)</h2>
+          <p>Tombol interaktif dengan area sentuh minimal 44-48px untuk aksesibilitas WCAG.</p>
+        </div>
+
+        <div class="ui-component-preview-box">
+          <h3 style="margin-top:0; color:var(--color-mint);">A. Editorial Minimalist Buttons</h3>
+          <div class="ui-component-grid">
+            <div>
+              <span class="ui-class-tag">.btn-lime</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Tombol konversi utama dengan kontras tinggi:</p>
+              <button class="btn btn-lime" type="button">Mulai Brief Proyek ↗</button>
             </div>
-            <div class="ui-state-card">
-              <p>Hover · secondary</p>
-              <button class="ui-btn ui-btn--secondary is-hovered" type="button">Lihat detail</button>
+            <div>
+              <span class="ui-class-tag">.btn-outline-editorial</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Tombol sekunder berbingkai minimalis:</p>
+              <button class="btn btn-outline-editorial" type="button">Lihat Portofolio</button>
             </div>
-            <div class="ui-state-card">
-              <p>Focus visible</p>
-              <button class="ui-btn ui-btn--primary is-focus-demo" type="button">Lanjutkan</button>
+          </div>
+        </div>
+
+        <div class="ui-component-preview-box">
+          <h3 style="margin-top:0; color:var(--color-mint);">B. Solid Press & Brand Buttons</h3>
+          <div class="ui-component-grid">
+            <div>
+              <span class="ui-class-tag">.btn-primary / .ui-btn--solid</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Hijau rumput dengan efek tekan fisik:</p>
+              <button class="btn btn-primary" type="button">Simpan Perubahan</button>
             </div>
-            <div class="ui-state-card">
-              <p>Pressed · contoh state</p>
-              <button class="ui-btn ui-btn--primary is-pressed" type="button">Tombol ditekan</button>
+            <div>
+              <span class="ui-class-tag">.btn-secondary</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Transparan dengan border putih:</p>
+              <button class="btn btn-secondary" type="button">Aksi Sekunder</button>
             </div>
-            <div class="ui-state-card">
-              <p>Pressed · secondary</p>
-              <button class="ui-btn ui-btn--secondary is-pressed" type="button">Aksi alternatif</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Disabled</p>
-              <button class="ui-btn ui-btn--solid" type="button" disabled>Belum tersedia</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Outline · aksi alternatif</p>
+            <div>
+              <span class="ui-class-tag">.ui-btn--outline</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Outline standar:</p>
               <button class="ui-btn ui-btn--outline" type="button">Batal</button>
             </div>
-            <div class="ui-state-card">
-              <p>Icon button · aksi pencarian</p>
-              <button class="ui-btn ui-btn--solid ui-btn--icon" type="button" aria-label="Cari">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="10.8" cy="10.8" r="6.8"></circle>
-                  <path d="m16 16 4.5 4.5"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="ui-demo-block">
-          <h3>Formulir dan status</h3>
-          <form class="ui-form ui-card" action="#" method="get">
-            <div class="ui-demo-grid">
-              <div class="ui-field">
-                <label class="ui-label" for="solid-name">Nama</label>
-                <input class="ui-input" id="solid-name" name="nama" type="text" placeholder="Nama lengkap" aria-describedby="solid-name-help" />
-                <p class="ui-helper" id="solid-name-help">Contoh field teks dengan label dan helper.</p>
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="solid-search">Fokus visible · pencarian</label>
-                <input class="ui-input ui-search is-focus-demo" id="solid-search" name="q" type="search" placeholder="Cari komponen" />
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="solid-select">Jenis proyek</label>
-                <select class="ui-select" id="solid-select" name="jenis">
-                  <option value="">Pilih salah satu</option>
-                  <option value="profil">Website profil</option>
-                  <option value="toko">Toko online</option>
-                </select>
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="solid-message">Pesan</label>
-                <textarea class="ui-textarea" id="solid-message" name="pesan" placeholder="Tulis pesan singkat"></textarea>
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="solid-invalid">Contoh error</label>
-                <input
-                  class="ui-input"
-                  id="solid-invalid"
-                  name="email-error"
-                  type="email"
-                  value="alamat-tidak-valid"
-                  aria-invalid="true"
-                  aria-describedby="solid-invalid-error"
-                />
-                <p class="ui-error" id="solid-invalid-error">Masukkan alamat email dengan format yang benar.</p>
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="solid-valid">Contoh berhasil</label>
-                <input
-                  class="ui-input"
-                  id="solid-valid"
-                  name="email-valid"
-                  type="email"
-                  value="halo@example.com"
-                  aria-invalid="false"
-                  aria-describedby="solid-valid-success"
-                />
-                <p class="ui-success" id="solid-valid-success">Format email terlihat benar.</p>
-              </div>
-            </div>
-            <fieldset class="ui-check-group">
-              <legend>Preferensi kontak</legend>
-              <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="kontak-email" /> Email</label>
-              <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="kontak-telepon" /> Telepon</label>
-            </fieldset>
-            <fieldset class="ui-check-group">
-              <legend>Pilih prioritas</legend>
-              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="prioritas" value="normal" /> Normal</label>
-              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="prioritas" value="tinggi" /> Tinggi</label>
-            </fieldset>
             <div>
-              <button class="ui-btn ui-btn--primary" type="submit">Kirim contoh</button>
+              <span class="ui-class-tag">:disabled</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Status nonaktif:</p>
+              <button class="btn btn-primary" type="button" disabled>Tidak Tersedia</button>
             </div>
-          </form>
+          </div>
         </div>
 
-        <div class="ui-demo-block ui-demo-grid">
-          <article class="ui-card">
-            <h3>Kartu</h3>
-            <p>Kartu untuk mengelompokkan informasi terkait dalam satu permukaan.</p>
-            <a href="#glass-title">Lihat contoh Glass Press</a>
-          </article>
-          <aside class="ui-panel" aria-label="Catatan komponen">
-            <h3>Panel informasi</h3>
-            <p>Panel menggunakan penanda tepi grass dan teks sea agar status tidak disampaikan lewat warna saja.</p>
-          </aside>
+        <div class="ui-component-preview-box" style="background: rgba(8, 126, 139, 0.25);">
+          <h3 style="margin-top:0; color:var(--color-mint);">C. Glass Press Buttons</h3>
+          <div class="ui-component-grid">
+            <div>
+              <span class="ui-class-tag">.ui-btn--glass</span>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">Permukaan kaca transparan:</p>
+              <button class="ui-btn ui-btn--glass" type="button">Jelajahi Fitur</button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="ui-theme--glass" aria-labelledby="glass-title">
-        <h2 id="glass-title">Glass Press</h2>
-        <p class="ui-section-intro">
-          Permukaan transparan memakai fallback warna alpha saat
-          <code>backdrop-filter</code> tidak tersedia. Contoh disajikan pada
-          latar sea dan putih agar keterbacaan tetap terjaga.
-        </p>
-
-        <div class="ui-glass-board ui-surface--sea">
-          <h3>Latar sea · glass terang</h3>
-          <div class="ui-state-grid">
-            <div class="ui-state-card">
-              <p>Normal</p>
-              <button class="ui-btn ui-btn--glass" type="button">Mulai sekarang</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Hover</p>
-              <button class="ui-btn ui-btn--glass is-hovered" type="button">Buka detail</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Focus visible</p>
-              <button class="ui-btn ui-btn--glass is-focus-demo" type="button">Teruskan</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Pressed · contoh state</p>
-              <button class="ui-btn ui-btn--glass is-pressed" type="button">Tombol ditekan</button>
-            </div>
-            <div class="ui-state-card">
-              <p>Disabled</p>
-              <button class="ui-btn ui-btn--glass" type="button" disabled>Tidak aktif</button>
-            </div>
-          </div>
-          <div class="ui-glass-layout">
-            <article class="ui-card">
-              <h3>Kartu glass</h3>
-              <p>Konten tetap terbaca di atas permukaan sea.</p>
-            </article>
-            <aside class="ui-panel" aria-label="Panel glass">
-              <h3>Panel glass</h3>
-              <p>Efek blur bersifat dekoratif; batas dan kontras tetap ada sebagai fallback.</p>
-            </aside>
-          </div>
-          <form class="ui-form ui-card" action="#" method="get">
-            <h3>Kontrol glass di latar sea</h3>
-            <div class="ui-demo-grid">
-              <div class="ui-field">
-                <label class="ui-label" for="glass-dark-search">Fokus visible · pencarian</label>
-                <input class="ui-input ui-search is-focus-demo" id="glass-dark-search" name="q-dark" type="search" placeholder="Cari di sini" />
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="glass-dark-select">Kategori</label>
-                <select class="ui-select" id="glass-dark-select" name="kategori-dark">
-                  <option value="">Pilih kategori</option>
-                  <option value="komponen">Komponen UI</option>
-                  <option value="form">Formulir</option>
-                </select>
-              </div>
-            </div>
-            <label class="ui-check"><input class="ui-check-input ui-checkbox" type="checkbox" name="ingat-dark" /> Ingat pilihan saya</label>
-          </form>
+      <!-- KATEGORI 3: BADGE & LABEL STATUS -->
+      <section class="ui-category-section" id="badges">
+        <div class="ui-category-header">
+          <h2>3. Badge & Indikator Kategori</h2>
+          <p>Label ringkas untuk menandai fitur, paket rekomendasi, atau status proyek.</p>
         </div>
 
-        <div class="ui-glass-board ui-surface--light">
-          <h3>Latar putih · glass sea</h3>
-          <div class="ui-theme--glass ui-glass-layout">
-            <div class="ui-state-grid">
-              <div class="ui-state-card">
-                <p>Normal</p>
-                <button class="ui-btn ui-btn--glass" type="button">Pilih opsi</button>
-              </div>
-              <div class="ui-state-card">
-                <p>Hover</p>
-                <button class="ui-btn ui-btn--glass is-hovered" type="button">Lihat pilihan</button>
-              </div>
-              <div class="ui-state-card">
-                <p>Focus visible</p>
-                <button class="ui-btn ui-btn--glass is-focus-demo" type="button">Buka berikutnya</button>
-              </div>
-              <div class="ui-state-card">
-                <p>Pressed · contoh state</p>
-                <button class="ui-btn ui-btn--glass is-pressed" type="button">Tombol ditekan</button>
-              </div>
-              <div class="ui-state-card">
-                <p>Disabled</p>
-                <button class="ui-btn ui-btn--glass" type="button" disabled>Tidak tersedia</button>
-              </div>
+        <div class="ui-component-preview-box">
+          <div class="ui-component-grid">
+            <div>
+              <span class="ui-class-tag">.badge-editorial .badge-mint</span>
+              <div><span class="badge-editorial badge-mint">Web Development</span></div>
             </div>
-            <div class="ui-control-stack">
-              <article class="ui-card">
-                <h3>Kartu glass terang</h3>
-                <p>Panel transparan memiliki batas sea untuk membedakannya dari latar putih.</p>
-              </article>
-              <aside class="ui-panel" aria-label="Catatan pada latar putih">
-                <h3>Panel informasi</h3>
-                <p>Komposisi sederhana menjaga teks tetap mudah dibaca.</p>
-              </aside>
+            <div>
+              <span class="ui-class-tag">.badge-editorial .badge-lime</span>
+              <div><span class="badge-editorial badge-lime">★ Paling Populer</span></div>
             </div>
           </div>
-          <form class="ui-theme--glass ui-card ui-form" action="#" method="get">
-            <h3>Kontrol glass di latar putih</h3>
-            <div class="ui-demo-grid">
-              <div class="ui-field">
-                <label class="ui-label" for="glass-light-name">Nama</label>
-                <input class="ui-input" id="glass-light-name" name="nama-light" type="text" placeholder="Nama lengkap" />
-              </div>
-              <div class="ui-field">
-                <label class="ui-label" for="glass-light-message">Fokus visible · pesan</label>
-                <textarea class="ui-textarea is-focus-demo" id="glass-light-message" name="pesan-light" placeholder="Tulis pesan"></textarea>
-              </div>
-            </div>
-            <fieldset class="ui-check-group">
-              <legend>Metode pemberitahuan</legend>
-              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="notifikasi" value="email" /> Email</label>
-              <label class="ui-check"><input class="ui-check-input ui-radio" type="radio" name="notifikasi" value="web" /> Web</label>
-            </fieldset>
-          </form>
         </div>
       </section>
 
-      <section aria-labelledby="usage-title">
-        <h2 id="usage-title">Cara pakai</h2>
-        <p class="ui-section-intro">
-          Muat <code>css/ui-components.css</code>, lalu tempatkan komponen di
-          dalam wrapper <code>.ui-components</code>. Gunakan
-          <code>.ui-theme--glass</code> pada grup Glass Press dan
-          <code>.ui-surface--sea</code> atau <code>.ui-surface--light</code>
-          untuk memilih latar demo. Tekan nyata menggunakan state native
-          <code>:active</code>; kelas <code>.is-hovered</code>,
-          <code>.is-focus-demo</code>, dan <code>.is-pressed</code> hanya untuk
-          menampilkan contoh state.
-        </p>
-        <pre class="ui-card"><code>&lt;div class="ui-components"&gt;
-  &lt;div class="ui-theme--glass"&gt;
-    &lt;div class="ui-surface--sea"&gt;
-      &lt;button class="ui-btn ui-btn--glass" type="button"&gt;Lanjutkan&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+      <!-- KATEGORI 4: KARTU & PERMUKAAN (CARDS) -->
+      <section class="ui-category-section" id="cards">
+        <div class="ui-category-header">
+          <h2>4. Kartu & Permukaan Konten (Cards & Surfaces)</h2>
+          <p>Kontainer konten modular yang adaptif untuk tema gelap maupun terang.</p>
+        </div>
+
+        <div class="ui-component-grid">
+          <div class="card-editorial card-editorial-dark card-interactive">
+            <span class="ui-class-tag">.card-editorial .card-editorial-dark</span>
+            <h3 style="margin: 0.5rem 0; font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-light-text);">Kartu Studio Gelap</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.25rem;">
+              Digunakan pada seksi Hero, Profil, dan Portofolio dengan border mint halus dan efek angkat interaktif saat disentuh.
+            </p>
+            <span class="badge-editorial badge-mint">Tema Gelap</span>
+          </div>
+
+          <div class="card-editorial card-editorial-cream card-interactive">
+            <span class="ui-class-tag">.card-editorial .card-editorial-cream</span>
+            <h3 style="margin: 0.5rem 0; font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-dark-text);">Kartu Editorial Krem</h3>
+            <p style="color: #4b5563; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.25rem;">
+              Digunakan pada seksi Layanan dan Tabel Paket Harga untuk menciptakan ritme kontras visual yang elegan.
+            </p>
+            <span class="badge-editorial badge-lime">Tema Krem</span>
+          </div>
+        </div>
       </section>
+
+      <!-- KATEGORI 5: INPUT & FORMULIR (FORMS) -->
+      <section class="ui-category-section" id="forms">
+        <div class="ui-category-header">
+          <h2>5. Formulir & Kontrol Masukan (UI Inputs)</h2>
+          <p>Kontrol input dengan tinggi 48px, label semantik, dan cincin fokus aksesibel.</p>
+        </div>
+
+        <div class="ui-component-grid">
+          <!-- Formulir Gaya Editorial -->
+          <div class="ui-component-preview-box">
+            <h3 style="margin-top:0; color:var(--color-mint);">A. Formulir Minimalist Editorial</h3>
+            <form action="#" method="get" onsubmit="return false;">
+              <div class="form-group-editorial">
+                <label class="label-editorial" for="ed-nama">Nama Lengkap</label>
+                <input class="input-editorial" id="ed-nama" type="text" placeholder="Masukkan nama Anda" />
+              </div>
+              <div class="form-group-editorial">
+                <label class="label-editorial" for="ed-email">Alamat Email</label>
+                <input class="input-editorial" id="ed-email" type="email" placeholder="nama@domain.com" />
+              </div>
+              <div class="form-group-editorial">
+                <label class="label-editorial" for="ed-pesan">Deskripsi Proyek</label>
+                <textarea class="textarea-editorial" id="ed-pesan" placeholder="Ceritakan kebutuhan website Anda..."></textarea>
+              </div>
+              <button class="btn btn-lime" type="submit">Kirim Formulir</button>
+            </form>
+          </div>
+
+          <!-- Formulir Status Validasi -->
+          <div class="ui-component-preview-box">
+            <h3 style="margin-top:0; color:var(--color-mint);">B. Status Validasi & Seleksi Native</h3>
+            <div class="ui-field" style="margin-bottom: 1.25rem;">
+              <span class="ui-class-tag">aria-invalid="true" (.ui-error)</span>
+              <label class="ui-label" for="stat-error">Contoh Input Salah</label>
+              <input class="ui-input" id="stat-error" type="text" value="format-tidak-sesuai" aria-invalid="true" />
+              <p class="ui-error">Mohon masukkan format email yang valid.</p>
+            </div>
+            <div class="ui-field" style="margin-bottom: 1.25rem;">
+              <span class="ui-class-tag">aria-invalid="false" (.ui-success)</span>
+              <label class="ui-label" for="stat-success">Contoh Input Benar</label>
+              <input class="ui-input" id="stat-success" type="text" value="halo@nfshark.web.id" aria-invalid="false" />
+              <p class="ui-success">Alamat email terverifikasi.</p>
+            </div>
+            <div class="ui-field">
+              <span class="ui-class-tag">.ui-select</span>
+              <label class="ui-label" for="stat-select">Pilihan Paket</label>
+              <select class="ui-select" id="stat-select">
+                <option value="basic">Paket Basic</option>
+                <option value="popular">Paket Popular</option>
+                <option value="premium">Paket Premium</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI 6: ACCORDION AKSESIBEL (ARIA) -->
+      <section class="ui-category-section" id="accordion">
+        <div class="ui-category-header">
+          <h2>6. Accordion Aksesibel (ARIA Interactive)</h2>
+          <p>Navigasi buka-tutup konten berbasis CSS Grid untuk performa nol layout-shift.</p>
+        </div>
+
+        <div class="ui-component-preview-box" style="max-width: 800px;">
+          <span class="ui-class-tag">.accordion-editorial</span>
+          <div class="accordion-editorial" role="region" aria-label="Contoh Accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="acc-panel-1" id="acc-btn-1">
+                <span>01 / Desain Antarmuka & Frontend Cepat</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="acc-panel-1" role="region" aria-labelledby="acc-btn-1">
+                <div class="accordion-panel-inner" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                  Pembuatan website berbasis HTML5, CSS3, dan Vanilla JavaScript yang dirancang khusus untuk memuat kilat tanpa beban framework berat.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="acc-panel-2" id="acc-btn-2">
+                <span>02 / Optimalisasi Responsif & Aksesibilitas WCAG</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="acc-panel-2" role="region" aria-labelledby="acc-btn-2">
+                <div class="accordion-panel-inner" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                  Tata letak yang teruji pada layar 320px hingga monitor lebar, ramah keyboard, dan nyaman dibaca pada perangkat seluler.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI 7: MEDIA & FRAME MOCKUP (ANTI-CLS) -->
+      <section class="ui-category-section" id="media-frames">
+        <div class="ui-category-header">
+          <h2>7. Media Frames & Mockup (Anti-CLS)</h2>
+          <p>Wadah dengan <code>aspect-ratio: 16 / 10</code> untuk mencegah pergeseran tata letak saat media dimuat.</p>
+        </div>
+
+        <div class="ui-component-grid">
+          <div>
+            <span class="ui-class-tag">.frame-editorial</span>
+            <div class="frame-editorial" style="display:grid; place-items:center; border: 1px dashed var(--color-mint);">
+              <p style="color: var(--color-mint); font-size: 0.95rem; text-align: center; padding: 1rem;">
+                Frame Rasio Aspek Terkunci (16:10)<br />
+                <small style="color: var(--text-secondary);">Mencegah Cumulative Layout Shift</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="ui-preview-footer">
-      <p>NFShark · Pratinjau sistem komponen UI</p>
+    <!-- FOOTER PRATINJAU -->
+    <footer class="ui-preview-footer" style="padding: 3rem 1.5rem; text-align: center; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.88rem;">
+      <p>NFShark · Sistem Komponen & Pratinjau Desain</p>
     </footer>
+
+    <!-- SKRIP KECIL UNTUK INTERAKSI AKORDION DEMO -->
+    <script>
+      document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          trigger.setAttribute('aria-expanded', String(!isExpanded));
+          const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+          if (panel) {
+            panel.setAttribute('aria-hidden', String(isExpanded));
+          }
+        });
+      });
+    </script>
   </body>
 </html>
