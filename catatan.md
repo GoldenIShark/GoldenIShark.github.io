@@ -1,5 +1,28 @@
 # Catatan Teknis Lintas Agent
 
+Tanggal: 2026-10-25
+
+## Area
+- Konfigurasi native Antigravity workspace: `.agents/` (`.agents/skills/` dan `.agents/agents/`).
+
+## Fakta dan keputusan
+- Direktori native `.agents/` dibuat di root repository sesuai standar Antigravity Customization Discovery.
+- Seluruh skill dari `.github/skills/` disalin ke `.agents/skills/`.
+- Seluruh definisi agent dari `.github/agents/` disalin ke `.agents/agents/`.
+- File asli di `.github/` dan kode website tidak diubah sama sekali.
+
+## Dampak
+- Antigravity kini dapat langsung mendeteksi dan memuat skills serta agents melalui jalur discovery native workspace `.agents/`.
+
+## Status
+- Struktur `.agents/skills/` dan `.agents/agents/` lengkap dan terverifikasi via PowerShell.
+
+## Command dan batasan
+- `Copy-Item -Path ".github\skills" -Destination ".agents\skills" -Recurse -Force` dan `Copy-Item -Path ".github\agents" -Destination ".agents\agents" -Recurse -Force` berhasil dieksekusi.
+- `Get-ChildItem -Path .agents -Recurse` mengonfirmasi seluruh 12 folder skill dan 4 file agent tersalin dengan utuh.
+
+---
+
 Tanggal: 2026-10-24
 
 ## Area
