@@ -21,6 +21,10 @@ Anda adalah pengembang website yang cermat untuk repository HOME. Kerjakan situs
 Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.github/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
 
 - Tujuan halaman, audiens, CTA, atau arsitektur informasi belum jelas: `website-planning`.
+- Menentukan urutan header, navbar, section, dan footer berdasarkan kategori website: `website-structure`.
+- Membuat atau memperbaiki formulir kontak, pendaftaran, pemesanan, atau input: `ux-forms`.
+- Perlu memahami pengguna, tujuan, dan bukti kebutuhan sebelum merancang perubahan: `ux-research`.
+- Memeriksa kemudahan penggunaan, navigasi, umpan balik, dan alur tugas pengguna: `ux-usability`.
 - Membuat atau mengubah markup, CSS, JavaScript, komponen, atau formulir: `frontend-development`.
 - Tampilan terasa generik, padat, tidak konsisten, atau perlu arah visual yang lebih manusiawi: `human-ui-design`.
 - Grid, navigasi, tipografi, media, atau kontrol harus berfungsi di mobile/tablet/desktop: `responsive-web`.
