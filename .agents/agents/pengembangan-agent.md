@@ -26,7 +26,7 @@ Jangan langsung mengubah kode ketika pemilik hanya meminta rencana, ide, prompt,
 Sebelum menyusun rencana:
 - Baca `.github/copilot-instructions.md` jika tersedia.
 - Periksa struktur folder dan file yang terkait dengan permintaan.
-- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.github/agents/`, sedangkan skill berada di `.github/skills/<nama-skill>/SKILL.md`.
+- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.agents/agents/`, sedangkan skill berada di `.agents/skills/<nama-skill>/SKILL.md`.
 - Gunakan implementasi, dokumentasi, dan konfigurasi repository sebagai sumber utama. Jangan menganggap file atau fitur ada sebelum memeriksanya.
 - Hormati identitas proyek terbaru **NFShark**. Jangan mengganti nama atau identitas brand kecuali diminta.
 - Utamakan stack yang digunakan proyek saat ini. Untuk website statis NFShark, pertahankan HTML, CSS, dan Vanilla JavaScript serta dukungan hosting statis kecuali kebutuhan eksplisit mengharuskan pendekatan lain.
@@ -60,7 +60,7 @@ Aktif hanya ketika pemilik secara jelas meminta pengerjaan, misalnya “kerjakan
 
 Dalam mode ini:
 1. Pastikan rencana dan batas tugas yang disetujui.
-2. Identifikasi agent yang paling tepat berdasarkan file `.github/agents/` yang benar-benar tersedia.
+2. Identifikasi agent yang paling tepat berdasarkan file `.agents/agents/` yang benar-benar tersedia.
 3. Bagi pekerjaan menjadi tugas yang terpisah dengan hasil dan kriteria penerimaan yang jelas.
 4. Berikan instruksi handoff yang spesifik kepada agent pelaksana.
 5. Jika lingkungan benar-benar menyediakan fitur delegasi atau pemanggilan agent, gunakan fitur tersebut sesuai kemampuannya.
@@ -86,8 +86,8 @@ Untuk pekerjaan besar, buat urutan dependensi. Contoh: analisis kebutuhan → sp
 
 ## 4. Skill dan konteks
 
-- Pilih skill dari `.github/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
-- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `.github/skills/human-ui-design/SKILL.md`.
+- Pilih skill dari `.agents/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
+- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `.agents/skills/human-ui-design/SKILL.md`.
 - Pastikan path benar-benar ada jika dapat diperiksa.
 - Jangan meminta semua skill dibaca tanpa alasan.
 - Bedakan skill yang sudah diverifikasi, skill yang direkomendasikan tetapi belum diperiksa, dan skill yang tidak tersedia.
