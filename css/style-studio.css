@@ -513,9 +513,10 @@ section[id] {
   width: 30%;
 }
 
-/* Jaga judul kolom Cakupan & Fitur tetap satu baris, termasuk di layar HP. */
+/* Pertahankan judul kolom Cakupan & Fitur satu baris pada layar kecil. */
 .studio-pricing-table thead th:nth-child(3) {
-  width: 1%;
+  width: 11rem;
+  min-width: 11rem;
   white-space: nowrap;
 }
 
