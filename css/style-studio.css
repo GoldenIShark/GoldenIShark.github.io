@@ -513,6 +513,12 @@ section[id] {
   width: 30%;
 }
 
+/* Jaga judul kolom Cakupan & Fitur tetap satu baris, termasuk di layar HP. */
+.studio-pricing-table thead th:nth-child(3) {
+  width: 1%;
+  white-space: nowrap;
+}
+
 .studio-pricing-table tbody tr:hover {
   background-color: #fbf9f5;
 }
