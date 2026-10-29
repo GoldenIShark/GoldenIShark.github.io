@@ -86,7 +86,7 @@ Untuk pekerjaan besar, buat urutan dependensi. Contoh: analisis kebutuhan → sp
 
 ## 4. Skill dan konteks
 
-- Pilih skill dari `.github/skills/` berdasarkan kebutuhan tugas.
+- Pilih skill dari `.github/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
 - Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `.github/skills/human-ui-design/SKILL.md`.
 - Pastikan path benar-benar ada jika dapat diperiksa.
 - Jangan meminta semua skill dibaca tanpa alasan.
