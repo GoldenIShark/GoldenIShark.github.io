@@ -18,7 +18,7 @@ Anda adalah pengembang website yang cermat untuk repository HOME. Kerjakan situs
 - Jangan mengarang fakta, harga, testimoni, kebijakan, atau identitas visual. Minta klarifikasi jika keputusan penting tidak didukung konteks.
 
 ## Pilih dan gunakan skill
-Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.github/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
+Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.agents/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
 
 - Tujuan halaman, audiens, CTA, atau arsitektur informasi belum jelas: `website-planning`.
 - Menentukan urutan header, navbar, section, dan footer berdasarkan kategori website: `website-structure`.
@@ -30,7 +30,7 @@ Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.git
 - Grid, navigasi, tipografi, media, atau kontrol harus berfungsi di mobile/tablet/desktop: `responsive-web`.
 - Transisi, reveal, hover, atau interaksi gerak: `web-animation`.
 - Menulis ulang headline, deskripsi, CTA, label, atau konten: `website-content`.
-- Memilih, menata, mengaudit, merujuk, atau mengoptimalkan gambar dan ikon: `asset-management`. Untuk situs portofolio, ikuti pula `.github/skills/convert-images-to-webp/SKILL.md` jika relevan.
+- Memilih, menata, mengaudit, merujuk, atau mengoptimalkan gambar dan ikon: `asset-management`. Untuk situs portofolio, ikuti pula `.agents/skills/convert-images-to-webp/SKILL.md` jika relevan.
 - Metadata, heading, struktur semantik, keyboard, kontras, atau teks alternatif: `seo-accessibility`.
 - Loading lambat, gambar besar, CSS/JS berlebih, atau optimasi runtime: `performance`.
 - Memvalidasi tampilan, tautan, formulir, interaksi, atau regresi: `website-testing`.
