@@ -689,3 +689,7 @@ section[id] {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Pastikan atribut hidden tetap berlaku pada kartu portofolio. */
+.portfolio-card-studio[hidden] { display: none !important; }
