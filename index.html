@@ -178,11 +178,11 @@
             </p>
           </div>
 
-          <div class="portfolio-grid-studio">
+          <div class="portfolio-grid-studio" id="studio-portfolio-grid">
             <!-- Proyek 1: Aura Rasa -->
             <a href="portofolio/restoran-basic/" class="portfolio-card-studio">
               <div class="portfolio-thumb-frame">
-                <img src="portofolio/restoran-basic/assets/images/preview.webp" alt="Pratinjau antarmuka website Aura Rasa" width="800" height="600" loading="lazy" />
+                <iframe src="portofolio/restoran-basic/index.html" title="Pratinjau website Aura Rasa" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
               </div>
               <div class="portfolio-meta-box">
                 <span class="portfolio-cat-badge">Paket Basic · Kuliner</span>
@@ -194,7 +194,7 @@
             <!-- Proyek 2: Ruang Rasa -->
             <a href="portofolio/restoran/" class="portfolio-card-studio">
               <div class="portfolio-thumb-frame">
-                <img src="portofolio/restoran/assets/images/hero.webp" alt="Pratinjau website Ruang Rasa" width="800" height="600" loading="lazy" />
+                <iframe src="portofolio/restoran/index.html" title="Pratinjau website Ruang Rasa" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
               </div>
               <div class="portfolio-meta-box">
                 <span class="portfolio-cat-badge">Paket Popular · Dining</span>
@@ -239,6 +239,7 @@
               </div>
             </a>
           </div>
+          <button class="btn btn-lime" id="portfolio-more" type="button" hidden aria-expanded="false" style="margin-top:2rem;">Lihat Karya Lainnya</button>
         </div>
       </section>
 
@@ -256,7 +257,7 @@
           <div class="features-grid-studio">
             <div class="feature-col-item">
               <span class="feature-number">01</span>
-              <h3>Desain Ramah Manusia</h3>
+              <h3>Desain Ramah</h3>
               <p>Tata letak intuitif yang memudahkan mata pengunjung menemukan informasi penting tanpa gangguan dekorasi yang membingungkan.</p>
             </div>
             <div class="feature-col-item">
@@ -428,7 +429,7 @@
             <ul>
               <li><a href="ui-preview.html">Pratinjau Komponen UI</a></li>
               <li><a href="brief.html">Formulir Brief Proyek</a></li>
-              <li><a href="index.html">Tampilan Klasik (v1)</a></li>
+              <li><a href="history/">Arsip Tampilan Lama</a></li>
             </ul>
           </div>
 
@@ -502,6 +503,28 @@
             }
           });
         });
+
+        // 3. Tampilkan tombol hanya jika jumlah karya melebihi enam
+        const portfolioGrid = document.getElementById('studio-portfolio-grid');
+        const portfolioMore = document.getElementById('portfolio-more');
+        if (portfolioGrid && portfolioMore) {
+          const cards = [...portfolioGrid.querySelectorAll('.portfolio-card-studio')];
+          const visibleLimit = 6;
+          if (cards.length > visibleLimit) {
+            cards.forEach((card, index) => {
+              if (index >= visibleLimit) card.hidden = true;
+            });
+            portfolioMore.hidden = false;
+            portfolioMore.addEventListener('click', () => {
+              const expanded = portfolioMore.getAttribute('aria-expanded') === 'true';
+              cards.forEach((card, index) => {
+                if (index >= visibleLimit) card.hidden = expanded;
+              });
+              portfolioMore.setAttribute('aria-expanded', String(!expanded));
+              portfolioMore.textContent = expanded ? 'Lihat Karya Lainnya' : 'Tampilkan Lebih Sedikit';
+            });
+          }
+        }
       });
     </script>
   </body>
