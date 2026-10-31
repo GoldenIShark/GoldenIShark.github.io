@@ -67,40 +67,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buildMessage = () => {
     const features = checkedValues('features');
+    const country = valueOf('phoneCountry').replace(/[^\\d]/g, '');
+    let number = valueOf('phoneNumber').replace(/[^\\d]/g, '');
+    if (number.startsWith('0')) number = number.slice(1);
+    const phone = [country, number].filter(Boolean).join(' ');
+
     const lines = [
-      'BRIEF PEMBUATAN WEBSITE — NFSHARK',
+      '*BRIEF PEMBUATAN WEBSITE — NFSHARK*',
+      '_Berikut ringkasan kebutuhan website yang saya ajukan._',
       '',
-      'INFORMASI AWAL',
-      `Sumber mengetahui NFShark: ${selectedValue('source')}`,
-      ...(selectedValue('source') === 'Lainnya' && valueOf('sourceOther') ? [`Sumber lainnya: ${valueOf('sourceOther')}`] : []),
+      '*INFORMASI AWAL*',
+      `- Sumber mengetahui NFShark: ${selectedValue('source')}`,
+      ...(selectedValue('source') === 'Lainnya' && valueOf('sourceOther') ? [`- Sumber lainnya: ${valueOf('sourceOther')}`] : []),
       '',
-      'INFORMASI PELANGGAN',
-      `Nama: ${valueOf('customerName')}`,
-      `Bisnis / proyek: ${valueOf('businessName') || 'Tidak diisi'}`,
-      `WhatsApp: ${valueOf('phoneCountry')} ${valueOf('phoneNumber')}`,
+      '*INFORMASI PELANGGAN*',
+      `- Nama: ${valueOf('customerName')}`,
+      `- Bisnis / Proyek: ${valueOf('businessName') || 'Tidak diisi'}`,
+      `- WhatsApp: ${phone}`,
       '',
-      'KEBUTUHAN WEBSITE',
-      `Jenis website: ${valueOf('websiteType')}`,
-      `Informasi / fitur: ${features.length ? features.join(', ') : 'Belum ditentukan'}`,
+      '*KEBUTUHAN WEBSITE*',
+      `- Jenis Website: ${valueOf('websiteType')}`,
+      `- Informasi / Fitur: ${features.length ? features.join(', ') : 'Belum ditentukan'}`,
       '',
-      'PREFERENSI DESAIN',
-      `Gaya desain: ${selectedValue('designStyle')}`,
-      ...(selectedValue('designStyle') === 'Desain lainnya' && valueOf('designOther') ? [`Desain lainnya: ${valueOf('designOther')}`] : []),
-      `Warna / referensi: ${valueOf('designReference') || 'Tidak diisi'}`,
+      '*PREFERENSI DESAIN*',
+      `- Gaya Desain: ${selectedValue('designStyle')}`,
+      ...(selectedValue('designStyle') === 'Desain lainnya' && valueOf('designOther') ? [`- Detail Desain: ${valueOf('designOther')}`] : []),
+      `- Warna / Referensi: ${valueOf('designReference') || 'Tidak diisi'}`,
       '',
-      'MATERI WEBSITE',
-      `Ketersediaan materi: ${selectedValue('assetsStatus')}`,
+      '*MATERI WEBSITE*',
+      `- Ketersediaan Materi: ${selectedValue('assetsStatus')}`,
       '',
-      'PAKET DAN ANGGARAN',
-      `Paket: ${valueOf('packageChoice')}`,
-      `Anggaran: ${valueOf('budget')}`,
+      '*PAKET DAN ANGGARAN*',
+      `- Paket: ${valueOf('packageChoice')}`,
+      `- Anggaran: ${valueOf('budget')}`,
       '',
-      'INFORMASI TAMBAHAN',
-      valueOf('additionalNotes') || 'Tidak ada catatan tambahan',
+      '*INFORMASI TAMBAHAN*',
+      `- Catatan: ${valueOf('additionalNotes') || 'Tidak ada'}`,
       '',
-      'Persetujuan ketentuan layanan: Ya'
+      '*PERSETUJUAN*',
+      '- Ketentuan layanan NFShark: Telah dibaca dan disetujui',
+      '',
+      '_Mohon tinjau ringkasan brief ini. Terima kasih._'
     ];
-    return lines.join('\n');
+    return lines.join('\\n');
   };
 
   form.addEventListener('submit', (event) => {
