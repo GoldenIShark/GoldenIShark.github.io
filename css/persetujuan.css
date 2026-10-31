@@ -1,19 +1,16 @@
+/* Ukuran dan proporsi halaman Persetujuan — gaya visual dari page-template.css */
+.agreement-page {
+  --page-container-width: 1180px;
+  --page-content-width: 820px;
+  --page-gutter: 2.5rem;
+  --page-header-height: 74px;
+  --page-logo-size: 44px;
+  --page-main-padding: 4.5rem;
+  --page-main-padding-mobile: 2.5rem;
+  --page-main-bottom: 4.5rem;
+  --page-title-size: clamp(2.2rem, 5vw, 3.4rem);
+}
 .agreement-page { min-height: 100vh; }
-.agreement-back { color: var(--text-secondary); font-weight: 600; }
-.agreement-back:hover { color: var(--green); }
-.agreement-main { padding: clamp(2.5rem, 6vw, 5rem) 0; }
-.agreement-content { width: min(100% - 2rem, 820px); }
-.agreement-eyebrow { margin: 0 0 .6rem; color: var(--green); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.agreement-content h1 { margin: 0; color: var(--white); font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12; }
-.agreement-lead { max-width: 720px; margin: 1rem 0 2rem; color: var(--text-secondary); font-size: 1.05rem; }
-.agreement-content section { padding: 1.25rem 0; border-top: 1px solid var(--border); }
-.agreement-content h2 { margin: 0 0 .45rem; color: var(--white); font-size: 1.12rem; }
-.agreement-content section p { margin: 0; color: var(--text-secondary); line-height: 1.75; }
-.agreement-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
-.agreement-note { margin-top: 1.2rem; color: var(--text-secondary); font-size: .82rem; }
-.agreement-page .site-footer { border-top: 1px solid var(--border); }
-@media (max-width: 620px) {
-  .agreement-page .container { width: min(100% - 1.25rem, 820px); }
-  .agreement-actions { flex-direction: column; }
-  .agreement-actions .btn { width: 100%; }
+@media (max-width: 767px) {
+  .agreement-page { --page-gutter: 1.25rem; --page-header-height: 66px; --page-logo-size: 40px; }
 }
