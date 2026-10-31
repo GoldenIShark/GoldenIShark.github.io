@@ -130,5 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   updateConditionalFields();
-  showStep(1);
+  showStep(window.location.hash === '#consent' ? 2 : 1);
+  if (window.location.hash === '#consent') document.querySelector('#consent').focus({ preventScroll: true });
 });
