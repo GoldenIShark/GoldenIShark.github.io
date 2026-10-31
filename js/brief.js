@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buildMessage = () => {
     const features = checkedValues('features');
-    const country = valueOf('phoneCountry').replace(/[^\\d]/g, '');
-    let number = valueOf('phoneNumber').replace(/[^\\d]/g, '');
+    const country = valueOf('phoneCountry').replace(/\D/g, '');
+    let number = valueOf('phoneNumber').replace(/\D/g, '');
     if (number.startsWith('0')) number = number.slice(1);
     const phone = [country, number].filter(Boolean).join(' ');
 
