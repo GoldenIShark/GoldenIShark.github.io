@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '',
       '_Mohon tinjau ringkasan brief ini. Terima kasih._'
     ];
-    return lines.join('\\n');
+    return lines.join('\n');
   };
 
   form.addEventListener('submit', (event) => {
